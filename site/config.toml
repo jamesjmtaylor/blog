@@ -67,7 +67,7 @@ paginate = 10
 
 		[[params.portfolio.gallery]]
         	image = "fulls/gwent.jpg"
-            thumb = "thumbs/gwent.png"
+            thumb = "thumbs/gwent.jpg"
             title = "Gwent (iOS)."
             description = "My capstone project at the Coding Dojo, where I studied the Swift programming language."
 
