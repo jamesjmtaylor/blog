@@ -1,10 +1,7 @@
 +++
-
-
-title = "About Me"
-date = "2015-08-03T13:39:46+02:00"
+date = "2018-01-27T10:15:23-04:00"
 draft = false
-
+title = "About me"
 +++
 
 I received my Bachelor of Science in Computer Science at the United States Military Academy 
@@ -17,3 +14,7 @@ focused on native development in Swift, Java, and Kotlin, although I've done som
 in Ionic and Xamarin as well.  For full stack solutions I've worked primarily in .NET Core,
 although I have to say that I prefer Spring Boot and Kotlin, which I've used for
 side-projects.
+
+![tanks!](/images/printrbot.jpg)
+
+<i>Picture of our cat, Steve, staring at my Printrbot 3d printer.</i>
