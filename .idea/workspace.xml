@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8f6299f6-43ad-49a6-92e1-d6d88ab7c712" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/site/config.toml" afterPath="$PROJECT_DIR$/site/config.toml" />
-      <change beforePath="$PROJECT_DIR$/site/content/post/20160711.md" afterPath="$PROJECT_DIR$/site/content/post/20160711.md" />
-      <change beforePath="$PROJECT_DIR$/site/content/post/20170401.md" afterPath="$PROJECT_DIR$/site/content/post/20170401.md" />
-      <change beforePath="$PROJECT_DIR$/site/static/admin/config.yml" afterPath="$PROJECT_DIR$/site/static/admin/config.yml" />
-      <change beforePath="$PROJECT_DIR$/site/static/images/avatar.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/site/themes/hugo-strata-theme/images/screenshot.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/site/themes/hugo-strata-theme/images/tn.png" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,12 +23,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="about.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="about.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/site/content/about.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="75">
-                <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="84" />
+              <first_editor relative-caret-position="90">
+                <caret line="6" column="56" lean-forward="false" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -43,12 +36,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20160711.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="20160711.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/site/content/post/20160711.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="210">
-                <caret line="14" column="40" lean-forward="false" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+              <first_editor relative-caret-position="120">
+                <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -108,8 +101,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="203" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1614" />
+    <option name="y" value="-138" />
     <option name="width" value="1440" />
     <option name="height" value="877" />
   </component>
@@ -177,6 +171,36 @@
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="hugo-strata-theme" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="hugo-strata-theme" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="hugo-strata-theme" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -192,10 +216,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/site/static/images" />
       <recent name="$PROJECT_DIR$/site/content/image" />
       <recent name="$PROJECT_DIR$/site/content/post" />
       <recent name="$PROJECT_DIR$/src/img" />
-      <recent name="$PROJECT_DIR$/site/static/images" />
       <recent name="$PROJECT_DIR$/dist/images/thumbs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -318,7 +342,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
+    <frame x="1614" y="-138" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -755,22 +779,22 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/site/content/about.md">
+    <entry file="file://$PROJECT_DIR$/site/content/post/20160711.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="75">
-            <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="84" />
+          <first_editor relative-caret-position="120">
+            <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/site/content/post/20160711.md">
+    <entry file="file://$PROJECT_DIR$/site/content/about.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="210">
-            <caret line="14" column="40" lean-forward="false" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+          <first_editor relative-caret-position="90">
+            <caret line="6" column="56" lean-forward="false" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
             <folding />
           </first_editor>
           <second_editor />
