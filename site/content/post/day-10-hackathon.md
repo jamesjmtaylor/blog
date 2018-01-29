@@ -1,6 +1,6 @@
 ---
 title: Day 10-Hackathon
-date: 09/16/2016 5:15 AM
+date: 2016-09-16T00:00:00-07:00
 ---
 <img style="float: left; margin:0 1em 1em 0; width: 33%" src="/img/blog/day10.jpg"/>Timeline:
 
