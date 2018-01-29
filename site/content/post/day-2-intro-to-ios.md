@@ -1,6 +1,6 @@
 ---
 title: Day 2-Intro to iOS
-date: 2016-09-08T04:47:26-07:00
+date: 2016-09-07T04:47:26-07:00
 ---
 <img style="float: left; margin:0 2em 0 0; width: 66%" src="/img/blog/day2.jpg"/>
 
