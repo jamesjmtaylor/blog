@@ -1,0 +1,15 @@
+---
+title: Day 19-Projects Week
+date: 2016-09-28T05:41:38-07:00
+---
+<img style="float: left; margin:0 1em 1em 0; width: 50%" src="/img/blog/day19.jpg"/>
+
+ 0730-Arrived early to get as much headway with Alamofire and SwiftyJSON as possible and… it doesn’t compile.  xCode tells me there are now over 800 errors with the two pods.  Apparently both of the libraries are still written in Swift 2.  At some point Swift tried to update them to Swift 3 and it broke everything.
+
+0900-After fighting it for over an hour I gave up.  Everyone did their mini-scrum with David and then we started working on our projects again.  I’ve asked David to help me with conventional JSON parsing and callbacks. 
+
+1100-Break for algorithms.  We put all the pieces together from the previous days and implement a search bar autocomplete class with our tries.  I’ve had this exact interview question before so I breeze through it in a little less than an hour.
+
+1400-David has finally gotten through to me on JSON callbacks.  There were a couple of gotchas that I was missing.  First, if you don’t have a completionHandler for the calling class to implement in a JSON query, the calling class will continue to merrily execute through its code and whatever the asynchronous call was supposed to be doing will be lost.  Second, the asynchronous function will continue to execute whatever comes after the completionHandler  even after you have passed the requested arguments back to the calling class.  If this isn’t intended it can lead the whole program to crash (due to an array index out of bounds exception raised by the asynchronous call, for example). Third, in order to ensure that asynchronous JSON requests execute synchronously with respect to each other (if such behavior is desired) you need to execute each call recursively through the same function and track the recursive calls through a url stack external to everything from which you can push and pop urls as necessary.  Now that I’ve got these JSON handler basics under my belt I’m moving a lot faster and confidently than before.
+
+1920-Well, I’ve got the gwent library working!  My app successfully pulls card data from the API and saves it to CoreData and dynamically saves the images from the API to the app directory. All the images for the cards along with their names are displayed in a scrollable CollectionView. The collectionView is also searchable through a searchBar that I’ve place above it.  It’s really slick looking and I’m excited to go home on a high note.
