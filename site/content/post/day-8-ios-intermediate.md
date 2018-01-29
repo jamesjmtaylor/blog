@@ -1,8 +1,8 @@
 ---
 title: Day 8-iOS Intermediate
-date: 2017-09-14T05:10:10-07:00
+date: 2016-09-14T05:10:10-07:00
 ---
-<img style="float: left; margin:0 2em 2em 0; width: 33%" src="/img/blog/day8.jpg"/> Timeline:
+<img style="float: left; margin:0 1em 1em 0; width: 33%" src="/img/blog/day8.jpg"/> Timeline:
 
 1000-Argh!  The firmware on my primary phone was corrupted somehow.  I stayed at home until 0830 this morning trying to fix it before starting the commute.  When I got in I found out that we had a new assignment-a picker view application integrating Core Data. Time to get to work.
 
