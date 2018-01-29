@@ -1,8 +1,8 @@
 ---
 title: Day 7-iOS Intermediate
-date: 2017-09-13T05:08:38-07:00
+date: 2016-09-13T05:08:38-07:00
 ---
-<img style="float: left; margin:0 2em 2em 0; width: 66%" src="/img/blog/day7.jpg"/>
+<img style="float: left; margin:0 2em 1em 0; width: 66%" src="/img/blog/day7.jpg"/>
 
 Timeline:
 
