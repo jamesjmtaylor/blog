@@ -1,8 +1,8 @@
 ---
 title: Day 3-Intro to iOS
-date: 2017-09-08T04:52:27-07:00
+date: 2016-09-08T04:52:27-07:00
 ---
-<img style="float: left; margin:0 2em 0 0; width: 66%" src="/img/blog/day3.jpg"/>
+<img style="float: left; margin:0 1em 1em 0; width: 66%" src="/img/blog/day3.jpg"/>
 
 Timeline:
 
