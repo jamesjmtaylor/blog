@@ -1,8 +1,8 @@
 ---
 title: Day 4-Hackathon
-date: 2017-09-09T04:54:00-07:00
+date: 2016-09-09T04:54:00-07:00
 ---
-<img style="float: left; margin:0 2em 0 0; width: 66%" src="/img/blog/day4.jpg"/>
+<img style="float: left; margin:0 1em 1em 0; width: 66%" src="/img/blog/day4.jpg"/>
 
 Timeline:
 
