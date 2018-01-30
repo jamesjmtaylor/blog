@@ -1,0 +1,7 @@
+---
+title: Stairway to Heaven of Front-End Developers
+date: 2017-05-01T04:49:38-07:00
+---
+<img style="float: left; margin:0 1em 1em 0; width: 33%" src="/img/blog/stairway.jpg"/>
+
+So I was reading <a href="https://teds-coding-dojo-experience.blogspot.com" title="Ted Whang’s blog" target="_blank" rel="external">Ted Whang’s blog</a> the other day and I saw something that made me chuckle.  Ted’s blog centers around his experience at Coding Dojo.  In one entry in particular he says that he  “personally has an obsession with parallax scrolling. Even if you don't know what parallax scrolling means, you probably have ran into one and thought to yourself, "man this is really cool". “ I had to laugh because I felt (and still feel) the same way.  When I first started browsing personal websites for ideas and saw parallax I immediately thought to myself <a class="various fancybox.iframe" data-fancybox-title="I want that" href="https://www.youtube.com/embed/0mfSfekiZeE?enablejsapi=1&wmode=opaque&autoplay=1">I want that</a>.  But a lot of more seasoned web developers are beginning to see parallax as overdone and somewhat tacky/annoying.  To me it’s comically similar to the way music stores <a class="various fancybox.iframe" data-fancybox-title="No Stairway to Heaven" href="https://www.youtube.com/embed/RD1KqbDdmuE?enablejsapi=1&wmode=opaque&autoplay=1">universally outlawed the playing of Stairway to Heaven</a> in their stores, simply because too many amateurs were trying it and store owners grew sick of hearing the same familiar riff over and over again.
