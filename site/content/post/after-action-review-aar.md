@@ -2,6 +2,7 @@
 title: After Action Review (AAR)
 date: 2018-01-31T12:53:40.508Z
 ---
+<img style="float: left; margin:0 2em 1em 0; width: 66%" src="/img/blog/aar.jpg"/>
 In the Army we conducted a formal retrospective after every operation that we completed, called an After Action Review (AAR).   Books like <u>Outliers</u> have found such rituals to be extraordinarily important to skills mastery.  In the work, Malcolm Gladwell posits that it takes at least 10,000 hours of deliberate practice to cultivate a world-class skill.  Part of deliberate practice is performing a critical review of performance after every session, essentially an AAR.
 
  Since leaving the Army I've carried on the habit of After Action Reviews. After every two week Sprint at Steelcase I summarize the most important lessons learned over the last two weeks in my notebook.  My plan going forward is transcribe the best lessons learned from my notebook into my blog every two months. The lessons learned will be in the form of bullet points that I wish I had known prior to undertaking the work involved in the Sprint.  If you're not interested in my more technical musings, feel free to skip over these.  Otherwise, I hope your able to glean a few helpful tidbits here and there.  
