@@ -2,7 +2,7 @@
 title: 'AAR pt 3 (Xamarin/C#/Azure)'
 date: 2018-02-01T12:58:08.374Z
 ---
-We do a fair amount of .NET development over at Steelcase.  When I first joined the mobile development team we seriously considered doing our mobile applications in Xamarin.  We eventually decided against it since Steelcase is a very heavily design driven company, and Xamarin just wouldn't provide the flexibility that a purely native approach does.  But in the spirit of giving Xamarin a fair shake we spent a sprint working in it to get an idea of it's capabilities.  Below are the lessons I learned, as well as some I've come to learn after working with Steelcase's C#/Azure backend.
+If you haven't had a chance to read the first entry in the series for context, [you can do so here](/post/after-action-review-aar/). We do a fair amount of .NET development over at Steelcase.  When I first joined the mobile development team we seriously considered doing our mobile applications in Xamarin.  We eventually decided against it since Steelcase is a very heavily design driven company, and Xamarin just wouldn't provide the flexibility that a purely native approach does.  But in the spirit of giving Xamarin a fair shake we spent a sprint working in it to get an idea of it's capabilities.  Below are the lessons I learned, as well as some I've come to learn after working with Steelcase's C#/Azure backend.
 
 * To issue adb commands in Xamarin Studio go to the menu bar and select **Tools**>**SDK Command Prompts.**
 * To find a package name right click the project and select **options**>**Android Applications **> **Package Name.**
@@ -21,7 +21,7 @@ We do a fair amount of .NET development over at Steelcase.  When I first joined 
 * Each Azure event processor has its own marker, so one event processor consuming from a partition does NOT prevent another from consuming it.
 * .NET Core allows you to deploy to Linux and MacOS, which also means that you can create .NET Core Docker containers.  In exchange, you lose a lot of .NET Framework libraries.
 * In C# the `wait` keyword will block further progress synchronously.  The `await` keyword just blocks execution in the containing method and the calling class gets an incomplete Task.
-* You can pass multiple parameters after a url's ``?`\` by concatenating them with an \``&`` symbol.
+* You can pass multiple parameters after a url's ``?`\` by concatenating them with an \``& symbol.
 * For Azure Oauth you must have the following variables: Auth URL, Access Token URL, client Id, and client secret.
 * In a .NET MVC application, if you have two identical routes in the same controller all the endpoints will result in a 500 error.
 * If Visual Studio ever can't find the 'system' import, press CMD+SHIFT+P (opens the VS command terminal) and type **Restart Omnisharp**
