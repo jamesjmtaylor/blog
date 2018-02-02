@@ -2,7 +2,7 @@
 title: Day 9-Frameworks
 date: 2016-09-15T12:13:50.000Z
 ---
-<img style="float: left; margin:0 2em 2em 0; width: 50%" src="/img/blog/day9.jpg"/> 
+<img style="float: left; margin:0 2em 1em 0; width: 50%" src="/img/blog/day9.jpg"/> 
 
 Timeline:<br/>
 0800-Yeah!  Phone’s fixed, I’m caught up in the lesson modules, I’ve got my 80’s movies soundtrack going and a hot cup of coffee at my side.  Time to get to work.<br/>
