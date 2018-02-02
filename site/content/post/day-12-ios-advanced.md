@@ -1,10 +1,9 @@
 ---
 title: Day 12-iOS Advanced
-date: 2016-09-19T05:29:18-07:00
+date: 2016-09-19T12:29:18.000Z
 ---
-<img style="float: left; margin:0 1em 1em 0; width: 50%" src="/img/blog/day12.jpg"/>
-Timeline:
-
+<img style="float: left; margin:0 1em 0 0; width: 50%" src="/img/blog/day12.jpg"/>
+Timeline:<br/>
 0800-This is the final week of guided lessons.  Next week is project week, during which we will be set loose to use everything that we’ve learned to create our own app.  I’ve got a few ideas that I’m kicking around, but I want to get through this week before I decide on anything.
 
 0900-David introduces JSON query structure and how we have to convert that data (which is just a specially formatted string) into either an Array or a Dictionary. Our next few assignments are going to revolve around GET requests to a Star Wars API (also known as SWAPI) in order to populate a Star Wars Encyclopedia.  Sounds like fun.
