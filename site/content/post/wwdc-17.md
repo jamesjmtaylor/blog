@@ -1,21 +1,17 @@
 ---
 title: WWDC 17
-date: 2017-06-10T06:28:32-07:00
+date: 2017-06-10T13:28:32.000Z
 ---
-<img style="float: left; margin:0 1em 1em 0; width: 10%" src="/img/blog/day1.jpg"/>
+<img style="float: left; margin:0 1em 0 0; width: 66%" src="/img/blog/wwdc17.jpg"/>
 
 One of the many benefits of working at Steelcase is that each year every developer is allotted $5000 to attend conferences.  This year I entered the Apple lottery for WWDC tickets and I won!  Over the course of 5 days I learned an immense amount about Swift 4, Xcode 9, iOS 11, Natural Language Processing, Computer Vision, and Machine Learning with CoreML.  What follows is a massive brain dump of all the notes and highlights that I took during the conference.
 
 ## Swift 4
 
 * Strings are now a collection of characters, enabling methods calls like myString.first() or myString\[myString.startIndex].  Strings also support slicing into substrings which must be cast back to String explicitly. Finally, multi-line strings in the IDE (as opposed to the automatic IDE word wrapping) are possible by using triple quotes (""") at the beginning and ending of the string. (read more here https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/StringsAndCharacters.html)
-
 * Objects can now be declared as KeyPaths.  Keypaths allow you to declare run-time closures on the objects which now implement .observer().  (read more here https://developer.apple.com/documentation/swift/key_path_expressions) 
-
-* Classes and Structs support single line JSON encoding and decoding by implementing the [Codeable protocol.] (https://developer.apple.com/documentation/foundation/archives_and_serialization/encoding_and_decoding_custom_types)
-
+* Classes and Structs support single line JSON encoding and decoding by implementing the [Codeable protocol.](https://developer.apple.com/documentation/foundation/archives_and_serialization/encoding_and_decoding_custom_types)
 * The 'private' access modifier now does exactly the same thing as 'fileprivate'. 
-
 * Mutable collections now have a .swapAt(\_:,\_:) function.
 
 ## Xcode 9
@@ -45,26 +41,16 @@ XCUI.waitForElement() is now recommended over explicitly calling sleep()
 ## iOS 11
 
 * The NavController.NavBarTitle should now default to prefersLargeTitles. 
-
 * All of the iOS phone controls and settings are now contained on a single screen, accessible by dragging up from the bottom of the screen.
-
 * All of the iOS lock screen notifications are accessible even when the phone is unlocked by dragging down from the top of the screen.
-
 * SafeArea has replaced topLayoutGuide and bottomLayoutGuide for defining the area that will not be obscured by the default navigation bar and footer bar.
-
 * leadingSwipeActionsForRowAtIndexPath and trailingSwipeActionsForRowAtIndexPath APIs have been exposed to TableView, enabling developers to create their own custom implementations.
-
 * UIDocumentBrowserViewController has been released, allowing developers to create screens dedicated to file system manipulation on iphones, tablets, macs, etc.
-
 * Notifications can either be Local, Remote, Silent (direct from the server to the app), or Hidden (displayed, but abbreviated on screen lock).
-
 * Remote Service Extensions allow you to download media from a url embedded in a notification message for display in the notifications window when you can't embed the media in the push notification directly.
-
 * Extensions themselves are not intractable, and need to be overlaid with media buttons in order to trigger (i.e. youtube video)
 
 ## Privacy
-
-
 
 To uniquely identify an app instance use "let id = UUID()" (constructor natively supported by Foundation)
 
@@ -74,12 +60,9 @@ Apple assigns each device 2-bits that are uniquely referenced to each device and
 
 ## NLP
 
-* Additional Natural Language Processing APIs have been exposed in Foundation through the [NSLinguisticTagger class.] (https://developer.apple.com/documentation/foundation/nslinguistictagger).
-
+* Additional Natural Language Processing APIs have been exposed in Foundation through the [NSLinguisticTagger class.](https://developer.apple.com/documentation/foundation/nslinguistictagger).
 * Included are Language Recognition, word/sentance/paragraph/document tokenization, part of speech tagging, and lemmatization.
-
 * Lemmatization is the most important concept, reducing conjugated words to their base nature (i.e. 'hiking', 'hiker', 'hikable' all matchable with the word 'hike').
-
 * Exposure of the .dominantLanguage method also allows for localized NLP.
 
 ## Vision
@@ -89,23 +72,17 @@ The Vision API enables Image Registration (stitching images together), Rectangle
 There are three parts to implement Vision
 
 1. Create the request
-
 2. Run the request
-
 3. Use the results.
 
 Vision supports CIImage, CGImage, NSURL, and NSData formats.  Make sure to use a completion handler for requests.
 
 ## CoreML
 
-* CoreML is an Apple provided Machine Learning API that allows you to import pre-trained Artificial Intelligences directly into Xcode.  Importing is as simple as dragging and dropping a CoreML model into the Workspace directory pane in Xcode.  Once that's done, right click on the file in Xcode to see the model's constructor, as well as the inputs and outputs for an instantiated object's .predict() method.
-
+* CoreML is an Apple provided Machine Learning API that allows you to import pre-trained Artificial Intelligences directly into Xcode.  Importing is as simple as dragging and dropping a CoreML model into the Workspace directory pane in Xcode.  Once that's done, right click on the file in Xcode to see the model's constructor, as well as the inputs and outputs for an instantiated object's .predict() method.
 * As of this writing Apple offers four pre-trained models ranging in size from 25mb to 550mb, all focusing on recognition of objects and scenes in an image.  They're available at https://developer.apple.com/machine-learning/
-
 * A new data type, MLMultiArray, has been created as an advanced input type specific to CoreML that allows audio/video/image collections.
-
 * CoreML functions best with other existing libraries to pre-process input.  For example, NLP to tokenize and lemmatize words that can then be fed into a CoreML model for sentiment analysis (i.e. this is a happy text message vs this is a text sad message), or Vision to recognize sticky-note rectangles which it corrects for skew and then feeds into a CoreML model for handwritten text parsing.
-
 * CoreML handles context switching between CPU and GPU processes for you, optimizing AI processing speed automatically.
 
-To allow use of models trained outside of CoreML (i.e. Keras, Caffe, scikit-learn, libsvm, and XGBoos) execute [pip install -U coremltools](https://pypi.python.org/pypi/coremltools) in the command line. 
+To allow use of models trained outside of CoreML (i.e. Keras, Caffe, scikit-learn, libsvm, and XGBoos) execute [pip install -U coremltools](https://pypi.python.org/pypi/coremltools) in the command line.
