@@ -1,6 +1,6 @@
 ---
 title: One IDE to Rule them All
-date: 2017-06-01T05:05:46-07:00
+date: 2018-02-01T05:05:46-08:00
 ---
 <img style="float: left; margin:0 2em 1em 0; width: 66%" src="/img/blog/onering.jpg"/>
 
