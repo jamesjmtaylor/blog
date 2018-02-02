@@ -1,11 +1,10 @@
 ---
 title: Day 13-iOS Advanced
-date: 2016-09-20T05:30:56-07:00
+date: 2016-09-20T12:30:56.000Z
 ---
-<img style="float: left; margin:0 1em 1em 0; width: 66%" src="/img/blog/day13.jpg"/>
+<img style="float: left; margin:0 1em 0 0; width: 66%" src="/img/blog/day13.jpg"/>
 
-Timeline:
-
+Timeline:<br/>
 0745-I asked David as soon as I got in and he had it cleared up in 5 minutes.  Apparently it’s not sufficient to have a tabNavigation controller embedded in the TableViewController, you also have to have a regular navigationController embedded as well for the show segue to function.  Otherwise it just defaults to a modal segue.
 
 0915-David calls the class together and we address the development of our own back-end servers for our mobile apps.  He shows us a convenient mocking scheme known as json-server that installs and runs in under a minute (literally less than 60 seconds, it’s pretty amazing).  After a little bit of experimenting I found that I can host stand-alone .json files on my GoDaddy root folder though, and as long as I have a URL to that folder I can just have my apps call that instead.  Definitely something I’m going to leverage during project week.
