@@ -1,6 +1,6 @@
 ---
 title: AAR pt 2 (Python)
-date: 2018-02-01T12:37:09.764Z
+date: 2017-05-01T04:37:09-07:00
 ---
 <img style="float: left; margin:0 0 1em 0; width: 100%" src="/img/blog/python.jpg"/>
 
