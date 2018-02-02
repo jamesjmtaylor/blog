@@ -1,6 +1,6 @@
 ---
 title: Stairway to Heaven of Front-End Developers
-date: 2017-05-01T11:49:38.000Z
+date: 2017-10-01T04:49:38-07:00
 ---
 <img style="float: left; margin:0 2em 1em 0; width: 33%" src="/img/blog/stairway.jpg"/>
 
