@@ -1,6 +1,6 @@
 ---
 title: AAR pt 5 (Android)
-date: 2018-02-05T13:20:03.554Z
+date: 2017-11-01T05:20:03-07:00
 ---
 <img style="float: left; margin:0 1em 1em 0; width: 10%" src="/img/blog/android.png"/> 
 
