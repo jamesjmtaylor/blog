@@ -1,6 +1,6 @@
 ---
 title: AAR pt 6 (Tools)
-date: 2018-02-05T13:48:17.031Z
+date: 2018-01-01T05:48:17-08:00
 ---
 <img style="float: left; margin:0 1em 1em 0; width: 33%" src="/img/blog/toolbelt.jpeg"/> 
 
