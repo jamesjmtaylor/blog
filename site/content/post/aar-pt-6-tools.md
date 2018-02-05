@@ -28,7 +28,6 @@ Over the course of a professional career you tend to acquire a lot of tools, reg
   * Install OS X Server on developer app (must have a developer account/team)
 
 
-
 * [GPG](https://www.gnupg.org/) is a free, fairly widely used Certificate Authority (CA) tool that allows you to create a private and public cert based on your email.  This allows you to send signed and encrypted emails that others can decrypt as long as they are registered GPG users as well.
 * Sketch is best for Design creation, while the Zeplin Sketch plugin gives designers a way to provide developer access to an  immutable design 'source-of-truth' that they can export assets from, generate formatting code snippets with, post questions/comments, and view the design revision history.
 * In Zeplin, to get the transparent window for overlaying a design over the siumulator click the box icon with the arrow point up and to the right that's located in Zeplins bottom-left.
