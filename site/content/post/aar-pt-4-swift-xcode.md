@@ -1,6 +1,6 @@
 ---
 title: AAR pt 4 (Swift/Xcode)
-date: 2018-02-01T08:00:00.000Z
+date: 2017-09-01T00:00:00-07:00
 ---
 <img style="float: left; margin:0 1em 1em 0; width: 66%" src="/img/blog/xcode.jpg"/> 
 
