@@ -2,7 +2,7 @@
 title: AAR pt 7 (Android Architecture Components)
 date: '2018-03-18T06:15:05-07:00'
 ---
-<img style="float: left; margin:0 1em 1em 0; width: 33%" src="/img/blog/mvvm.jpeg"> If you haven’t had a chance to read the first entry in the series for context, <a href="/post/after-action-review-aar/">you can do so here</a>
+<img style="float: left; margin:0 1em 1em 0; width: 33%" src="/img/blog/mvvm.jpg"> If you haven’t had a chance to read the first entry in the series for context, <a href="/post/after-action-review-aar/">you can do so here</a>
 
 Way back in 2017 at Google I/O several architectural components were announced to help streamline Android development.  Kotlin support was also announced.  I've only just recently been able to get around to doing an app that implements both simultaneously.  I've included some of my lessons learned below:
 
@@ -198,13 +198,17 @@ Kotlin offers a Java interoperable language that offers a lot of Swift features 
 * The Kotlin paradigm for object property access and mutation is identical to that of Swift.  Just get and set the property explicitly.
 * The Kotlin 'let' keyword is tersely described as a function that "Calls the specified function block with this value as its argument and returns its result." It's real power is that it allows the object that calls it to have an '?.' operator, and only runs if the calling object or expression is not null. Think of it as a swift \`if let\` block where the unwrapped constant generated as a result of the \`if let\` is assigned the name \`it\`. An example is below:
 
-**let keyword**
+**let keyword
+**
 
-`findUser(id)?.let { return it.name }`
+`findUser(id)?.let {
+ return it.name
+ }`
 
 The Kotlin equivalent of the Swift \`guard let\` statement takes the following format ( the unwrappedString variable is available for use immediately following unwrapping).  Note that this function makes use of the 'Elvis operator' ('?:') which is similar to Swift's default value operator ('??') except that it can execute functions as well as return values.
 
-**guard let statement**
+**guard let statement
+**
 
 ```
 val nullSafeString : String? = "Cool string"
@@ -214,7 +218,10 @@ val nullSafeString : String? = "Cool string"
 val unwrappedString = nullSafeString ?: return
 ```
 
-The Kotlin documentation recommends solving most of the needs for static functions with package-level functions. They are simply declared outside a class in a source code file. Then you can call them anywhere and auto-import the function in Android Studio by pressing ALT+ENTER when the function is underlined. "Kotlin has “class” for classes that have multiple instances, and “object” for singletons. A “companion object” is an extension of the concept of “object”: an object that is a companion to a particular class, and thus has access to it’s private level methods and properties. Sometimes in Java you need to create anonymous inner class instances.  OnClickListener is an excellent, oft used example of this. Kotlin slightly generalizes this concept with object expressions and object declarations.  
+The Kotlin documentation recommends solving most of the needs for static functions with package-level functions. They are simply declared outside a class in a source code file. Then you can call them anywhere and auto-import the function in Android Studio by pressing ALT+ENTER when the function is underlined.
+ "Kotlin has “class” for classes that have multiple instances, and “object” for singletons.
+ A “companion object” is an extension of the concept of “object”: an object that is a companion to a particular class, and thus has access to it’s private level methods and properties.
+ Sometimes in Java you need to create anonymous inner class instances.  OnClickListener is an excellent, oft used example of this. Kotlin slightly generalizes this concept with object expressions and object declarations.  
 
 ## Kotlin Gotchas
 
