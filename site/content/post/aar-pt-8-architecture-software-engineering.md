@@ -1,6 +1,6 @@
 ---
 title: AAR pt 8 (Architecture/Software Engineering)
-date: '2018-08-05T07:08:20-07:00'
+date: '2018-06-01T07:08:20-07:00'
 ---
 <img style="float: left; margin:0 1em 1em 0; width: 33%" src="/img/blog/architecture.jpg"> If you haven’t had a chance to read the first entry in the series for context, <a href="/post/after-action-review-aar/">you can do so here</a>
 
