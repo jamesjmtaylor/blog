@@ -1,6 +1,6 @@
 ---
 title: Day 9-Frameworks
-date: 2016-09-15T12:13:50.000Z
+date: '2018-07-01T05:13:50-07:00'
 ---
 <img style="float: left; margin:0 2em 1em 0; width: 50%" src="/img/blog/day9.jpg"/> 
 
