@@ -8,20 +8,20 @@ It's been exactly a year since I did <a href="/post/aar-pt-4-swift-xcode/">my la
 
 * Apple's recomendation is that you use .pngs for image assets, not vector drawables (pdfs).  You can read more about their recommendation at <a href="https://developer.apple.com/library/content/documentation/2DDrawing/Conceptual/DrawingPrintingiOS/LoadingImages/LoadingImages.htm">https://developer.apple.com/library/content/documentation/2DDrawing/Conceptual/DrawingPrintingiOS/LoadingImages/LoadingImages.html</a>.
 * You can declare a delegate protocol in the same file as the class that uses.  Java will not allow you to do this, but Kotlin will.
-* If you need to erase a UserDefault key, use `UserDefaults.standard.removeObject(forKey: String)`. Do NOT use` UserDefaults.standard.setNilValueForKey(key: String)` which is a run-time crash.
+* If you need to erase a UserDefault key, use `UserDefaults.standard.removeObject(forKey: String)`. Do NOT use`UserDefaults.standard.setNilValueForKey(key: String)` which is a run-time crash.
 * By far the most versatile UserDefault type to use is dictionary.
 * UserDefaults, just like Android sharedPreferences, use a the repository pattern behind the scenes.  This means that when you set the key it's first saved to an in-memory cache, and then a SQLite database.
 * Swipe left to delete supported as of iOS8, but swipe right/left for custom actions is supported only as of iOS11
-* Do NOT try to add your own swipe action.  Use the` editActionForRowAt` tableview function.
+* Do NOT try to add your own swipe action.  Use the`editActionForRowAt` tableview function.
 * Do NOT try to keep track of tableView editing state yourself, use `tableView.isEditing`
-* If you are using `editActionsForRowAt `make sure to call refreshUI in your own custom implementation of `didEndEditingRowAt`
-* Only use `tableView.dequeCell(...)` in the `tableView.cellForRowAt `function. This is because it resets all the fields back to their defaults in order to promote cell reuse.
+* If you are using `editActionsForRowAt`make sure to call refreshUI in your own custom implementation of `didEndEditingRowAt`
+* Only use `tableView.dequeCell(...)` in the `tableView.cellForRowAt`function. This is because it resets all the fields back to their defaults in order to promote cell reuse.
 * If you want to prevent cell attributes from changing back to defaults when accessing use `tableView.CellForRow(at: indexPath)`
 * By using the view debugger at runtime you can see which views to introspect against for runtime modifications.
 * Use the font-book application that comes with MacOS to find and install fonts missing from your system.  Fonts must be in ".otf" format to be imported.
 * To see all possible font values use `for font in UIFont.familyNames{ print(UIFont.fontNames(forFamilyName:font)}`
 * It is possible to get TabBar and Navbar and superview height at run-time with self (i.e. self.view.frame.height)
-* Constraints are the only way to affect frames in `ViewDidLoad`.  After `didLayoutSubviews `you can change frames at will.
+* Constraints are the only way to affect frames in `ViewDidLoad`.  After `didLayoutSubviews`you can change frames at will.
 * In LLDB during debugging you can trigger a button by typing `expr self.buttonPressed()`
 * LLDB can dump all variables with "fr v" or "fr v -a"
 * AFNetworking is implicitly asynchronous, UNLESS you try to change the database on the callback thread due to the database ACID principles (Atomic, Complete, Isolated, Durable), at which point it implicitly becomes synchronous.
@@ -31,7 +31,7 @@ It's been exactly a year since I did <a href="/post/aar-pt-4-swift-xcode/">my la
 * Playing .gif files in Swift requires an external library.  It's generally not recommended though, since .gifs are generally much more size intensive and lower fidelity than an equivalent Lottie animation.
 * If you want to animate a layout constraint change, set the InterfaceBuilder constraint to the new value and then call animate on the method `View.NotifyLayoutChangeNeeded()`
 * You can dynamically and programatically add subviews within a stackview by calling `.addSubview(...)`
-* If presenting a .xib (Pronounced 'nib') over another storyboard view using `Bundle.main.loadNibNamed(...) `make sure to set the frame to match `self.view.bounds.width/height`
+* If presenting a .xib (Pronounced 'nib') over another storyboard view using `Bundle.main.loadNibNamed(...)`make sure to set the frame to match `self.view.bounds.width/height`
 * In storyboards the fit to size hotkey is "CMD+="
 * You can restart Timers by setting them to nil and re-initializing them with another constructor call.
 * You can control the natively provided UIBlurEffect radius by animating it's application to a view and pausing that animation at the fractional value of the blur radius that you want.
@@ -55,7 +55,7 @@ It's been exactly a year since I did <a href="/post/aar-pt-4-swift-xcode/">my la
 * You can drag and drop a tapRecognizer widget onto any other element to make it interactive (i.e. a UILabel)
 * Do NOT count on attributed strings in the storyboard to render correctly at run-time.
 * Schemes are just meta-data that bundle targets for compilation.  Scheme and Target should be the same name for ease of CI/CD scripting and cocoapods dependency specification.  They should also only be PascalCase, for the same reasons.
-* Local and Remote (push) notifications are handled in the AppDelegate in the `didReceiveRemoteNotification `function.
+* Local and Remote (push) notifications are handled in the AppDelegate in the `didReceiveRemoteNotification`function.
 * Local notifications can be triggered by timers even when the app is closed.
 * A Good optimization for tableView updates is to update using `indexPathsForVisibleCells`.
 * ScrollViews automatically add padding to their content in order to make room for the scrollbar.  You can hide the scrollbar inset by adjusting constraints to a setting larger than the superview. In iOS 9 scrollInsets are handled differently than iOS 10 and 11.  The solution is to set `self.autoAdjustScrollViewInsets = false` in viewDidLoad().
