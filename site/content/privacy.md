@@ -3,17 +3,8 @@ date = "2018-01-27T10:15:23-04:00"
 draft = false
 title = "Privacy Policy"
 +++
-<h1>Privacy Policy</h1>
 
-
-<p>Effective date: October 30, 2018</p>
-
-
-<p>I (James Taylor) develop and host the http://jjmtaylor.netlify.com website and as well as my native mobile applications.</p>
-
-<p>This page informs you of my policies regarding the collection, use, and disclosure of personal data when you use my Service and the choices you have associated with that data.
-
-<p>I use your data to provide and improve the website and mobile applications. By using the Service, you agree to the collection and use of information in accordance with this policy.</p>
+<p>I (James Taylor) develop and host the http://jjmtaylor.netlify.com website and as well as my native mobile applications. This page informs you of my policies regarding the collection, use, and disclosure of personal data when you use my Service and the choices you have associated with that data. I use your data to provide and improve the website and mobile applications. By using the Service, you agree to the collection and use of information in accordance with this policy.</p>
 
 
 <h2>Information Collection And Use</h2>
@@ -23,7 +14,6 @@ title = "Privacy Policy"
 <h3>Types of Data Collected</h3>
 
 <h4>Personal Data</h4>
-
 <p>While using my Service, I may ask you to provide me with certain personally identifiable information that can be used to contact or identify you ("Personal Data"). Personally identifiable information may include, but is not limited to:</p>
 
 <ul>
@@ -88,7 +78,7 @@ title = "Privacy Policy"
 <p>I may use third-party Service Providers to monitor and analyze the use of the Service.</p>    
 <ul>
         <li>
-        <p><strong>Google Analytics</strong></p>
+        <strong>Google Analytics</strong>
         <p>Google Analytics is a web analytics service offered by Google that tracks and reports website traffic. Google uses the data collected to track and monitor the use of the Service. This data is shared with other Google services. Google may use the collected data to contextualize and personalize the ads of its own advertising network.</p>
                         <p>For more information on the privacy practices of Google, please visit the Google Privacy & Terms web page: <a href="https://policies.google.com/privacy?hl=en">https://policies.google.com/privacy?hl=en</a></p>
     </li>
