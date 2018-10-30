@@ -142,3 +142,8 @@ paginate = 5
 	name = "Blog"
 	url  = "post/"
 	weight = 10
+
+[[menu.main]]
+	name = "Privacy Policy"
+	url  = "privacy"
+	weight = 15
