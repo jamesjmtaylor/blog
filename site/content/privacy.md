@@ -78,7 +78,7 @@ title = "Privacy Policy"
 <p>I may use third-party Service Providers to monitor and analyze the use of the Service.</p>    
 <ul>
         <li>
-        <strong>Google Analytics</strong>
+        <p><strong>Google Analytics</strong></p>
         <p>Google Analytics is a web analytics service offered by Google that tracks and reports website traffic. Google uses the data collected to track and monitor the use of the Service. This data is shared with other Google services. Google may use the collected data to contextualize and personalize the ads of its own advertising network.</p>
                         <p>For more information on the privacy practices of Google, please visit the Google Privacy & Terms web page: <a href="https://policies.google.com/privacy?hl=en">https://policies.google.com/privacy?hl=en</a></p>
     </li>
