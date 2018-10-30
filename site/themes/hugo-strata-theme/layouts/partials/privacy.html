@@ -1,0 +1,6 @@
+<section>
+	<header class="major">
+		{{ with .Site.Params.privacy.title }}<h2>{{ . | markdownify }}</h2>{{ end }}
+	</header>
+	{{ with .Site.Params.privacy.content }}<p>{{ . | markdownify }}</p>{{ end }}
+</section>
