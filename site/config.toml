@@ -145,5 +145,5 @@ paginate = 5
 
 [[menu.main]]
 	name = "Privacy Policy"
-	url  = "privacy"
+	url  = "privacy/"
 	weight = 15
