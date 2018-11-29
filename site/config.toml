@@ -99,8 +99,7 @@ paginate = 5
 		content = "I'm always open to new challenges and opportunities, or just to chat."
 
 		address = [
-			"10926 SW Celeste Ln",
-			"Portland, OR 97225",
+			"Portland, OR",
 			"United States"
 		]
 		phone = "503-410-4295"
