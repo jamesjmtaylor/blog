@@ -8,14 +8,14 @@ It's been a little over a  year since I did <a href="/post/aar-pt-5-android/">my
 
 * To add adb to the path (adb controls android debugging):
 
-1.  "cd ~"
+1. "cd ~"
 2. "vim .bash_profile"
 3. paste "export PATH=$PATH:/Users/jtaylor/Library/Android/sdk/platforms"
 
 * To restart adb from the terminal (if/when logcat crashes) 
 
-1.  "adb kill-server" 
-2.  "adb start-server"
+1. "adb kill-server" 
+2. "adb start-server"
 
 * You can run android unit tests from the terminal with "./gradlew clean test"
 * To see a list of connected devices in the terminal enter "adb devices"
@@ -24,7 +24,10 @@ It's been a little over a  year since I did <a href="/post/aar-pt-5-android/">my
 * In Android Studio, holding ALT while dragging your selection enables a column style selection.
 * You can only lock orientation for specific activities, not the entire app.  Each activity's orientation can be specified in the manifest
 * ALWAYS use Glide for image download/editing/caching/etc.  
-* ViewModels must never call View methods directly.  This is because Views are typically fragments and activities and are created and destroyed at will, leading to possible null pointer exceptions if called directly.
+* 
+
+ViewModels must never call View methods directly.  This is because Views are typically fragments and activities and are created and destroyed at will, leading to possible null pointer exceptions if called directly.
+
 * You can press ALT+F8 in the variables window during debugging to bring up the expression evaluater.
 * To calculate view size at runtime 
 
@@ -65,5 +68,6 @@ myView.measure(0,0); myView.getMeasuredWidth() / myView.getDisplayMetrics.densit
   * onSaveInstanceState is used for storing a small amount of data needed to easily reload activity state if the UI Controller is stopped and recreated by the system. Instead of storing complex objects here, persist the complex objects in local storage and store a unique ID for these objects in onSaveInstanceState(). Example: The most recent search query. <a href="<https://medium.com/google-developers/viewmodels-persistence-onsaveinstancestate-restoring-ui-state-and-loaders-fc7cc4a6c090>">Read more on Medium</a>
   * As of API 21 you have a choice to store a PersistableBundle as well as just a Bundle.  The former will be saved across device reboots.
 * An unfortunate side effect of the way hierarchical navigation is implemented in Android is that the activity that you navigate up to will be completely re-created from scratch.  This means that any saved instance state will be lost.  The parent activity is seen as a completely new activity. To get around this, add the attribute \`android:launchMode="singleTop"\` to the activity in the AndroidManifest.  If that's not an option you can also override the child activity's \`onOptionsItemSelected\` method and in the item id switch case android.R.id.home call NavUtils.navigateUpFromSameTask(this).
-* A bug currently exists with the Android RecyclerView. RecyclerView.dispatchLayout() can try to pull items from the scrap before calling mRecycler.clearOldPositions(). The consequence is that it pulls items from the common pool that had positions higher than the adapter size, leading to a run-time crash.  To get around this you need to turn off predictive animations by subclassing the recycler view's LayoutManager.  <a href="https://stackoverflow.com/questions/30220771/recyclerview-inconsistency-detected-invalid-item-position">Read more on StackOverflow</a>.
+* A bug currently exists with the Android RecyclerView. RecyclerView.dispatchLayout() can try to pull items from the scrap before calling mRecycler.clearOldPositions(). The consequence is that it pulls items from the common pool that had positions higher than the adapter size, leading to a run-time crash.  To get around this you need to turn off predictive animations by subclassing the recycler view's LayoutManager.  <a href="https://stackoverflow.com/questions/30220771/recyclerview-inconsistency-detected-invalid-item-position
+  ">Read more on StackOverflow</a>.
 * In android studio you can create code folding blocks, similar to the \`//MARK: -\` annotation in Xcode, by pressing CMD + ALT + T on a single line and selecting either "editor fold" or "region...end region".  While the former is a little uglier in the IDE, it folds all the encapsulated code in the Structure pane of the Android Studio IDE as well as in the main code pane.
