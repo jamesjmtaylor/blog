@@ -1,6 +1,6 @@
 ---
 title: AAR pt 10 (Android)
-date: '2018-12-01T08:56:22-08:00'
+date: '2019-01-01T08:56:22-08:00'
 ---
 <img style="float: left; margin:0 1em 1em 0; width: 10%" src="/img/blog/android.png"> If you haven’t had a chance to read the first entry in the series for context, <a href="/post/after-action-review-aar/">you can do so here</a>
 
