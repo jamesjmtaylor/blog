@@ -2,7 +2,7 @@
 title: AAR pt 10 (Android)
 date: '2019-01-01T08:56:22-08:00'
 ---
-<img style="float: left; margin:0 1em 1em 0; width: 66%" src="/img/blog/developers.png"> If you haven’t had a chance to read the first entry in the series for context, <a href="/post/after-action-review-aar/">you can do so here</a> 
+<img style="float: left; margin:0 1em 1em 0; width: 10%" src="/img/blog/developers.png"> If you haven’t had a chance to read the first entry in the series for context, <a href="/post/after-action-review-aar/">you can do so here</a>
 
 It's been a little over a  year since I did <a href="/post/aar-pt-5-android/">my last Android AAR entry</a>, so I figured it was about time that I had a new entry on my lessons learned with Android and Kotlin.  
 
