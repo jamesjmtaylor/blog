@@ -1,8 +1,8 @@
----
+﻿---
 title: AAR pt 10 (Android)
-date: '2019-01-01T08:56:22-08:00'
+date: '2018-12-01T08:56:22-08:00'
 ---
-<img style="float: left; margin:0 1em 1em 0; width: 33%" src="/img/blog/developers.jpg"> If you haven’t had a chance to read the first entry in the series for context, <a href="/post/after-action-review-aar/">you can do so here</a> 
+<img style="float: left; margin:0 2em 1em 0; width: 33%" src="/img/blog/developers.png"> If you have not had a chance to read the first entry in the series for context, <a href="/post/after-action-review-aar/">you can do so here</a> 
 
 It's been a little over a  year since I did <a href="/post/aar-pt-5-android/">my last Android AAR entry</a>, so I figured it was about time that I had a new entry on my lessons learned with Android and Kotlin.  
 
@@ -63,10 +63,10 @@ myView.measure(0,0); myView.getMeasuredWidth() / myView.getDisplayMetrics.densit
 * In order to pass objects between activities you must have the object implement the parcelable interface, which was built for android specifically for this purpose.  If you are using the Android Studio IDE then hovering over the class declarations name should give you a tooltip to auto-implement the interface.
 * View state like user input should be preserved when the Activity is restored after the process has been killed. ViewModels are NOT a replacement for onSaveInstanceState, because as soon as the activity's process is destroyed it's corresponding ViewModel is destroyed as well.
 * Configuration changes do not destroy the activity, but back-grounding the activity or opening a new activity will. You should use a combination of ViewModels, onSaveInstanceState() and local persistence to cover all situations.
-  * Local persistence is used for storing all data you don’t want to lose if you open and close the activity. For example: The collection of all song objects, which could include audio files and metadata. 
-  * ViewModels are used for storing all the data needed to display the associated UI Controller. Example: The results of the most recent search, the most recent search query.
-  * onSaveInstanceState is used for storing a small amount of data needed to easily reload activity state if the UI Controller is stopped and recreated by the system. Instead of storing complex objects here, persist the complex objects in local storage and store a unique ID for these objects in onSaveInstanceState(). Example: The most recent search query. <a href="<https://medium.com/google-developers/viewmodels-persistence-onsaveinstancestate-restoring-ui-state-and-loaders-fc7cc4a6c090>">Read more on Medium</a>
-  * As of API 21 you have a choice to store a PersistableBundle as well as just a Bundle.  The former will be saved across device reboots.
+* Local persistence is used for storing all data you don’t want to lose if you open and close the activity. For example: The collection of all song objects, which could include audio files and metadata. 
+* ViewModels are used for storing all the data needed to display the associated UI Controller. Example: The results of the most recent search, the most recent search query.
+* onSaveInstanceState is used for storing a small amount of data needed to easily reload activity state if the UI Controller is stopped and recreated by the system. Instead of storing complex objects here, persist the complex objects in local storage and store a unique ID for these objects in onSaveInstanceState(). Example: The most recent search query. <a href="<https://medium.com/google-developers/viewmodels-persistence-onsaveinstancestate-restoring-ui-state-and-loaders-fc7cc4a6c090>">Read more on Medium</a>
+* As of API 21 you have a choice to store a PersistableBundle as well as just a Bundle.  The former will be saved across device reboots.
 * An unfortunate side effect of the way hierarchical navigation is implemented in Android is that the activity that you navigate up to will be completely re-created from scratch.  This means that any saved instance state will be lost.  The parent activity is seen as a completely new activity. To get around this, add the attribute \`android:launchMode="singleTop"\` to the activity in the AndroidManifest.  If that's not an option you can also override the child activity's \`onOptionsItemSelected\` method and in the item id switch case android.R.id.home call NavUtils.navigateUpFromSameTask(this).
 * A bug currently exists with the Android RecyclerView. RecyclerView.dispatchLayout() can try to pull items from the scrap before calling mRecycler.clearOldPositions(). The consequence is that it pulls items from the common pool that had positions higher than the adapter size, leading to a run-time crash.  To get around this you need to turn off predictive animations by subclassing the recycler view's LayoutManager.  <a href="https://stackoverflow.com/questions/30220771/recyclerview-inconsistency-detected-invalid-item-position
   ">Read more on StackOverflow</a>.
