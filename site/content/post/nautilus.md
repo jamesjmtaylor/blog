@@ -1,0 +1,5 @@
+---
+title: Nautilus
+date: '2019-01-16T00:00:00-08:00'
+---
+<img style="float: left; margin:0 2em 1em 0; width: 33%" src="/img/blog/nautilus-office.jpg"> I just wanted to break the news that I got a new job!  I'm now a Senior Application Developer at Nautilus.  That's the same Nautilus Inc. that produces personal exercise equipment and owns Bowflex, Schwinn, and Octane.  Given the relative size of Nautilus (1,000 employees) in comparison to Steelcase (10,000 employees) I was surprised to learn that not only does Nautilus have a bigger software development team, but that the vast majority of them are Android and iOS developers (Steelcase had primarily ASP .NET Core developers).  That means that I'll have plenty of opportunities to learn new tips and tricks from fellow mobile developers.  The commute NIC (Nautilus Innovation Center) is not nearly as good as it was to the PDXIC (Portland Innovation Center), but I've found that I can mitigate that a fair amount by commuting in early and using their on-site gym rather than working out at home and leaving later.  In any case I hope to have a long and fulfilling career with Nautilus.  Wish me luck!
