@@ -1,0 +1,409 @@
+<!DOCTYPE HTML>
+
+<!-- 
+Strata by HTML5 UP
+html5up.net | @n33co
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>TeamCity Integration &middot; James JM Taylor</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="author" content="James Taylor">
+    	<meta name="description" content="Blog and Portfolio for James Taylor, a native and hybrid android and iOS mobile developer.">
+    	<meta http-equiv="content-language" content="en-us" />
+
+		<meta name="generator" content="Hugo 0.53" />
+
+		<!--[if lte IE 8]><script src='{{ .Site.BaseURL }}js/ie/html5shiv.js'></script><![endif]-->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+		<link rel="stylesheet" href="https://jjmtaylor.netlify.com/css/main.css" />
+		<!--[if lte IE 8]><link rel='stylesheet' href='{{ .Site.BaseURL }}/css/ie8.css' /><![endif]-->
+
+		
+	</head>
+
+	<body id="top">
+		<!-- Header -->
+<header id="header">
+	<a href="https://jjmtaylor.netlify.com/" class="image avatar"><img src="https://jjmtaylor.netlify.com/images/avatar.jpg" alt="" /></a>
+	
+		<h1><strong>Hi!</strong>  I&rsquo;m James, a dedicated<br> polyglot mobile developer<br> based in Portland, OR.</h1>
+	
+
+	
+		<nav id="sidebar">
+			<ul>
+			
+				<li><a href="https://jjmtaylor.netlify.com/about">About</a></li>
+			
+				<li><a href="https://jjmtaylor.netlify.com/post/">Blog</a></li>
+			
+				<li><a href="https://jjmtaylor.netlify.com/privacy/">Privacy Policy</a></li>
+			
+				<li><a href="https://jjmtaylor.netlify.com/">Home</a></li>
+			
+			</ul>
+		</nav>
+	
+</header>
+
+
+		<!-- Main -->
+		<div id="main">
+			
+	<span>
+		<h1>TeamCity Integration</h1>
+
+		<i class="fa fa-calendar"></i>&nbsp;&nbsp;
+<time datetime="2017-04-01 17:04:00 -0700 PDT">2017-04-01</time>&nbsp;&nbsp;
+
+
+
+
+
+	</span>
+
+	<p>
+	    
+
+<p><img style="float: left; margin:0 1em 0 0; width: 33%" src="/img/blog/teamcity.jpg"/></p>
+
+<p>Over the last couple sprints I’ve become my team’s informal DevOps subject matter expert.  This was because we needed
+to implement Continuous Integration/Continuous Delivery we were fairly low on the backlog of our Company’s formal
+DevOps team.  Over the course of teaching myself how GitHub, TeamCity, Slack, and HockeyApp can all plug into one
+another I wrote a pretty handy little tutorial.  Enjoy.</p>
+
+<h2 id="teamcity-installation">TeamCity Installation</h2>
+
+<p>The guide below is based on the TeamCity Documentation. A note on the terminal commands: you must execute them from
+the root of the file otherwise the shell script may fail to run.  For example, running <code>/buildAgent/bin/agent.sh start</code>
+will work, but trying to run <code>agent.sh start</code> from within the bin directory will fail.</p>
+
+<ol>
+<li>Download TeamCity for macOS</li>
+<li>Unzip the file and move the folder to <strong>/Library/</strong></li>
+<li>Make sure it works if started from the command line with <code>bin/teamcity-server.sh start</code></li>
+<li>Create the <strong>/Library/LaunchDaemons/jetbrains.teamcity.server.plist</strong> file with the following content:</li>
+</ol>
+
+<p>&lt;?xml version=&ldquo;1.0&rdquo;encoding=&ldquo;UTF-8&rdquo;?&gt;</p>
+
+<p>&lt;!DOCTYPE plist PUBLIC &ldquo;-//Apple//DTD PLIST 1.0//EN&rdquo;&ldquo;<a href="http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;">http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;</a></p>
+
+<p><plist version="1.0">
+<dict>
+    <key>WorkingDirectory</key>
+    <string>/Library/TeamCity</string>
+    <key>Debug</key>
+    <false/>
+    <key>Label</key>
+    <string>jetbrains.teamcity.server</string>
+    <key>OnDemand</key>
+    <false/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>ProgramArguments</key>
+    <array>
+        <string>bin/teamcity-server.sh</string>
+        <string>run</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>StandardErrorPath</key>
+    <string>logs/launchd.err.log</string>
+    <key>StandardOutPath</key>
+    <string>logs/launchd.out.log</string>
+</dict>
+</plist></p>
+
+<ol>
+<li>Test your file by running <code>launchctl load /Library/LaunchDaemons/jetbrains.teamcity.server.plist</code>.
+This command should start the TeamCity server (you can see this from logs/teamcity-server.log and in your browser).</li>
+<li>TeamCity server will now start automatically when the machine starts. If you&rsquo;re operating TeamCity from a headless
+server you will need to configure your mac to automatically login as the build user, as <a href="https://support.apple.com/kb/PH10650?locale=en_US">described here</a>.</li>
+<li>You can access the Web UI by navigating to <a href="http://localhost:8111/">http://localhost:8111/</a>  It may be necessary to restart your computer
+before accessing it for the first time.</li>
+<li>To change the server port, in the <strong><TeamCity Home>/conf/server.xml</strong> file, change the port number in the existing,
+uncommented, &ldquo;<Connector>&rdquo; XML node</li>
+<li>When you access the Web UI there will be a TeamCity First Start page.  Proceed through the prompts with the
+existing defaults.</li>
+<li>Accept the license agreement.</li>
+<li>Create an administrator account.  This is the account that will be used to log into the TeamCity software.</li>
+</ol>
+
+<h2 id="project-creation">Project Creation</h2>
+
+<p>A project in TeamCity is a <a href="https://support.apple.com/kb/PH10650?locale=en_US">collection of build configurations</a>.
+Build configurations are settings edited in the Web UI which are used to start a build. The settings include VCS,
+run procedure (build steps and environment parameters), and triggers (when to start a new build). Examples of build
+configurations are distribution, integration tests, prepare release distribution, &ldquo;nightly&rdquo; build, deploy to QA.  The
+project has a name, an <a href="https://confluence.jetbrains.com/display/TCD10/Identifier">ID</a>, and an optional description.
+In TeamCity, <a href="https://confluence.jetbrains.com/display/TCD10/Role+and+Permission">user roles and permissions</a> are
+managed on per-project basis.</p>
+
+<ol>
+<li>Access the Web UI by navigating to <a href="http://localhost:8111/">http://localhost:8111/</a></li>
+<li>Click the <strong>Projects</strong> button in the upper-left-hand corner.</li>
+<li>Select <strong>Create project</strong> and then <strong>Pointing to repository URL</strong></li>
+<li>Copy and paste the github project address into repository URL field (i.e. <a href="https://github.com/SC-TechDev/lcv3-ios">https://github.com/SC-TechDev/lcv3-ios</a>).</li>
+<li>Input your GitHub username and password and click Proceed</li>
+<li>Keep the auto-populated fields and click <strong>Proceed</strong>
+When Auto-detected Build Steps appears check the schemes (iOS) or buildTypes (Android) that you want to use for the build and click Use selected (NOTE: If deployed on a TeamCity Server you will need to make sure xCode and Android Studio are installed).<br /></li>
+<li>Add any build triggers that you want under the Triggers section</li>
+<li>Add any failure conditions you want under the Failure Conditions section (highly recommended: Fail build on metric change &gt; Fail build if: its percentage of class/method/line coverage &gt; compared to constant value &gt; is less than 50)
+(NOTE: Read this
+<a href="https://developer.apple.com/library/content/documentation/DeveloperTools/Conceptual/testing_with_xcode/chapters/07-code_coverage.html">Apple Developer Guide</a>
+and this <a href="https://developer.android.com/studio/test/index.html">Android Studio Guide</a>
+on the code coverage reporting as they are implemented in Xcode and Android Studio)</li>
+<li><strong>Build Features</strong>, <strong>Dependencies</strong>, <strong>Parameters</strong>, and <strong>Agent Requirements</strong> can be safely skipped for now.</li>
+</ol>
+
+<h2 id="build-agent-installation">Build Agent Installation</h2>
+
+<p>A Build Agent is a piece of software which listens for the commands from the TeamCity server and starts the actual
+build processes.  It is installed and configured separately from the TeamCity Server.  It can be installed on the same
+computer as TeamCity or a different computer.  (NOTE: This tutorial assumes the build agent is located on the same
+machine that the code was developed on.  If it&rsquo;s not paths will need to be adjusted to accommodate the build agent&rsquo;s
+output directory)</p>
+
+<ol>
+<li>Make sure a JDK (JRE) 1.6+ (1.8 is recommended) is properly installed on the agent computer from the command line
+with <strong>java -version</strong></li>
+<li>In the TeamCity Web UI, navigate to the <strong>Agents</strong> tab along the top.</li>
+<li>Click the <strong>Zip file distribution</strong> under the <strong>Install Build Agents</strong> section  to download the archive.</li>
+<li>Unzip the downloaded file into the desired directory.</li>
+<li>Navigate to the <strong><installation path>/buildAgent/conf</strong> directory, locate the file called <strong>buildAgent.dist.properties</strong>
+and rename it to <strong>buildAgent.properties</strong></li>
+<li>Edit the buildAgent.properties file to specify:
+
+<ul>
+<li>The TeamCity server URL (i.e. <strong>serverUrl=<a href="http://localhost:8111/">http://localhost:8111/</a></strong>)</li>
+<li>The name of the agent. (i.e <strong>name=lcv-ios</strong>)</li>
+<li>The path to the android SDK (i.e. <strong>env.ANDROID_HOME=/Users/jtaylor/Library/Android/sdk</strong>)</li>
+</ul></li>
+<li>Now you can start the agent manually by executing <strong><installation path>/buildAgent/bin/agent.sh start</strong>, or stop by
+executing <strong><installation path>/buildAgent/bin/agent.sh stop</strong></li>
+<li>To run the buildAgent automatically at startup, enter the command line interface and execute the following commands:
+
+<ul>
+<li><strong><installation path>/buildAgent/ mkdir logs</strong></li>
+<li><strong>sh <installation path>/buildAgent/bin/mac.launchd.sh load</strong> (It will take several minutes for the build agent
+to auto-upgrade)<br /></li>
+<li>When the build agent is upgraded and connects to TeamCity, stop it with
+<strong>sh <installation path>/buildAgent/bin/mac.launchd.sh unload</strong></li>
+</ul></li>
+<li>Copy <strong><installation path>/buildAgent/bin/jetbrains.teamcity.BuildAgent.plist</strong> file to <strong>$HOME/Library/LaunchAgents/</strong></li>
+<li>If you&rsquo;re operating the build agent from a headless server you will need to configure your mac to automatically
+login as the build user, as <a href="https://support.apple.com/kb/PH10650?locale=en_US">described here</a>. Reboot afterwards.</li>
+<li>If you want to start several build agents on the Mac, repeat the procedure of installing and starting build agent
+with the following changes
+
+<ul>
+<li>Install the second build agent in a different director7 In <strong><installation path>/buildAgent/conf/buildAgent.properties</strong>,
+you should specify an unique name for the build agent</li>
+<li>Start and upgrade second agent via the <strong><installation path>/buildAgent/bin/agent.sh</strong> script</li>
+<li>In <strong><installation path>/buildAgent/bin/jetbrains.teamcity.BuildAgent.plist</strong> file, you should specify unique
+<strong>&ldquo;Label</strong>&rdquo; parameter (<strong>jetbrains.teamcity.BuildAgent</strong> by default)</li>
+<li>When copying <strong>jetbrains.teamcity.BuildAgent.plist</strong> file to LaunchAgents, you should give it a different name</li>
+</ul></li>
+<li>When the newly installed agent connects to the server for the first time, it appears on the <strong>Agents</strong> page,
+<strong>Unauthorized agents</strong> tab visible to administrators/users with the permissions to authorize it. Agents will not run
+builds until they are authorized in the TeamCity web UI. The agent running on the same computer as the server is
+authorized by default.</li>
+</ol>
+
+<h2 id="slack-integration">Slack Integration</h2>
+
+<p>In order to receive build status updates in a slack channel:</p>
+
+<ol>
+<li>Download the TeamCity Slack plugin zip file.</li>
+<li>In the TeamCity Web UI, navigate to the <strong>Administration</strong> tab along the top.</li>
+<li>Select <strong>Plugins List</strong> from the bottom left.</li>
+<li>Select <strong>Upload plugin zip</strong> and select the slack plugin zip file when the dialog box appears.</li>
+<li>Restart TeamCity server.</li>
+<li>In the TeamCity Web UI, navigate to the <strong>admin</strong> tab along the top.</li>
+<li>Select <strong>Notification Rules</strong> and then <strong>Slack Notifier</strong></li>
+<li>Create an incoming webook (<a href="https://my.slack.com/services/new/incoming-webhook">https://my.slack.com/services/new/incoming-webhook</a>) in Slack</li>
+<li>Copy and paste the <strong>webhook URL</strong> given by slack in step 8 into the <strong>Slack Notifier</strong> notification rule from step 7.</li>
+<li>Pick a Slack username to use for automated notifications.</li>
+<li>Pick a Slack channel to notify on build events.</li>
+<li>Click <strong>Save</strong></li>
+<li>Select <strong>Add new rule</strong> and then define what you want the TeamCity Slackbot to notify you of (build failed, build succeeded, etc.)</li>
+</ol>
+
+<h2 id="hockeyapp-integration">HockeyApp Integration</h2>
+
+<p>HockeyApp integration involves the addition of two build steps to both platforms.</p>
+
+<ol>
+<li>Access the Web UI by navigating to <a href="http://localhost:8111/">http://localhost:8111/</a></li>
+<li>Select <strong>Administration &gt; Projects</strong> and select <strong>edit</strong> to the right of the ios project</li>
+<li>Under <strong>Build Configurations</strong> select <strong>edit</strong> for the <strong>Build</strong></li>
+<li>Select <strong>Build Steps</strong> from the side bar and click <strong>Add build step</strong> and then select <strong>Command Line</strong> from the drop down menu.</li>
+<li>Name the step &ldquo;Archive and Export&rdquo; and paste the code below into the Custom Script text box
+
+<ul>
+<li>xcodebuild -workspace <workspaceName>.xcworkspace -scheme <schemeName> archive -archivePath
+/Users/<username>/Desktop/<projectname>.xcarchive</li>
+<li>(i.e. xcodebuild -workspace  /Users/jtaylor/Desktop/GitHub\ Clones/lcv3-ios/lcv3.xcworkspace -scheme pa-proto
+archive -archivePath /Users/jtaylor/Desktop/lcv3.xcarchive)</li>
+<li>xcodebuild -exportArchive -exportFormat ipa -archivePath /Users/<username>/Desktop/<projectname>.xcarchive
+-exportPath  <appName> -exportProvisioningProfile <provisioningProfileName></li>
+<li>(i.e. xcodebuild -exportArchive -exportFormat ipa -archivePath /Users/jtaylor/Desktop/lcv3.xcarchive -exportPath /Users/jtaylor/Desktop/lcv3 -exportProvisioningProfile LCV3\ HockeyApp\ Ad\ Hoc)</li>
+</ul></li>
+<li>Click <strong>Save</strong></li>
+<li>Under your <strong>Project Settings</strong> (the level above your <strong>Build Configuration</strong>) click <strong>Create build Configuration</strong>.</li>
+<li>You should not have a need to add your code repository</li>
+<li>Under <strong>Dependencies</strong> select <strong>Add new artifact dependency</strong>
+
+<ul>
+<li>For <strong>Depend on</strong>, select the <strong>Build Configuration</strong> we created in the previous steps</li>
+<li>For <strong>Get artifacts from</strong>, select <strong>Last successful build</strong></li>
+<li>For <strong>Artifact rules</strong> enter the <strong>Artifact Paths</strong> field of the previous <strong>Build Configuration</strong> (i.e. <AppName>.ipa)</li>
+<li>Make sure to check <strong>Clean destination paths before downloading artifacts</strong></li>
+</ul></li>
+<li>Click <strong>Add build step</strong> and then select <strong>Command Line</strong> from the drop down menu.</li>
+<li>Name the step &ldquo;Deploy to HockeyApp&rdquo; and paste the code below into the <strong>Custom Script</strong> text box (Read more about the HockeyApp API method calls here.
+
+<ul>
+<li>set -x curl -F &ldquo;status=2&rdquo; -F &ldquo;notify=0&rdquo; -F &ldquo;notes=Build %build.counter%&rdquo; -F &ldquo;notes_type=0&rdquo; -F &ldquo;ipa=@<AppName>.ipa&rdquo;-H &ldquo;X-HockeyAppToken: <API_Token_From_HockeyApp>&rdquo; <a href="https://rink.hockeyapp.net/api/2/apps/upload">https://rink.hockeyapp.net/api/2/apps/upload</a></li>
+<li>(i.e. set -x curl  -F &ldquo;status=2&rdquo; -F &ldquo;notify=0&rdquo; -F &ldquo;notes=Build %build.counter%&rdquo; -F &ldquo;notes_type=0&rdquo; -F &ldquo;ipa=@lcv3.ipa&rdquo; -H &ldquo;X-HockeyAppToken: b2f7b3b1158f4c3faf62ccff9a6a9cb0&rdquo; <a href="https://rink.hockeyapp.net/api/2/apps/upload">https://rink.hockeyapp.net/api/2/apps/upload</a>)</li>
+</ul></li>
+<li>Click <strong>Save</strong></li>
+<li>Select <strong>Administration &gt; Projects</strong> and select <strong>edit</strong> to the right of the Android project</li>
+<li>Under <strong>Build Configurations</strong> select <strong>edit</strong> for the Build</li>
+<li>Select <strong>Build Steps</strong> from the side bar</li>
+<li>Make sure the starting step is a Gradle task, NOT the command line that it auto-populates with.  If it states
+Command Line under the Parameters Description delete it and create the Gradle task (make sure
+<strong>Use gradle wrapper to build project</strong> is checked).</li>
+<li>Click <strong>Add build step</strong> and then select <strong>Command Line</strong> from the drop down menu.</li>
+<li>Name the step &ldquo;Archive and Export&rdquo; and paste the code below into the <strong>Custom Script</strong> text box
+
+<ul>
+<li>./gradlew assemble</li>
+</ul></li>
+<li>Click <strong>Save</strong>ß</li>
+<li>Under your <strong>Project Settings</strong> (the level above your Build Configuration) click <strong>Create build Configuration</strong>.</li>
+<li>You should not have a need to add your code repository</li>
+<li>Under <strong>Dependencies</strong> select <strong>Add new artifact dependency</strong>
+
+<ul>
+<li>For <strong>Depend on</strong>, select the <strong>Build Configuration</strong> we created in the previous steps</li>
+<li>For <strong>Get artifacts from</strong>, select <strong>Last successful build</strong></li>
+<li>For <strong>Artifact rules</strong> enter the <strong>Artifact Paths</strong> field of the previous <strong>Build Configuration</strong>ß (i.e. <AppName>.ipa)</li>
+<li>Make sure to check <strong>Clean destination paths before downloading artifacts</strong></li>
+</ul></li>
+<li>Click <strong>Add build step</strong> and then select <strong>Command Line</strong> from the drop down menu.</li>
+<li>Name the step &ldquo;Deploy to HockeyApp&rdquo; and paste the code below into the Custom Script text box (Read more about the HockeyApp API method calls here.
+
+<ul>
+<li>set -x curl -F &ldquo;status=2&rdquo; -F &ldquo;notify=0&rdquo; -F &ldquo;notes=Build %build.counter%&rdquo; -F &ldquo;notes_type=0&rdquo; -F &ldquo;ipa=@<AppName>.apk&rdquo;-H &ldquo;X-HockeyAppToken: <API_Token_From_HockeyApp>&rdquo; <a href="https://rink.hockeyapp.net/api/2/apps/upload">https://rink.hockeyapp.net/api/2/apps/upload</a></li>
+<li>(i.e. set -x curl  -F &ldquo;status=2&rdquo; -F &ldquo;notify=0&rdquo; -F &ldquo;notes=Build %build.counter%&rdquo; -F &ldquo;notes_type=0&rdquo; -F &ldquo;ipa=@/Users/jtaylor/Desktop/GitHub Clones/lcv3-aos/app/build/outputs/apk/app-release-unsigned.apk&rdquo; -H &ldquo;X-HockeyAppToken: b2f7b3b1158f4c3faf62ccff9a6a9cb0&rdquo; <a href="https://rink.hockeyapp.net/api/2/apps/upload">https://rink.hockeyapp.net/api/2/apps/upload</a>)</li>
+</ul></li>
+</ol>
+
+<h2 id="production-configuration">Production Configuration</h2>
+
+<p>Out-of-the-box TeamCity server installation is suitable for evaluation purposes. For production use you will need to
+perform additional configuration which typically includes:</p>
+
+<ol>
+<li><a href="https://confluence.jetbrains.com/display/TCD10/Installing+and+Configuring+the+TeamCity+Server#InstallingandConfiguringtheTeamCityServer-changingServerPort">Configuring correct server port</a>) (and access via https)</li>
+<li>Make sure server URL, email and (optionally) Jabber server settings are specified and are correct</li>
+<li>Configuring the server process for OS-dependent autostart on machine reboot</li>
+<li><a href="https://confluence.jetbrains.com/display/TCD10/TeamCity+Data+Directory">Using reliable storage for TeamCity Data Directory</a></li>
+<li><a href="https://confluence.jetbrains.com/display/TCD10/Setting+up+an+External+Database">Using external databases</a></li>
+<li><a href="https://confluence.jetbrains.com/display/TCD10/Installing+and+Configuring+the+TeamCity+Server#InstallingandConfiguringtheTeamCityServer-memory">Configuring recommended memory settings, use &ldquo;maximum settings&rdquo; for active or growing servers</a></li>
+<li><a href="https://confluence.jetbrains.com/pages/viewpage.action?pageId=74845225#HowTo...-TeamCitySecurityNotes">Reviewing server security notes</a></li>
+<li><a href="https://confluence.jetbrains.com/display/TCD10/TeamCity+Data+Backup">Planning for regular backups</a></li>
+<li><a href="https://confluence.jetbrains.com/display/TCD10/Upgrade">Planning for regular upgrades</a> to the latest TeamCity releases
+(since TeamCity 10.0.3) Consider adding the &ldquo;teamcity.installation.completed=true&rdquo; line into the
+<TeamCity Home Directory>\conf\teamcity-startup.properties file - this will prevent the server from creating an
+ administrator user if no such user is found</li>
+</ol>
+
+	</p>
+
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "jjmtaylor" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+		</div>
+
+		<!-- Footer -->
+<footer id="footer">
+	<ul class="icons">
+		
+		
+        <li><a href="//facebook.com/James.Jordan.Moody.Taylor" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+        
+		
+		
+		<li><a href="//github.com/jamesjmtaylor" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
+		
+		
+		<li><a href="//linkedin.com/in/jamesjmtaylor" target="_blank" class="icon fa-linkedin-square"><span class="label">Linkedin</span></a></li>
+		
+		
+		
+		
+		<li><a href="https://jjmtaylor.netlify.com/#contact-form" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+		
+	</ul>
+
+	<ul class="copyright">
+		
+		<li>&copy; James Taylor</li>
+		
+		<li>Design: <a href="//html5up.net">HTML5 UP</a></li>
+		
+		<li>Demo Images: <a href="//unsplash.com/">Unsplash</a></li>
+		
+	</ul>
+</footer>
+
+<!-- Scripts -->
+<script src="https://jjmtaylor.netlify.com/js/jquery.min.js"></script>
+<script src="https://jjmtaylor.netlify.com/js/jquery.poptrox.min.js"></script>
+<script src="https://jjmtaylor.netlify.com/js/skel.min.js"></script>
+<script src="https://jjmtaylor.netlify.com/js/util.js"></script>
+
+<script src="https://jjmtaylor.netlify.com/js/main.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-79422202-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+	</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+
+<!-- 
+Strata by HTML5 UP
+html5up.net | @n33co
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>AAR pt 8 (Architecture/Software Engineering) &middot; James JM Taylor</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="author" content="James Taylor">
+    	<meta name="description" content="Blog and Portfolio for James Taylor, a native and hybrid android and iOS mobile developer.">
+    	<meta http-equiv="content-language" content="en-us" />
+
+		<meta name="generator" content="Hugo 0.53" />
+
+		<!--[if lte IE 8]><script src='{{ .Site.BaseURL }}js/ie/html5shiv.js'></script><![endif]-->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+		<link rel="stylesheet" href="https://jjmtaylor.netlify.com/css/main.css" />
+		<!--[if lte IE 8]><link rel='stylesheet' href='{{ .Site.BaseURL }}/css/ie8.css' /><![endif]-->
+
+		
+	</head>
+
+	<body id="top">
+		<!-- Header -->
+<header id="header">
+	<a href="https://jjmtaylor.netlify.com/" class="image avatar"><img src="https://jjmtaylor.netlify.com/images/avatar.jpg" alt="" /></a>
+	
+		<h1><strong>Hi!</strong>  I&rsquo;m James, a dedicated<br> polyglot mobile developer<br> based in Portland, OR.</h1>
+	
+
+	
+		<nav id="sidebar">
+			<ul>
+			
+				<li><a href="https://jjmtaylor.netlify.com/about">About</a></li>
+			
+				<li><a href="https://jjmtaylor.netlify.com/post/">Blog</a></li>
+			
+				<li><a href="https://jjmtaylor.netlify.com/privacy/">Privacy Policy</a></li>
+			
+				<li><a href="https://jjmtaylor.netlify.com/">Home</a></li>
+			
+			</ul>
+		</nav>
+	
+</header>
+
+
+		<!-- Main -->
+		<div id="main">
+			
+	<span>
+		<h1>AAR pt 8 (Architecture/Software Engineering)</h1>
+
+		<i class="fa fa-calendar"></i>&nbsp;&nbsp;
+<time datetime="2018-07-01 07:08:20 -0700 PDT">2018-07-01</time>&nbsp;&nbsp;
+
+
+
+
+
+	</span>
+
+	<p>
+	    <p><img style="float: left; margin:0 1em 1em 0; width: 33%" src="/img/blog/architecture.jpg"> If you haven’t had a chance to read the first entry in the series for context, <a href="/post/after-action-review-aar/">you can do so here</a></p>
+
+<p>A lot of software development is more general than the idiosyncrasies of this framework over that.  Over the last year I&rsquo;ve come across a few pretty handy rules of thumb to use while planning or implementing features.  A few of these are more technical (i.e. web tokens) but were included because their application spans a breadth of platforms.  Others are more general but opinionated. As an example, the first item in the list below is a more functional paradigm that others may or may not agree with, but that I have in my experience found to help reduce the overall number of bugs in production code.</p>
+
+<ul>
+<li>You should use immutable (they can&rsquo;t be changed, or <em>mutated</em>) objects where possible for speed and thread safety.  If you need to make a change you should create a new immutable copy of the object with the changes applied to it.</li>
+<li>Always time-box an attempt to integrate a new open-source library.  If you&rsquo;re not done at the end of the exploration, capture your learnings, disseminate them to the team, and either petition for more time or to time-box a different framework option.</li>
+<li>ARM stands for Advanced Reduced Instruction Set Computing (RISC) Machine, and is used to power IoT, smartphones, RaspberryPi&rsquo;s, and BeagleBoards.  It is not compatible with x86 Complex Instruction Set Computing (CISC) that most desktop computers use. Applications developed for ARM must be recompiled for x86 and vice versa.</li>
+<li>JSON Web Tokens (JWTs) can be deconstructed and constructed at <a href="jwt.io">JWT.io</a>, allowing you to see what info is encoded in the token itself (i.e. expiration time, object id, etc). You can encode attributes into a token (i.e.  expiration time, userId, etc.) yourself as well.</li>
+<li>BFS and DFS are identical in time complexity (unless searching for the shortest path between two points, which is best served by a binomial BFS).  Space complexity depends on whether the graph is wider or deeper.</li>
+<li>For all code reviews:</li>
+</ul>
+
+<ol>
+<li>Go through the functionality</li>
+<li>Show and describe the code</li>
+<li>Go through the unit tests</li>
+<li>Address any remaining questions</li>
+</ol>
+
+<ul>
+<li>The &ldquo;Rule of 30&rdquo; is that there should be no more than 30 lines per method, 30 methods per class, 30 classes per module, etc.  This reduces complexity and overall bug density.</li>
+<li>Most modern programming languages are now pass reference by value; that is to say that they pass values to methods through values, the value being the reference to the object.  That means that during a method call there are two values that point to the same object.  The easiest way I&rsquo;ve found to remember it is that it&rsquo;s like tying a second string to a balloon.  If you cut one of the strings (i.e. set the reference to null in the method) you still have the other reference to retain the object in memory.</li>
+<li>Their are two ways to organize projects, package by layer (i.e. ViewControllers, Views, etc.) and package by feature (i.e. Login section, Tab 1 section, etc).  The former is easier starting out since there&rsquo;s no question where different filetypes go.  The latter is easier for long term projects though because new developers (or old, returning developers) won&rsquo;t have as many questions as to where to find the files to implement a new feature.</li>
+<li>A Bloom Filter is a Hashmap of Bools intended to track if a value exists in a Database or Network call.  Each value in the database or network is hashed with 3 different hashes and then the value is marked as true at each of the hash indexes.  Then for lookup if you get 3 trues the value MAY be in the database or network.  But any less than that and the value definitely isn&rsquo;t in the database or network.  This solution is more space efficient than a POJO hashmap and more time efficient than querying the database or network each and every time.  The larger the bloom array the more certainty that the object queried is actually present.<br /></li>
+<li>The &ldquo;copy-left&rdquo; moniker refers to licences that force you to open-source your code if you use that licensed library.</li>
+<li>Kerning refers to the space between a pair of specific letters and hails back to the printing press when letters would have angles cut out of their blocks so they could nest better with other letters, the characters &lsquo;AV&rsquo; being one example.  Letter spacing on the other hand refers to the spacing between all letters.</li>
+<li>There are 3 main Timezone encodings: Windows (i.e &ldquo;Pacific Standard Time&rdquo;) IANA (i.e. &ldquo;America/San-Francisco&rdquo;), and offset (i.e. &ldquo;+0800&rdquo;)</li>
+<li>Hungarian notation is just prefixing variables with a lower-case letter.  Examples include s for singleton (i.e. &ldquo;sInstance&rdquo;) m for main (i.e. &ldquo;mVar&rdquo;).<br /></li>
+<li>The key to reactive programming is &ldquo;Push, don&rsquo;t pull&rdquo;. For example, VMs shouldn&rsquo;t have getters, just an update() method that pushes a static state to it&rsquo;s observers.</li>
+<li>Override Java&rsquo;s &lsquo;clone()&rsquo; method of Objects judiciously.  That&rsquo;s because it does NOT create deep copies of the mutable objects that may be referenced as attributes of the original object.  To make deep copies of those you need to override their &lsquo;clone()&rsquo; methods and call them as well in the original object&rsquo;s &lsquo;clone()&rsquo; call.</li>
+</ul>
+
+<p>Photo by Daniel McCullough on Unsplash</p>
+
+	</p>
+
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "jjmtaylor" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+		</div>
+
+		<!-- Footer -->
+<footer id="footer">
+	<ul class="icons">
+		
+		
+        <li><a href="//facebook.com/James.Jordan.Moody.Taylor" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+        
+		
+		
+		<li><a href="//github.com/jamesjmtaylor" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
+		
+		
+		<li><a href="//linkedin.com/in/jamesjmtaylor" target="_blank" class="icon fa-linkedin-square"><span class="label">Linkedin</span></a></li>
+		
+		
+		
+		
+		<li><a href="https://jjmtaylor.netlify.com/#contact-form" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+		
+	</ul>
+
+	<ul class="copyright">
+		
+		<li>&copy; James Taylor</li>
+		
+		<li>Design: <a href="//html5up.net">HTML5 UP</a></li>
+		
+		<li>Demo Images: <a href="//unsplash.com/">Unsplash</a></li>
+		
+	</ul>
+</footer>
+
+<!-- Scripts -->
+<script src="https://jjmtaylor.netlify.com/js/jquery.min.js"></script>
+<script src="https://jjmtaylor.netlify.com/js/jquery.poptrox.min.js"></script>
+<script src="https://jjmtaylor.netlify.com/js/skel.min.js"></script>
+<script src="https://jjmtaylor.netlify.com/js/util.js"></script>
+
+<script src="https://jjmtaylor.netlify.com/js/main.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-79422202-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+	</body>
+</html>

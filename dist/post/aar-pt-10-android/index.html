@@ -1,0 +1,232 @@
+<!DOCTYPE HTML>
+
+<!-- 
+Strata by HTML5 UP
+html5up.net | @n33co
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>AAR pt 10 (Android) &middot; James JM Taylor</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="author" content="James Taylor">
+    	<meta name="description" content="Blog and Portfolio for James Taylor, a native and hybrid android and iOS mobile developer.">
+    	<meta http-equiv="content-language" content="en-us" />
+
+		<meta name="generator" content="Hugo 0.53" />
+
+		<!--[if lte IE 8]><script src='{{ .Site.BaseURL }}js/ie/html5shiv.js'></script><![endif]-->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+		<link rel="stylesheet" href="https://jjmtaylor.netlify.com/css/main.css" />
+		<!--[if lte IE 8]><link rel='stylesheet' href='{{ .Site.BaseURL }}/css/ie8.css' /><![endif]-->
+
+		
+	</head>
+
+	<body id="top">
+		<!-- Header -->
+<header id="header">
+	<a href="https://jjmtaylor.netlify.com/" class="image avatar"><img src="https://jjmtaylor.netlify.com/images/avatar.jpg" alt="" /></a>
+	
+		<h1><strong>Hi!</strong>  I&rsquo;m James, a dedicated<br> polyglot mobile developer<br> based in Portland, OR.</h1>
+	
+
+	
+		<nav id="sidebar">
+			<ul>
+			
+				<li><a href="https://jjmtaylor.netlify.com/about">About</a></li>
+			
+				<li><a href="https://jjmtaylor.netlify.com/post/">Blog</a></li>
+			
+				<li><a href="https://jjmtaylor.netlify.com/privacy/">Privacy Policy</a></li>
+			
+				<li><a href="https://jjmtaylor.netlify.com/">Home</a></li>
+			
+			</ul>
+		</nav>
+	
+</header>
+
+
+		<!-- Main -->
+		<div id="main">
+			
+	<span>
+		<h1>AAR pt 10 (Android)</h1>
+
+		<i class="fa fa-calendar"></i>&nbsp;&nbsp;
+<time datetime="2018-12-01 08:56:22 -0800 PST">2018-12-01</time>&nbsp;&nbsp;
+
+
+
+
+
+	</span>
+
+	<p>
+	    <p><img style="float: left; margin:0 2em 1em 0; width: 33%" src="/img/blog/developers.png"> If you have not had a chance to read the first entry in the series for context, <a href="/post/after-action-review-aar/">you can do so here</a></p>
+
+<p>It&rsquo;s been a little over a  year since I did <a href="/post/aar-pt-5-android/">my last Android AAR entry</a>, so I figured it was about time that I had a new entry on my lessons learned with Android and Kotlin.</p>
+
+<ul>
+<li>To add adb to the path (adb controls android debugging):</li>
+</ul>
+
+<ol>
+<li>&ldquo;cd ~&rdquo;</li>
+<li>&ldquo;vim .bash_profile&rdquo;</li>
+<li>paste &ldquo;export PATH=$PATH:/Users/jtaylor/Library/Android/sdk/platforms&rdquo;</li>
+</ol>
+
+<ul>
+<li>To restart adb from the terminal (if/when logcat crashes)</li>
+</ul>
+
+<ol>
+<li>&ldquo;adb kill-server&rdquo;</li>
+<li>&ldquo;adb start-server&rdquo;</li>
+</ol>
+
+<ul>
+<li>You can run android unit tests from the terminal with &ldquo;./gradlew clean test&rdquo;</li>
+<li>To see a list of connected devices in the terminal enter &ldquo;adb devices&rdquo;</li>
+<li>&ldquo;adb shell&rdquo; in the Android Studio terminal tab on the bottom allows you to examine app directories (i.e. if you&rsquo;re saving a file to disk in the app). SQLite tables for your android app are available by navigating to data/data/yourPackageName&rdquo;.</li>
+<li>If you need to debug Android Wear you can also use TCP forwarding through adb</li>
+<li>In Android Studio, holding ALT while dragging your selection enables a column style selection.</li>
+<li>You can only lock orientation for specific activities, not the entire app.  Each activity&rsquo;s orientation can be specified in the manifest</li>
+<li>ALWAYS use Glide for image download/editing/caching/etc.<br /></li>
+<li></li>
+</ul>
+
+<p>ViewModels must never call View methods directly.  This is because Views are typically fragments and activities and are created and destroyed at will, leading to possible null pointer exceptions if called directly.</p>
+
+<ul>
+<li>You can press ALT+F8 in the variables window during debugging to bring up the expression evaluater.</li>
+<li>To calculate view size at runtime</li>
+</ul>
+
+<pre><code>myView.measure(0,0); myView.getMeasuredWidth() / myView.getDisplayMetrics.density
+</code></pre>
+
+<ul>
+<li>If you clone a project with multiple projects in it, open the base folder in Android Studio and select the project you want to run in the dropdown menu by the play button.  If a module doesn&rsquo;t appear in the drop-down, check it&rsquo;s corresponding &lsquo;build.gradle&rsquo; file and see if its actually &ldquo;apply plugin: &lsquo;com.android.application&rsquo;&rdquo; or just &ldquo;apply plugin: &lsquo;com.android.library&rsquo;&rdquo;</li>
+<li>CTRL+R for local replace, CMD+R for global replace.</li>
+<li>Best way to check if an object&rsquo;s collection is null is in the object&rsquo;s accessor method (return an empty collection, not null)</li>
+<li>Primitive data types (int, double, etc.) cannot be null.  Objects (Integer, Double) can.</li>
+<li>Robelectric (a unit testing framework) is limited to one thread and you must manipulate views manually.</li>
+<li>Separate overloaded singleton constructors can lead to multiple singletons if you don&rsquo;t know exactly what you&rsquo;re doing.</li>
+<li>TimerTasks cannot be re-run once cancelled.  They must be de-allocated entirely and re instantiated first.</li>
+<li>A pointer points to a memory location and can be null.  A reference refers to an object  and shouldn&rsquo;t ever be null.  Because references are implemented with pointers in Java, accessing a bad reference throws a NullPointerException.</li>
+<li>Google has a LOT of their own libraries for functionality: Glide for image loading and caching, Room for ORM, Volley for networking, Firebase for Analytics, ViewModel and Livedata for MVVM, GSON for JSON (de)serialization</li>
+<li>Push notifications are a component of Firebase, which is a component of Google Play Console Services and GCP (Google Cloud Platform)</li>
+<li>In order for an organization to appear it must have a GCP (Google Cloud Platform) asset</li>
+<li>Once an app is assigned to an organization it can never be transferred</li>
+<li>Google API is just another name for GCP</li>
+<li>If you ever get &ldquo;cannot resolve&rdquo; errors for everything, just go to the menu and select Files&gt;Invalidate caches&gt;Invalidate &amp; Restart&rdquo;</li>
+<li>The difference between &ldquo;/@+id&rdquo; and &ldquo;/@id&rdquo; are that the former adds an id entry in R.id, the latter references the entry.</li>
+<li>Avoid using &ldquo;include&rdquo; xml tag to reference a fragment xml, it usually doesn&rsquo;t work.  Instead use a generic FrameLayout that you can .add(&hellip;).addToBackstack.commit()&rdquo; to to, or use the &ldquo;Fragment&rdquo; xml tag directly in the activity xml.</li>
+<li>If you have a class that has difficult to isolate dependencies (i.e. DB/Network) create a subclass for your tests with an overridden constructor that doesn&rsquo;t actually access the DB or Network.</li>
+<li>Unlike iOS storyboards, aOS XML files CANNOT have views that start outside of the screen, unless you are using a ConstraintLayout.</li>
+<li>Best practice for lists is to use a recyclerView fragment that instantiates it&rsquo;s view in an Activity&rsquo;s FrameLayout.</li>
+<li>To invisibly increase a touch target increase the objects padding.  You can use negative margins on overlapped components to compensate for the increase padding.</li>
+<li>Passing GSON a string that&rsquo;s not actually an object will crash the app.</li>
+<li>The difference between a bundle and a hashmap is that a bundle can only contain parcelable primitives (i.e. int, bool, string) whereas Hashmaps can contain objects (Integer, Boolean, String).</li>
+<li>Hashmaps also autobox (create objects for) primitives that are passed to it.</li>
+<li>If an item has a different UI when activated you can use a &ldquo;selection.xml&rdquo; in your drawables folder and assign that file to the object&rsquo;s XML.</li>
+<li>In order to pass objects between activities you must have the object implement the parcelable interface, which was built for android specifically for this purpose.  If you are using the Android Studio IDE then hovering over the class declarations name should give you a tooltip to auto-implement the interface.</li>
+<li>View state like user input should be preserved when the Activity is restored after the process has been killed. ViewModels are NOT a replacement for onSaveInstanceState, because as soon as the activity&rsquo;s process is destroyed it&rsquo;s corresponding ViewModel is destroyed as well.</li>
+<li>Configuration changes do not destroy the activity, but back-grounding the activity or opening a new activity will. You should use a combination of ViewModels, onSaveInstanceState() and local persistence to cover all situations.</li>
+<li>Local persistence is used for storing all data you don’t want to lose if you open and close the activity. For example: The collection of all song objects, which could include audio files and metadata.</li>
+<li>ViewModels are used for storing all the data needed to display the associated UI Controller. Example: The results of the most recent search, the most recent search query.</li>
+<li>onSaveInstanceState is used for storing a small amount of data needed to easily reload activity state if the UI Controller is stopped and recreated by the system. Instead of storing complex objects here, persist the complex objects in local storage and store a unique ID for these objects in onSaveInstanceState(). Example: The most recent search query. <a href="<https://medium.com/google-developers/viewmodels-persistence-onsaveinstancestate-restoring-ui-state-and-loaders-fc7cc4a6c090>&rdquo;&gt;Read more on Medium</a></li>
+<li>As of API 21 you have a choice to store a PersistableBundle as well as just a Bundle.  The former will be saved across device reboots.</li>
+<li>An unfortunate side effect of the way hierarchical navigation is implemented in Android is that the activity that you navigate up to will be completely re-created from scratch.  This means that any saved instance state will be lost.  The parent activity is seen as a completely new activity. To get around this, add the attribute `android:launchMode=&ldquo;singleTop&rdquo;` to the activity in the AndroidManifest.  If that&rsquo;s not an option you can also override the child activity&rsquo;s `onOptionsItemSelected` method and in the item id switch case android.R.id.home call NavUtils.navigateUpFromSameTask(this).</li>
+<li>A bug currently exists with the Android RecyclerView. RecyclerView.dispatchLayout() can try to pull items from the scrap before calling mRecycler.clearOldPositions(). The consequence is that it pulls items from the common pool that had positions higher than the adapter size, leading to a run-time crash.  To get around this you need to turn off predictive animations by subclassing the recycler view&rsquo;s LayoutManager.  <a href="https://stackoverflow.com/questions/30220771/recyclerview-inconsistency-detected-invalid-item-position
+">Read more on StackOverflow</a>.</li>
+<li>In android studio you can create code folding blocks, similar to the `//MARK: -` annotation in Xcode, by pressing CMD + ALT + T on a single line and selecting either &ldquo;editor fold&rdquo; or &ldquo;region&hellip;end region&rdquo;.  While the former is a little uglier in the IDE, it folds all the encapsulated code in the Structure pane of the Android Studio IDE as well as in the main code pane.</li>
+</ul>
+
+	</p>
+
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "jjmtaylor" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+		</div>
+
+		<!-- Footer -->
+<footer id="footer">
+	<ul class="icons">
+		
+		
+        <li><a href="//facebook.com/James.Jordan.Moody.Taylor" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+        
+		
+		
+		<li><a href="//github.com/jamesjmtaylor" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
+		
+		
+		<li><a href="//linkedin.com/in/jamesjmtaylor" target="_blank" class="icon fa-linkedin-square"><span class="label">Linkedin</span></a></li>
+		
+		
+		
+		
+		<li><a href="https://jjmtaylor.netlify.com/#contact-form" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+		
+	</ul>
+
+	<ul class="copyright">
+		
+		<li>&copy; James Taylor</li>
+		
+		<li>Design: <a href="//html5up.net">HTML5 UP</a></li>
+		
+		<li>Demo Images: <a href="//unsplash.com/">Unsplash</a></li>
+		
+	</ul>
+</footer>
+
+<!-- Scripts -->
+<script src="https://jjmtaylor.netlify.com/js/jquery.min.js"></script>
+<script src="https://jjmtaylor.netlify.com/js/jquery.poptrox.min.js"></script>
+<script src="https://jjmtaylor.netlify.com/js/skel.min.js"></script>
+<script src="https://jjmtaylor.netlify.com/js/util.js"></script>
+
+<script src="https://jjmtaylor.netlify.com/js/main.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-79422202-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+	</body>
+</html>

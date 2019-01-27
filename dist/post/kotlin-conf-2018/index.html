@@ -1,0 +1,232 @@
+<!DOCTYPE HTML>
+
+<!-- 
+Strata by HTML5 UP
+html5up.net | @n33co
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Kotlin Conf 2018 &middot; James JM Taylor</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="author" content="James Taylor">
+    	<meta name="description" content="Blog and Portfolio for James Taylor, a native and hybrid android and iOS mobile developer.">
+    	<meta http-equiv="content-language" content="en-us" />
+
+		<meta name="generator" content="Hugo 0.53" />
+
+		<!--[if lte IE 8]><script src='{{ .Site.BaseURL }}js/ie/html5shiv.js'></script><![endif]-->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+		<link rel="stylesheet" href="https://jjmtaylor.netlify.com/css/main.css" />
+		<!--[if lte IE 8]><link rel='stylesheet' href='{{ .Site.BaseURL }}/css/ie8.css' /><![endif]-->
+
+		
+	</head>
+
+	<body id="top">
+		<!-- Header -->
+<header id="header">
+	<a href="https://jjmtaylor.netlify.com/" class="image avatar"><img src="https://jjmtaylor.netlify.com/images/avatar.jpg" alt="" /></a>
+	
+		<h1><strong>Hi!</strong>  I&rsquo;m James, a dedicated<br> polyglot mobile developer<br> based in Portland, OR.</h1>
+	
+
+	
+		<nav id="sidebar">
+			<ul>
+			
+				<li><a href="https://jjmtaylor.netlify.com/about">About</a></li>
+			
+				<li><a href="https://jjmtaylor.netlify.com/post/">Blog</a></li>
+			
+				<li><a href="https://jjmtaylor.netlify.com/privacy/">Privacy Policy</a></li>
+			
+				<li><a href="https://jjmtaylor.netlify.com/">Home</a></li>
+			
+			</ul>
+		</nav>
+	
+</header>
+
+
+		<!-- Main -->
+		<div id="main">
+			
+	<span>
+		<h1>Kotlin Conf 2018</h1>
+
+		<i class="fa fa-calendar"></i>&nbsp;&nbsp;
+<time datetime="2018-10-07 07:00:33 -0700 PDT">2018-10-07</time>&nbsp;&nbsp;
+
+
+
+
+
+	</span>
+
+	<p>
+	    
+
+<p><img style="float: left; margin:0 2em 0 0; width: 33%" src="/img/blog/kotlinConf.jpg"/></p>
+
+<p>As a software developer at Steelcase I&rsquo;m able to attend a conference a year.  This year I purchased tickets to the second ever Kotlin Conference!  Over the course of 3 days I learned an immense amount about Kotlin, coroutines, and multiplatform projects.  What follows is a massive brain dump of all the notes and highlights that I took during the conference.</p>
+
+<h2 id="coroutines">Coroutines</h2>
+
+<ul>
+<li>Kotlin equivalent of C# async/await. (suspend = async; await is implied); can declare scope as main and coroutine will avoid blocking UI thread
+.</li>
+<li>Async alternatives include AsyncTask, Executors, Loaders (deprecated), Promises (API 24+), Threads, and Libraries (i.e. RxJava)</li>
+<li>Not currently supported by Robolectric
+.  Testing still possible with “runBlocking {…}” lambda which forces synchronous execution.</li>
+<li>You can explicitly prepend “async” to a suspend function call in order to immediately return your response type wrapped in a ”Deferred” object.</li>
+<li>You can unwrap a “Deferred” object by call “.wait”
+.</li>
+<li>For a list of “Deferred” you can unwrap them in 1 of 2 ways:
+
+<ul>
+<li>deferredList.map { it.await() } sequentially executes waits</li>
+<li>awaitAll(deferredList) executes waits in parallel.</li>
+</ul></li>
+<li>Requires:
+
+<ul>
+<li>kotlin_version = &lsquo;1.3.0-rc-116’,</li>
+<li>org.jetbrains.kotlinx:kotlinx-coroutines-core:0.30.1</li>
+<li>org.jetbrains.kotlinx:kotlinx-coroutines-android:0.30.1</li>
+</ul></li>
+</ul>
+
+<h2 id="multiplatform-projects">Multiplatform Projects</h2>
+
+<ul>
+<li>For interoperability you can compile a Kotlin Library (.klib) into a native iOS ObjC Library (with code completion in Xcode!) or call it directly from Android.</li>
+<li>You can also import existing C libraries into either platform.</li>
+<li>Issues with iOS MPP
+
+<ul>
+<li>No generics, protected access is broken, enums still somewhat broken.</li>
+<li>No iOS bitcode support (bitcode must be turned off for the entire iOS project)</li>
+<li>No step-through debugging of shared libraries in Xcode (Android Studio is fine)</li>
+<li>Threading is platform specific.  Coroutines are not ready for MPP yet</li>
+<li>No Date object support since Date objects are platform specific.</li>
+<li>No mocking or dependency injection libraries are available for shared libraries.</li>
+<li>Crashlytics stack trace reporting give only method names, no line numbers.</li>
+<li>Overall poor documentation and esoteric setup.</li>
+</ul></li>
+<li><a href="https://kotlinlang.org/docs/tutorials/native/mpp-ios-android.html">More information available here</a>.</li>
+</ul>
+
+<h2 id="kotlin-unit-testing">Kotlin Unit Testing</h2>
+
+<ul>
+<li>Best practice is to use immutability, non-nullability, and non-static constants as much as possible.</li>
+<li>Use of data classes provide ’equals()’ implementation for free, allowing you to easily compare an expected object with the generated object, increasing testing accuracy over attribute comparisons.</li>
+<li>Data classes also provide ‘copy()’ implementation for free, allowing you to generate a deep copy of an object and selectively specify attributes that you want to change in the copy.</li>
+<li>Recommended test stack of JUnit5, MockK, and Kluent.</li>
+<li>JUnit5 provides the following:
+
+<ul>
+<li>Allows use of backticks for test names with spaces, i.e. ”fun `user clicks and updates list`()”</li>
+<li>Allows use of @Nested inner classes for better organization of unit tests.</li>
+<li>Allows combination of @ParameterizedTest and Stream.of(…) with a custom Data Class TestClass(actual,expected) for one line assertions that give specific failures</li>
+</ul></li>
+<li>MockK implicitly applies “open” keyword to classes under test (Kotlin classes are final by default)</li>
+<li>Kluent provides fluent assertions.</li>
+</ul>
+
+<h2 id="kotlin-for-graphics-by-romain-guy">Kotlin for Graphics by Romain Guy</h2>
+
+<ul>
+<li>Use KTX for purposes of ColorInt extensions to enable clean bit-shifting</li>
+<li>Use Kotlin operators for vector &amp; matrix intersection (“or”), symmetric difference (“xor”), and union (“and”)</li>
+<li>Use the “contains()” operator  for geometric class extension functions for clean collision detection</li>
+<li>Use range operators for creating &amp; executing clean &amp; concise geometry extension functions.</li>
+<li>Geometries should be immutable and functions pure.</li>
+<li>Use aggregate functions like “all(…)” (which applies a flatmap of the &amp;&amp; operator) and “any(…)” (which applies a flatmap of the || operator) for cleaner logic</li>
+<li>Use inline classes wherever possible as zero-cost abstractions (just be aware of functions that cause autoboxing operations that nullify this benefit, i.e. ==).</li>
+</ul>
+
+	</p>
+
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "jjmtaylor" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+		</div>
+
+		<!-- Footer -->
+<footer id="footer">
+	<ul class="icons">
+		
+		
+        <li><a href="//facebook.com/James.Jordan.Moody.Taylor" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+        
+		
+		
+		<li><a href="//github.com/jamesjmtaylor" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
+		
+		
+		<li><a href="//linkedin.com/in/jamesjmtaylor" target="_blank" class="icon fa-linkedin-square"><span class="label">Linkedin</span></a></li>
+		
+		
+		
+		
+		<li><a href="https://jjmtaylor.netlify.com/#contact-form" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+		
+	</ul>
+
+	<ul class="copyright">
+		
+		<li>&copy; James Taylor</li>
+		
+		<li>Design: <a href="//html5up.net">HTML5 UP</a></li>
+		
+		<li>Demo Images: <a href="//unsplash.com/">Unsplash</a></li>
+		
+	</ul>
+</footer>
+
+<!-- Scripts -->
+<script src="https://jjmtaylor.netlify.com/js/jquery.min.js"></script>
+<script src="https://jjmtaylor.netlify.com/js/jquery.poptrox.min.js"></script>
+<script src="https://jjmtaylor.netlify.com/js/skel.min.js"></script>
+<script src="https://jjmtaylor.netlify.com/js/util.js"></script>
+
+<script src="https://jjmtaylor.netlify.com/js/main.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-79422202-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+	</body>
+</html>

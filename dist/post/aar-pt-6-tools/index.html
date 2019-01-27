@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+
+<!-- 
+Strata by HTML5 UP
+html5up.net | @n33co
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>AAR pt 6 (Tools) &middot; James JM Taylor</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="author" content="James Taylor">
+    	<meta name="description" content="Blog and Portfolio for James Taylor, a native and hybrid android and iOS mobile developer.">
+    	<meta http-equiv="content-language" content="en-us" />
+
+		<meta name="generator" content="Hugo 0.53" />
+
+		<!--[if lte IE 8]><script src='{{ .Site.BaseURL }}js/ie/html5shiv.js'></script><![endif]-->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+		<link rel="stylesheet" href="https://jjmtaylor.netlify.com/css/main.css" />
+		<!--[if lte IE 8]><link rel='stylesheet' href='{{ .Site.BaseURL }}/css/ie8.css' /><![endif]-->
+
+		
+	</head>
+
+	<body id="top">
+		<!-- Header -->
+<header id="header">
+	<a href="https://jjmtaylor.netlify.com/" class="image avatar"><img src="https://jjmtaylor.netlify.com/images/avatar.jpg" alt="" /></a>
+	
+		<h1><strong>Hi!</strong>  I&rsquo;m James, a dedicated<br> polyglot mobile developer<br> based in Portland, OR.</h1>
+	
+
+	
+		<nav id="sidebar">
+			<ul>
+			
+				<li><a href="https://jjmtaylor.netlify.com/about">About</a></li>
+			
+				<li><a href="https://jjmtaylor.netlify.com/post/">Blog</a></li>
+			
+				<li><a href="https://jjmtaylor.netlify.com/privacy/">Privacy Policy</a></li>
+			
+				<li><a href="https://jjmtaylor.netlify.com/">Home</a></li>
+			
+			</ul>
+		</nav>
+	
+</header>
+
+
+		<!-- Main -->
+		<div id="main">
+			
+	<span>
+		<h1>AAR pt 6 (Tools)</h1>
+
+		<i class="fa fa-calendar"></i>&nbsp;&nbsp;
+<time datetime="2018-01-01 05:48:17 -0800 PST">2018-01-01</time>&nbsp;&nbsp;
+
+
+
+
+
+	</span>
+
+	<p>
+	    <p><img style="float: left; margin:0 1em 1em 0; width: 33%" src="/img/blog/toolbelt.jpeg"/></p>
+
+<p>If you haven&rsquo;t had a chance to read the first entry in the series for context, <a href="/post/after-action-review-aar/">you can do so here</a>.</p>
+
+<p>Over the course of a professional career you tend to acquire a lot of tools, regardless of the industry.  I wanted to list some of my favorites in this blog entry, as well as some of my lessons learned from each.  I&rsquo;ll go into greater detail for each in the future, but for now I&rsquo;ll just cover some of my major takeaways from each.</p>
+
+<ul>
+<li>Always lint any mocked JSON.  I use <a href="https://jsonlint.com/">https://jsonlint.com/</a></li>
+<li>If you are doing any kind of network API interaction, test your all your API calls with <a href="https://www.getpostman.com/">Postman</a>.</li>
+<li>You can get the code equivalent of any Postman call in Java or Swift by clicking on the **Code **button.  If exporting Postman calls as Java use <strong>OKHTTP</strong>.  For swift, use <strong>NSURL</strong>.</li>
+<li>In Postman its a best practice to configure settings to erase the cache each time Postman is closed.  That way you can ensure any issues you had in your previous session of Postman don&rsquo;t cross-contaminate your current session.</li>
+<li>In Postman you can have your environment variables configuration save your <strong>clientURL</strong>, <strong>client id</strong>, and <strong>client secret</strong> with {{&hellip;}} in the dialogue box for each argument in the Oauth2.0 modal view.</li>
+<li>ALWAYS debug network integration through Postman first, then in the simulator with <a href="https://www.charlesproxy.com/">Charles</a> running (Charles is a Man-In-The-Middle network debugging program)</li>
+<li>The** Network Profiler** tab in Android Studio 3.0 provides all the functionality of Charles network debugging (view the raw request and response as well as delay time) without the fuss of installing custom SSL certificates on your Android emulators.</li>
+<li>In Windows you can use <a href="https://www.telerik.com/fiddler">Fiddler</a>, which is equivalent to Charles, but free.  A mac version of Fiddler exists, but it&rsquo;s not nearly as easy to setup and use as Charles is.</li>
+<li>Use the application <a href="http://nshipster.com/network-link-conditioner/">Network Link Conditioner</a> (not normally included on Mac) to simulate a bad connection over localhost.</li>
+<li>MacOS comes with grep installed and can use the terminal to run &ldquo;grep [options] [searchTerm] [dir]&rdquo; i.e. &ldquo;grep -r myFile .&rdquo;</li>
+<li>MacOS can display it&rsquo;s path variable with &ldquo;echo $PATH&rdquo;.  You can change it with &ldquo;sudo vi /etc/paths&rdquo;</li>
+<li>MacOS can use it&rsquo;s Keystore application to introspect on .jks files, provided you know the password.</li>
+<li>When in MacOS it&rsquo;s best to write .NET Core in VS code and debug with the F5 hotkey.</li>
+<li>For iOS profiling the best tool is the Instruments.app.</li>
+
+<li><p>For headless setup on a Mac</p>
+
+<ul>
+<li>Setup auto-login</li>
+<li>Enable SSH access</li>
+<li>Install OS X Server on developer app (must have a developer account/team)</li>
+</ul></li>
+
+<li><p><a href="https://www.gnupg.org/">GPG</a> is a free, fairly widely used Certificate Authority (CA) tool that allows you to create a private and public cert based on your email.  This allows you to send signed and encrypted emails that others can decrypt as long as they are registered GPG users as well.</p></li>
+
+<li><p>Sketch is best for Design creation, while the Zeplin Sketch plugin gives designers a way to provide developer access to an  immutable design &lsquo;source-of-truth&rsquo; that they can export assets from, generate formatting code snippets with, post questions/comments, and view the design revision history.</p></li>
+
+<li><p>In Zeplin, to get the transparent window for overlaying a design over the siumulator click the box icon with the arrow point up and to the right that&rsquo;s located in Zeplins bottom-left.</p></li>
+
+<li><p>Omnigravel is excellent for flow/interaction design.</p></li>
+
+<li><p>Adobe After Effect JSONs can be translated into native iOS (and android) animations through the <a href="https://airbnb.design/lottie/">Lottie Library</a>.</p></li>
+
+<li><p>Whenever possible you should pre-load animation jsons as LottieConfigurations and use them that way.</p></li>
+
+<li><p>Android Studio has an .apk analyzer tool that gives you data on the final .apk size</p></li>
+
+<li><p><a href="http://openjdk.java.net/projects/jigsaw/">Jigsaw</a> is a write-once-run-anywhere Java containerization Library (i.e. the machine running the app does not need the JVM pre-installed) for Desktop apps.  Best of all, apps are often smaller than 20mbs (in constrast to electron apps that are as large as 100 mbs or more.</p></li>
+
+<li><p>As of 2018 there is no industry standard for measuring app battery consumption outside of actually testing on physical devices</p></li>
+</ul>
+
+	</p>
+
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "jjmtaylor" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+		</div>
+
+		<!-- Footer -->
+<footer id="footer">
+	<ul class="icons">
+		
+		
+        <li><a href="//facebook.com/James.Jordan.Moody.Taylor" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+        
+		
+		
+		<li><a href="//github.com/jamesjmtaylor" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
+		
+		
+		<li><a href="//linkedin.com/in/jamesjmtaylor" target="_blank" class="icon fa-linkedin-square"><span class="label">Linkedin</span></a></li>
+		
+		
+		
+		
+		<li><a href="https://jjmtaylor.netlify.com/#contact-form" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+		
+	</ul>
+
+	<ul class="copyright">
+		
+		<li>&copy; James Taylor</li>
+		
+		<li>Design: <a href="//html5up.net">HTML5 UP</a></li>
+		
+		<li>Demo Images: <a href="//unsplash.com/">Unsplash</a></li>
+		
+	</ul>
+</footer>
+
+<!-- Scripts -->
+<script src="https://jjmtaylor.netlify.com/js/jquery.min.js"></script>
+<script src="https://jjmtaylor.netlify.com/js/jquery.poptrox.min.js"></script>
+<script src="https://jjmtaylor.netlify.com/js/skel.min.js"></script>
+<script src="https://jjmtaylor.netlify.com/js/util.js"></script>
+
+<script src="https://jjmtaylor.netlify.com/js/main.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-79422202-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+	</body>
+</html>

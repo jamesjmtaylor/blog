@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+
+<!-- 
+Strata by HTML5 UP
+html5up.net | @n33co
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>AAR pt 4 (Swift/Xcode) &middot; James JM Taylor</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="author" content="James Taylor">
+    	<meta name="description" content="Blog and Portfolio for James Taylor, a native and hybrid android and iOS mobile developer.">
+    	<meta http-equiv="content-language" content="en-us" />
+
+		<meta name="generator" content="Hugo 0.53" />
+
+		<!--[if lte IE 8]><script src='{{ .Site.BaseURL }}js/ie/html5shiv.js'></script><![endif]-->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+		<link rel="stylesheet" href="https://jjmtaylor.netlify.com/css/main.css" />
+		<!--[if lte IE 8]><link rel='stylesheet' href='{{ .Site.BaseURL }}/css/ie8.css' /><![endif]-->
+
+		
+	</head>
+
+	<body id="top">
+		<!-- Header -->
+<header id="header">
+	<a href="https://jjmtaylor.netlify.com/" class="image avatar"><img src="https://jjmtaylor.netlify.com/images/avatar.jpg" alt="" /></a>
+	
+		<h1><strong>Hi!</strong>  I&rsquo;m James, a dedicated<br> polyglot mobile developer<br> based in Portland, OR.</h1>
+	
+
+	
+		<nav id="sidebar">
+			<ul>
+			
+				<li><a href="https://jjmtaylor.netlify.com/about">About</a></li>
+			
+				<li><a href="https://jjmtaylor.netlify.com/post/">Blog</a></li>
+			
+				<li><a href="https://jjmtaylor.netlify.com/privacy/">Privacy Policy</a></li>
+			
+				<li><a href="https://jjmtaylor.netlify.com/">Home</a></li>
+			
+			</ul>
+		</nav>
+	
+</header>
+
+
+		<!-- Main -->
+		<div id="main">
+			
+	<span>
+		<h1>AAR pt 4 (Swift/Xcode)</h1>
+
+		<i class="fa fa-calendar"></i>&nbsp;&nbsp;
+<time datetime="2017-09-01 00:00:00 -0700 PDT">2017-09-01</time>&nbsp;&nbsp;
+
+
+
+
+
+	</span>
+
+	<p>
+	    <p><img style="float: left; margin:0 1em 1em 0; width: 66%" src="/img/blog/xcode.jpg"/></p>
+
+<p>If you haven&rsquo;t had a chance to read the first entry in the series for context, <a href="/post/after-action-review-aar/">you can do so here</a>. Given that my work is primarily based around development of the client applications, I&rsquo;m going to have an outsized quantity of iOS and Android lessons learned compared to the other stacks.  I&rsquo;ll do as well as I can to stagger them with other languages and tools (for example, the preceding entries on Python, React, and C#), but will probably eventually have a few back-to-back entries of iOS and Android.  So, without further adieu, Swift &amp; Xcode tips!</p>
+
+<ul>
+<li>In order to measure startup time, click the app name by the play button, **Edit scheme **&gt; **Run **&gt; **Arguments **&gt; **Environment Variables <strong>&gt;</strong>DYLD_PRINT_STATISTICS**.  Make sure it&rsquo;s a fresh simulator instance each time.</li>
+<li><code>.description</code> in swift and ObjectiveC is the same as .toString in Java
+.</li>
+<li>Keep configuration info in the AppDelegate to a minimum ( Use scheme environment variables instead)</li>
+<li>To view device logs (for wired debugging) select the menu bar **Window **&gt; **Devices **&gt; **Select Device <strong>&gt;</strong>View Device Logs**&rdquo;</li>
+<li>If building with a distribution license you will NOT be able to debug through your device (You&rsquo;ll receive a &ldquo;Failed to attach to process&rdquo; error)</li>
+<li>To acces the AppDelegate use &ldquo;app = UIApplication.shared.delegate as! AppDelegate&rdquo;</li>
+<li>If you ever have a &ldquo;no such module&rdquo; error make sure you&rsquo;re using xcworkspace, NOT xcproject</li>
+<li>Environment variables are ONLY available in Xcode, use Xconfig files (one for each scheme) for run-time configuration variables.</li>
+<li>You can mock the framework and it will still count for code coverage.</li>
+<li>The syntax &ldquo;<code>defer { abc }</code>&rdquo; waits until the end of a function to execute (good for cleaning up resources)</li>
+<li>If a scheme run config (managed in Edit Schemes) is not set to debug, garbage collection will cause variables to deallocate during step-through debugging!</li>
+<li>Stopping the simulator in a breakpoint when debugging an app also stops the simulator system clock, leading to odd artificial timing errors if you&rsquo;re trying to debug timing issues between different instances of the app on different devices.<br /></li>
+<li>The is no analogue to Java&rsquo;s ArrayList because Swift doesn&rsquo;t have lists.  This means O(1) prepend/append is impossible.</li>
+<li>If you&rsquo;re going to animate a UILabel expansion from one line to multiple lines, it should be over the number of lines displayed, not a change in the height of the UILabel itsel</li>
+<li>You can never count on a storyboard loading before AppDelegate does or vice-versa.</li>
+<li>You can see exactly where your layout view boundaries are by setting LayerBorderWidth, Number, 1 in&rdquo;UserDefinedRuntimeAttribues&rdquo; of the storyboard.</li>
+<li>UIScrollView ContentSize is the scrollable area; UIScrollView.frameSize is the actual size of the scrollView window.</li>
+<li>You can CTRL+Drag a constraint from the storyboard to the viewController and change constraints programmatically.</li>
+<li>For a calendar inmplemented through a UICollectionView always use images for selection because cells will have different sizes on different phones (and different sizes on the same phone if the number of cells is odd) . This can be fixed with images and the &ldquo;aspect-fit&rdquo; setting.</li>
+<li>In order to replicate an android carousel view, use a horizontal scrolling CollectionView and a PageControl with the number of pages equal to the CollectionViews.cells.count and the CurrentPage = CollectionView.visible.cells.first (set in the `scrollViewDidScrollFunction).</li>
+<li>For any kind of image filtering just use CoreImage.</li>
+<li>If you have multiple collectionViews/tableViews you don&rsquo;t need to re-declare the delegate methods, just have a check within each method to see which collectionView the method is called with.</li>
+<li>You can get/set a specific cell at any time, you just need to create an indexPath with the item and section, then call collectionView.itemAt(indexPath).</li>
+<li>For a storyboard to recognize a font for selection in Xcode, it must be in the Mac Fonts application of your development Macbook</li>
+<li>When you manually instantiate ViewControllers (VCs) in XCTests you must explicitly provide relationships between VC&rsquo;s (doesn&rsquo;t happen automatically like it does with a storyboard).</li>
+<li>If in XCTestSetup you need to wait for an async task to complete before running the test itself, use &ldquo;RunLoopMode(defaultRunLoopMode, before: .distantFuture)&rdquo;</li>
+<li>UILabels can never be changed by the user.  Use UITextFields instead.</li>
+<li>The Enterprise Dev Account EULA requires you to have direct control of the devices registered under the account and the ability to install and uninstall apps at will.  The primary use case is for company owned smartphones.</li>
+<li>There&rsquo;s nothing to stop a company from having multiple regular Apple Developer Accounts, you just need multiple DUN #&rsquo;s.  Each DUN # must be tied to a different physical address.
+Apple&rsquo;s primary retribution for EULA violations is to stonewall all future app approval requests, so be careful!</li>
+<li>Swift Date() function always generates a date with a UTC timezone.</li>
+<li>For the Observer pattern, just use Notification Center (The selector is the method to execute on update).  As of iOS 8 subscribers to the Notification center are even cleaned up when their views are destroyed, preventing memory leaks.</li>
+<li>The swift string class has an implementation very similar to the Java StringBuilder class, allowing constant time string appends.</li>
+<li>To dismiss the keyboard just do &ldquo;self.view.endEditing(true)&rdquo;</li>
+<li>To have a view &lsquo;float&rsquo; from within a scrollView, just assign it constraints external to the UIScrollView.</li>
+<li>UITableView header and footer views cannot have constraints external to themselves.</li>
+<li>By writing extensions to protocols you can define default behavior for conformers.</li>
+<li>Protocols can have attributes but must show &ldquo;{get set}&rdquo;.  This is one way you can get around extensions not allowing attributes, that is, by writing an extension to a protocol.</li>
+<li>If you use a break to escape an &lsquo;if&rsquo; statement, you must prefix the &lsquo;if&rsquo; with a name, i.e. &ldquo;myCustomIf: if let unwrap = wrappedVar { &hellip; break customIf &hellip; }&rdquo;</li>
+</ul>
+
+	</p>
+
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "jjmtaylor" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+		</div>
+
+		<!-- Footer -->
+<footer id="footer">
+	<ul class="icons">
+		
+		
+        <li><a href="//facebook.com/James.Jordan.Moody.Taylor" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+        
+		
+		
+		<li><a href="//github.com/jamesjmtaylor" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
+		
+		
+		<li><a href="//linkedin.com/in/jamesjmtaylor" target="_blank" class="icon fa-linkedin-square"><span class="label">Linkedin</span></a></li>
+		
+		
+		
+		
+		<li><a href="https://jjmtaylor.netlify.com/#contact-form" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+		
+	</ul>
+
+	<ul class="copyright">
+		
+		<li>&copy; James Taylor</li>
+		
+		<li>Design: <a href="//html5up.net">HTML5 UP</a></li>
+		
+		<li>Demo Images: <a href="//unsplash.com/">Unsplash</a></li>
+		
+	</ul>
+</footer>
+
+<!-- Scripts -->
+<script src="https://jjmtaylor.netlify.com/js/jquery.min.js"></script>
+<script src="https://jjmtaylor.netlify.com/js/jquery.poptrox.min.js"></script>
+<script src="https://jjmtaylor.netlify.com/js/skel.min.js"></script>
+<script src="https://jjmtaylor.netlify.com/js/util.js"></script>
+
+<script src="https://jjmtaylor.netlify.com/js/main.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-79422202-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+	</body>
+</html>

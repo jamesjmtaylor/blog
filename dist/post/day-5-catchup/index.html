@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+
+<!-- 
+Strata by HTML5 UP
+html5up.net | @n33co
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Day 5-Catchup &middot; James JM Taylor</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="author" content="James Taylor">
+    	<meta name="description" content="Blog and Portfolio for James Taylor, a native and hybrid android and iOS mobile developer.">
+    	<meta http-equiv="content-language" content="en-us" />
+
+		<meta name="generator" content="Hugo 0.53" />
+
+		<!--[if lte IE 8]><script src='{{ .Site.BaseURL }}js/ie/html5shiv.js'></script><![endif]-->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+		<link rel="stylesheet" href="https://jjmtaylor.netlify.com/css/main.css" />
+		<!--[if lte IE 8]><link rel='stylesheet' href='{{ .Site.BaseURL }}/css/ie8.css' /><![endif]-->
+
+		
+	</head>
+
+	<body id="top">
+		<!-- Header -->
+<header id="header">
+	<a href="https://jjmtaylor.netlify.com/" class="image avatar"><img src="https://jjmtaylor.netlify.com/images/avatar.jpg" alt="" /></a>
+	
+		<h1><strong>Hi!</strong>  I&rsquo;m James, a dedicated<br> polyglot mobile developer<br> based in Portland, OR.</h1>
+	
+
+	
+		<nav id="sidebar">
+			<ul>
+			
+				<li><a href="https://jjmtaylor.netlify.com/about">About</a></li>
+			
+				<li><a href="https://jjmtaylor.netlify.com/post/">Blog</a></li>
+			
+				<li><a href="https://jjmtaylor.netlify.com/privacy/">Privacy Policy</a></li>
+			
+				<li><a href="https://jjmtaylor.netlify.com/">Home</a></li>
+			
+			</ul>
+		</nav>
+	
+</header>
+
+
+		<!-- Main -->
+		<div id="main">
+			
+	<span>
+		<h1>Day 5-Catchup</h1>
+
+		<i class="fa fa-calendar"></i>&nbsp;&nbsp;
+<time datetime="2016-09-10 05:04:32 -0700 PDT">2016-09-10</time>&nbsp;&nbsp;
+
+
+
+
+
+	</span>
+
+	<p>
+	    <p><img style="float: left; margin:0 0 2em 0; width: 100%" src="/img/blog/day5.jpg"/></p>
+
+<p>Timeline:</p>
+
+<p>0745-It’s a Saturday, so traffic was really light and the Dojo parking lot was next to empty, so I parked there instead of my usual park-and-ride spot almost a mile away.  I continue work on my Calculator app.</p>
+
+<p>0915-I’ve completed my work on the Calculator App and commit it to my GitHub.  One of the cool resources that I used was <a href="http://unicode-table.com/en/">http://unicode-table.com/en/</a> which allows you to copy special characters which you can then paste directly into your Xcode.  Guess I should have made a rogue-like for yesterday’s competition!</p>
+
+<p>I’m starting work on the Great Number Game.  It appears to be a lot simpler than the last app.  All it does is tell you to guess a number between 1 and 100 and then displays a popover telling you if your guess is right or wrong.  Initial plan is 30 minutes on the storyboard, 30 minutes wiring it up and implementing the logic with console output, and 60 minutes figuring out how to switch that console output to popover output.</p>
+
+<p>1430-My estimates for the storyboard and the logic were spot on.  The popover output estimate was overly optimistic.  Popovers only work on iPads, so I needed to find a different component to use.  I managed to create an alert dialog with the required content, but alert dialogue styling is strictly governed, preventing me from mimicking the storyboard in the video. I tried creating my own Cocoa class and ViewController, but kept getting casting errors.  This was despite the fact that I set my new class to inherit directly from the prototypical UIViewController class.  So I’m putting it on the back burner for now.  On to next week’s assignments!</p>
+
+<p>1530-One of the other students here, Tom, showed me where I erred in my Great Number Game app.  Apparently you have to set all the text fields (title, message, buttons, etc) during initialization.  Changing them afterwards leads to unpredictable behavior.  Making this small tweak I was able to get the interface identical to that in the video using alert dialogues.  I feel a lot better now that it’s implemented exactly as it’s supposed to be.</p>
+
+<p>1930-Well, I got almost halfway through Monday’s reading, and ran into a couple troubling inconsistencies in the lesson code.  I’ll just have to wait until Monday to ask about it.</p>
+
+	</p>
+
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "jjmtaylor" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+		</div>
+
+		<!-- Footer -->
+<footer id="footer">
+	<ul class="icons">
+		
+		
+        <li><a href="//facebook.com/James.Jordan.Moody.Taylor" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+        
+		
+		
+		<li><a href="//github.com/jamesjmtaylor" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
+		
+		
+		<li><a href="//linkedin.com/in/jamesjmtaylor" target="_blank" class="icon fa-linkedin-square"><span class="label">Linkedin</span></a></li>
+		
+		
+		
+		
+		<li><a href="https://jjmtaylor.netlify.com/#contact-form" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+		
+	</ul>
+
+	<ul class="copyright">
+		
+		<li>&copy; James Taylor</li>
+		
+		<li>Design: <a href="//html5up.net">HTML5 UP</a></li>
+		
+		<li>Demo Images: <a href="//unsplash.com/">Unsplash</a></li>
+		
+	</ul>
+</footer>
+
+<!-- Scripts -->
+<script src="https://jjmtaylor.netlify.com/js/jquery.min.js"></script>
+<script src="https://jjmtaylor.netlify.com/js/jquery.poptrox.min.js"></script>
+<script src="https://jjmtaylor.netlify.com/js/skel.min.js"></script>
+<script src="https://jjmtaylor.netlify.com/js/util.js"></script>
+
+<script src="https://jjmtaylor.netlify.com/js/main.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-79422202-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+	</body>
+</html>

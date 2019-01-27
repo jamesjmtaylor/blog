@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+
+<!-- 
+Strata by HTML5 UP
+html5up.net | @n33co
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>AAR pt 3 (Xamarin/C#/Azure) &middot; James JM Taylor</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="author" content="James Taylor">
+    	<meta name="description" content="Blog and Portfolio for James Taylor, a native and hybrid android and iOS mobile developer.">
+    	<meta http-equiv="content-language" content="en-us" />
+
+		<meta name="generator" content="Hugo 0.53" />
+
+		<!--[if lte IE 8]><script src='{{ .Site.BaseURL }}js/ie/html5shiv.js'></script><![endif]-->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+		<link rel="stylesheet" href="https://jjmtaylor.netlify.com/css/main.css" />
+		<!--[if lte IE 8]><link rel='stylesheet' href='{{ .Site.BaseURL }}/css/ie8.css' /><![endif]-->
+
+		
+	</head>
+
+	<body id="top">
+		<!-- Header -->
+<header id="header">
+	<a href="https://jjmtaylor.netlify.com/" class="image avatar"><img src="https://jjmtaylor.netlify.com/images/avatar.jpg" alt="" /></a>
+	
+		<h1><strong>Hi!</strong>  I&rsquo;m James, a dedicated<br> polyglot mobile developer<br> based in Portland, OR.</h1>
+	
+
+	
+		<nav id="sidebar">
+			<ul>
+			
+				<li><a href="https://jjmtaylor.netlify.com/about">About</a></li>
+			
+				<li><a href="https://jjmtaylor.netlify.com/post/">Blog</a></li>
+			
+				<li><a href="https://jjmtaylor.netlify.com/privacy/">Privacy Policy</a></li>
+			
+				<li><a href="https://jjmtaylor.netlify.com/">Home</a></li>
+			
+			</ul>
+		</nav>
+	
+</header>
+
+
+		<!-- Main -->
+		<div id="main">
+			
+	<span>
+		<h1>AAR pt 3 (Xamarin/C#/Azure)</h1>
+
+		<i class="fa fa-calendar"></i>&nbsp;&nbsp;
+<time datetime="2017-07-01 11:58:08 &#43;0000 UTC">2017-07-01</time>&nbsp;&nbsp;
+
+
+
+
+
+	</span>
+
+	<p>
+	    <p>If you haven&rsquo;t had a chance to read the first entry in the series for context, <a href="/post/after-action-review-aar/">you can do so here</a>. We do a fair amount of .NET development over at Steelcase.  When I first joined the mobile development team we seriously considered doing our mobile applications in Xamarin.  We eventually decided against it since Steelcase is a very heavily design driven company, and Xamarin just wouldn&rsquo;t provide the flexibility that a purely native approach does.  But in the spirit of giving Xamarin a fair shake we spent a sprint working in it to get an idea of it&rsquo;s capabilities.  Below are the lessons I learned, as well as some I&rsquo;ve come to learn after working with Steelcase&rsquo;s C#/Azure backend.</p>
+
+<ul>
+<li>To issue adb commands in Xamarin Studio go to the menu bar and select <strong>Tools</strong>&gt;<strong>SDK Command Prompts.</strong></li>
+<li>To find a package name right click the project and select <strong>options</strong>&gt;**Android Applications **&gt; <strong>Package Name.</strong></li>
+<li>To add unit tests, add a project, select <strong>platforms</strong>,** Unit Tests**, then in the unit tests project add a reference to the main project.</li>
+<li>To run unit tests, select the project file and emulator and press the play button</li>
+<li>To add UI tests, do the same as above except with a UI Test project, then **View **&gt; **Pods **&gt; <strong>Unit Tests</strong>, right click the tests and select <strong>add project</strong></li>
+<li>When integrating AAD (Azure Active Directory) services Microsoft restricts services with 401 (unauthorized) responses.</li>
+<li>C# naming convention is Pascal Case for public methods, classes, and properties.  Private fields, classes, and methods are all camel case.</li>
+<li>An Azure cloud service can have one or more worker roles.  Info for that worker&rsquo;s run-time settings are in <strong>ServiceDefinition.csfg</strong>.  It includes endpoints, roles required, and vm size.</li>
+<li>In VS17 you can configure whether the MVC is run locally or on the cloud by right-clicking the **project **&gt; **properties **&gt; **development **&gt; **service configuration **&gt; <strong>local/cloud</strong></li>
+<li>In VS17 you can debug by clicking the gray area to the left of the line numbers to create a breakpoint.</li>
+<li>In VS17, to keep the command terminal open when running a command line project, run with CTRL+F5.</li>
+<li>An Azure IoTHub is really just an EventHub with a device registry bolted on.</li>
+<li>To view, modify, and debug blobs use** Azure Storage Explorer**, which can be downloaded for free from the internet.</li>
+<li>Every Azure IoTHub event has 3 buckets: a <strong>properties bucket</strong> (can&rsquo;t change), an** application bucket** (read as a header), and a <strong>payload bucket</strong> (read as JSON, can change).</li>
+<li>Each Azure event processor has its own marker, so one event processor consuming from a partition does NOT prevent another from consuming it.</li>
+<li>.NET Core allows you to deploy to Linux and MacOS, which also means that you can create .NET Core Docker containers.  In exchange, you lose a lot of .NET Framework libraries.</li>
+<li>In C# the <code>wait</code> keyword will block further progress synchronously.  The <code>await</code> keyword just blocks execution in the containing method and the calling class gets an incomplete Task.</li>
+<li>You can pass multiple parameters after a url&rsquo;s <code>?`\` by concatenating them with an \</code>&amp; symbol.</li>
+<li>For Azure Oauth you must have the following variables: Auth URL, Access Token URL, client Id, and client secret.</li>
+<li>In a .NET MVC application, if you have two identical routes in the same controller all the endpoints will result in a 500 error.</li>
+<li>If Visual Studio ever can&rsquo;t find the &lsquo;system&rsquo; import, press CMD+SHIFT+P (opens the VS command terminal) and type <strong>Restart Omnisharp</strong></li>
+<li>Exchange Web Server (EWS) and on-premise Exchange will throttle excessive API requests automatically.  O365 will not.</li>
+</ul>
+
+<p><img style="float: left; margin:0 0 1em 0; width: 100%" src="/img/blog/xamarin.jpg"/></p>
+
+	</p>
+
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "jjmtaylor" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+		</div>
+
+		<!-- Footer -->
+<footer id="footer">
+	<ul class="icons">
+		
+		
+        <li><a href="//facebook.com/James.Jordan.Moody.Taylor" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+        
+		
+		
+		<li><a href="//github.com/jamesjmtaylor" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
+		
+		
+		<li><a href="//linkedin.com/in/jamesjmtaylor" target="_blank" class="icon fa-linkedin-square"><span class="label">Linkedin</span></a></li>
+		
+		
+		
+		
+		<li><a href="https://jjmtaylor.netlify.com/#contact-form" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+		
+	</ul>
+
+	<ul class="copyright">
+		
+		<li>&copy; James Taylor</li>
+		
+		<li>Design: <a href="//html5up.net">HTML5 UP</a></li>
+		
+		<li>Demo Images: <a href="//unsplash.com/">Unsplash</a></li>
+		
+	</ul>
+</footer>
+
+<!-- Scripts -->
+<script src="https://jjmtaylor.netlify.com/js/jquery.min.js"></script>
+<script src="https://jjmtaylor.netlify.com/js/jquery.poptrox.min.js"></script>
+<script src="https://jjmtaylor.netlify.com/js/skel.min.js"></script>
+<script src="https://jjmtaylor.netlify.com/js/util.js"></script>
+
+<script src="https://jjmtaylor.netlify.com/js/main.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-79422202-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+	</body>
+</html>

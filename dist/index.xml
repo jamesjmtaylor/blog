@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>James JM Taylor</title>
+    <link>https://jjmtaylor.netlify.com/</link>
+    <description>Recent content on James JM Taylor</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 16 Jan 2019 00:00:00 -0800</lastBuildDate>
+    
+	<atom:link href="https://jjmtaylor.netlify.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Nautilus</title>
+      <link>https://jjmtaylor.netlify.com/post/nautilus/</link>
+      <pubDate>Wed, 16 Jan 2019 00:00:00 -0800</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/nautilus/</guid>
+      <description>I just wanted to break the news that I got a new job! I&amp;rsquo;m now a Senior Application Developer at Nautilus. That&amp;rsquo;s the same Nautilus Inc. that produces personal exercise equipment and owns Bowflex, Schwinn, and Octane. Given the relative size of Nautilus (1,000 employees) in comparison to Steelcase (10,000 employees) I was surprised to learn that not only does Nautilus have a bigger software development team, but that the vast majority of them are Android and iOS developers (Steelcase had primarily ASP .</description>
+    </item>
+    
+    <item>
+      <title>AAR pt 10 (Android)</title>
+      <link>https://jjmtaylor.netlify.com/post/aar-pt-10-android/</link>
+      <pubDate>Sat, 01 Dec 2018 08:56:22 -0800</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/aar-pt-10-android/</guid>
+      <description>If you have not had a chance to read the first entry in the series for context, you can do so here
+It&amp;rsquo;s been a little over a year since I did my last Android AAR entry, so I figured it was about time that I had a new entry on my lessons learned with Android and Kotlin.
+ To add adb to the path (adb controls android debugging):   &amp;ldquo;cd ~&amp;rdquo; &amp;ldquo;vim .</description>
+    </item>
+    
+    <item>
+      <title>Happy Halloween!</title>
+      <link>https://jjmtaylor.netlify.com/post/happy-halloween/</link>
+      <pubDate>Sat, 03 Nov 2018 08:29:41 -0700</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/happy-halloween/</guid>
+      <description>We had a pretty good Halloween at the Taylor household this Wednesday. This was our first Halloween in the neighborhood, since we moved just this summer, so we weren&amp;rsquo;t sure how common trick-or-treaters would be. I&amp;rsquo;d say our new cul-de-sac is somewhere in the middle of the spectrum. Not the swarms of locusts that I&amp;rsquo;ve seen in some neighborhoods, but not entirely dead either. And to parody that last paragraph, I give you this Andy Rooney montage.</description>
+    </item>
+    
+    <item>
+      <title>Kotlin Conf 2018</title>
+      <link>https://jjmtaylor.netlify.com/post/kotlin-conf-2018/</link>
+      <pubDate>Sun, 07 Oct 2018 07:00:33 -0700</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/kotlin-conf-2018/</guid>
+      <description>As a software developer at Steelcase I&amp;rsquo;m able to attend a conference a year. This year I purchased tickets to the second ever Kotlin Conference! Over the course of 3 days I learned an immense amount about Kotlin, coroutines, and multiplatform projects. What follows is a massive brain dump of all the notes and highlights that I took during the conference.
+Coroutines  Kotlin equivalent of C# async/await. (suspend = async; await is implied); can declare scope as main and coroutine will avoid blocking UI thread .</description>
+    </item>
+    
+    <item>
+      <title>AAR pt 9 (Swift)</title>
+      <link>https://jjmtaylor.netlify.com/post/aar-pt-9-swift/</link>
+      <pubDate>Sat, 01 Sep 2018 06:00:16 -0700</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/aar-pt-9-swift/</guid>
+      <description>If you haven’t had a chance to read the first entry in the series for context, you can do so here
+It&amp;rsquo;s been exactly a year since I did my last Swift/iOS AAR entry, and two years since I started the Coding Dojo Swift bootcamp so I figured it was about time that I had a new entry on my lessons learned with Swift. I&amp;rsquo;ve got a few more entries in my notebook that I haven&amp;rsquo;t been able to transcribe into a digital format yet, but you&amp;rsquo;ll probably find this to be a lot to digest as it is; so without further adieu:</description>
+    </item>
+    
+    <item>
+      <title>Artificial Intelligence</title>
+      <link>https://jjmtaylor.netlify.com/post/artificial-intelligence/</link>
+      <pubDate>Wed, 01 Aug 2018 07:04:00 -0700</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/artificial-intelligence/</guid>
+      <description>A podcast that I listen to, the Coder Radio, recently discussed how overhyped the field of Artificial Intelligence was and how the marketing departments of companies use the term when they shouldn’t. Which got me to thinking about when the term artificial intelligence should &amp;amp; shouldn’t apply. Intelligence is defined by Google Dictionary as “the ability to acquire and apply knowledge”. Pretty straightforward. IQ tests after all are claimed to be biased against the uneducated because they test the application of knowledge that some individuals haven’t had a chance to acquire.</description>
+    </item>
+    
+    <item>
+      <title>AAR pt 8 (Architecture/Software Engineering)</title>
+      <link>https://jjmtaylor.netlify.com/post/aar-pt-8-architecture-software-engineering/</link>
+      <pubDate>Sun, 01 Jul 2018 07:08:20 -0700</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/aar-pt-8-architecture-software-engineering/</guid>
+      <description>If you haven’t had a chance to read the first entry in the series for context, you can do so here
+A lot of software development is more general than the idiosyncrasies of this framework over that. Over the last year I&amp;rsquo;ve come across a few pretty handy rules of thumb to use while planning or implementing features. A few of these are more technical (i.e. web tokens) but were included because their application spans a breadth of platforms.</description>
+    </item>
+    
+    <item>
+      <title>Worldwide Equipment Guide</title>
+      <link>https://jjmtaylor.netlify.com/post/worldwide-equipment-guide/</link>
+      <pubDate>Mon, 04 Jun 2018 04:59:15 -0700</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/worldwide-equipment-guide/</guid>
+      <description>It&amp;rsquo;s been a while since I last posted. Truth be told I&amp;rsquo;ve been rather busy with the final release of my Worldwide Equipment Guide 2015 apps for iOS and Android. I released the Android app at the end of April. The iOS app was just recently (as of June 1st) released. I&amp;rsquo;ve already received some really positive feedback from the Army as well as some feature requests they&amp;rsquo;d like. Top on the list is filtering by region or country to aid soldiers in preparation for a particular theater of operations.</description>
+    </item>
+    
+    <item>
+      <title>AAR pt 7 (Android Architecture Components)</title>
+      <link>https://jjmtaylor.netlify.com/post/aar-pt-7-android-architecture-components/</link>
+      <pubDate>Sun, 18 Mar 2018 06:15:05 -0700</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/aar-pt-7-android-architecture-components/</guid>
+      <description>If you haven’t had a chance to read the first entry in the series for context, you can do so here
+Way back in 2017 at Google I/O several architectural components were announced to help streamline Android development. Kotlin support was also announced. I&amp;rsquo;ve only just recently been able to get around to doing an app that implements both simultaneously. I&amp;rsquo;ve included some of my lessons learned below:
+LiveData The Android MVVM pattern relies on a custom implementation of the MVVM and Observer patterns.</description>
+    </item>
+    
+    <item>
+      <title>One IDE to Rule them All</title>
+      <link>https://jjmtaylor.netlify.com/post/one-ide-to-rule-them-all/</link>
+      <pubDate>Thu, 01 Feb 2018 05:05:46 -0800</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/one-ide-to-rule-them-all/</guid>
+      <description>Most developers are pretty strongly opinionated about the IDE (Integrated Development Environment) that they use. I will probably be no different eventually, but right now I’m still struggling to find Mr. Right. My first enterprise IDE was Eclipse Helios, way back in 2010. Prior to that I used some gosh-awful Ada native IDE that the government used to program tank ballistics computers and nuclear missiles. Eclipse at the time was awesome by comparison.</description>
+    </item>
+    
+    <item>
+      <title>About me</title>
+      <link>https://jjmtaylor.netlify.com/about/</link>
+      <pubDate>Sat, 27 Jan 2018 10:15:23 -0400</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/about/</guid>
+      <description>I received my Bachelor of Science in Computer Science at the United States Military Academy in 2011. I graduated at the top of my class in my major, with honors, and my capstone project, the Joint Academy Cooperative Unmanned Systems Iniative won &amp;lsquo;Best Solution to a Military Problem.&amp;rsquo; While in the Army I served in Afghanistan as a Scout Platoon Leader and was eventually promoted to Captain.
+Since leaving the Army in 2016 I&amp;rsquo;ve worked as a mobile applications developer.</description>
+    </item>
+    
+    <item>
+      <title>Privacy Policy</title>
+      <link>https://jjmtaylor.netlify.com/privacy/</link>
+      <pubDate>Sat, 27 Jan 2018 10:15:23 -0400</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/privacy/</guid>
+      <description>I (James Taylor) develop and host the http://jjmtaylor.netlify.com website and as well as my native mobile applications. This page informs you of my policies regarding the collection, use, and disclosure of personal data when you use my Service and the choices you have associated with that data. I use your data to provide and improve the website and mobile applications. By using the Service, you agree to the collection and use of information in accordance with this policy.</description>
+    </item>
+    
+    <item>
+      <title>AAR pt 6 (Tools)</title>
+      <link>https://jjmtaylor.netlify.com/post/aar-pt-6-tools/</link>
+      <pubDate>Mon, 01 Jan 2018 05:48:17 -0800</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/aar-pt-6-tools/</guid>
+      <description>If you haven&amp;rsquo;t had a chance to read the first entry in the series for context, you can do so here.
+Over the course of a professional career you tend to acquire a lot of tools, regardless of the industry. I wanted to list some of my favorites in this blog entry, as well as some of my lessons learned from each. I&amp;rsquo;ll go into greater detail for each in the future, but for now I&amp;rsquo;ll just cover some of my major takeaways from each.</description>
+    </item>
+    
+    <item>
+      <title>EECS</title>
+      <link>https://jjmtaylor.netlify.com/post/20160725/</link>
+      <pubDate>Fri, 01 Dec 2017 13:04:40 -0800</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/20160725/</guid>
+      <description>Way back in 2008 I was a sophomore at West Point. I had to pick a major that I would pursue for the next three years. Unlike most schools, I’d be more or less stuck with what I picked because changing my major halfway through and staying in school for another year was not an option. I had narrowed my choices down to Civil Engineering, Mechanical Engineering, and Computer Science. I had considered Chemical Engineering at the onset of college, but had ruled it out after the joy that was organic chemistry my 2nd semester of freshman year.</description>
+    </item>
+    
+    <item>
+      <title>AAR pt 5 (Android)</title>
+      <link>https://jjmtaylor.netlify.com/post/aar-pt-5-android/</link>
+      <pubDate>Wed, 01 Nov 2017 12:20:03 +0000</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/aar-pt-5-android/</guid>
+      <description>If you haven&amp;rsquo;t had a chance to read the first entry in the series for context, you can do so here. Now, about Android. Of the two native platforms (iOS &amp;amp; Android) I&amp;rsquo;ve found Android far and away to be the more challenging of the two. It&amp;rsquo;s more verbose, more error-prone, and less standardized. Google went a long way at Google I/O 2017 in resolving the first two with official support of Kotlin, and the last one with the adoption of the MVVM architecture pattern.</description>
+    </item>
+    
+    <item>
+      <title>Stairway to Heaven of Front-End Developers</title>
+      <link>https://jjmtaylor.netlify.com/post/stairway-to-heaven-of-front-end-developers/</link>
+      <pubDate>Sun, 01 Oct 2017 04:49:38 -0700</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/stairway-to-heaven-of-front-end-developers/</guid>
+      <description>So I was reading Ted Whang’s blog the other day and I saw something that made me chuckle. Ted’s blog centers around his experience at Coding Dojo. In one entry in particular he says that he “personally has an obsession with parallax scrolling. Even if you don&amp;rsquo;t know what parallax scrolling means, you probably have ran into one and thought to yourself, &amp;ldquo;man this is really cool&amp;rdquo;. “ I had to laugh because I felt (and still feel) the same way.</description>
+    </item>
+    
+    <item>
+      <title>AAR pt 4 (Swift/Xcode)</title>
+      <link>https://jjmtaylor.netlify.com/post/aar-pt-4-swift-xcode/</link>
+      <pubDate>Fri, 01 Sep 2017 00:00:00 -0700</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/aar-pt-4-swift-xcode/</guid>
+      <description>If you haven&amp;rsquo;t had a chance to read the first entry in the series for context, you can do so here. Given that my work is primarily based around development of the client applications, I&amp;rsquo;m going to have an outsized quantity of iOS and Android lessons learned compared to the other stacks. I&amp;rsquo;ll do as well as I can to stagger them with other languages and tools (for example, the preceding entries on Python, React, and C#), but will probably eventually have a few back-to-back entries of iOS and Android.</description>
+    </item>
+    
+    <item>
+      <title>AAR pt 3 (Xamarin/C#/Azure)</title>
+      <link>https://jjmtaylor.netlify.com/post/aar-pt-3-xamarin-c-azure/</link>
+      <pubDate>Sat, 01 Jul 2017 11:58:08 +0000</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/aar-pt-3-xamarin-c-azure/</guid>
+      <description>If you haven&amp;rsquo;t had a chance to read the first entry in the series for context, you can do so here. We do a fair amount of .NET development over at Steelcase. When I first joined the mobile development team we seriously considered doing our mobile applications in Xamarin. We eventually decided against it since Steelcase is a very heavily design driven company, and Xamarin just wouldn&amp;rsquo;t provide the flexibility that a purely native approach does.</description>
+    </item>
+    
+    <item>
+      <title>WWDC 17</title>
+      <link>https://jjmtaylor.netlify.com/post/wwdc-17/</link>
+      <pubDate>Sat, 10 Jun 2017 13:28:32 +0000</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/wwdc-17/</guid>
+      <description>One of the many benefits of working at Steelcase is that each year every developer is allotted $5000 to attend conferences. This year I entered the Apple lottery for WWDC tickets and I won! Over the course of 5 days I learned an immense amount about Swift 4, Xcode 9, iOS 11, Natural Language Processing, Computer Vision, and Machine Learning with CoreML. What follows is a massive brain dump of all the notes and highlights that I took during the conference.</description>
+    </item>
+    
+    <item>
+      <title>AAR pt 2 (Python)</title>
+      <link>https://jjmtaylor.netlify.com/post/aar-pt-2-python/</link>
+      <pubDate>Mon, 01 May 2017 11:37:09 +0000</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/aar-pt-2-python/</guid>
+      <description>If you haven&amp;rsquo;t had a chance to read the first entry in the series for context, you can do so here. In this post I&amp;rsquo;ll be covering my most important lessons learned from everyone&amp;rsquo;s favorite language, Python. I&amp;rsquo;ll also have some React.js and React-Redux at the end, since the majority of these lessons learned were made while I was on-boarding with a full-stack web developer.
+ You can run python2 and python3 side-by-side, just need to differentiate calls by appending a &amp;lsquo;3&amp;rsquo; to calls to the python3 tools (i.</description>
+    </item>
+    
+    <item>
+      <title>TeamCity Integration</title>
+      <link>https://jjmtaylor.netlify.com/post/20170401/</link>
+      <pubDate>Sat, 01 Apr 2017 17:04:00 -0700</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/20170401/</guid>
+      <description>Over the last couple sprints I’ve become my team’s informal DevOps subject matter expert. This was because we needed to implement Continuous Integration/Continuous Delivery we were fairly low on the backlog of our Company’s formal DevOps team. Over the course of teaching myself how GitHub, TeamCity, Slack, and HockeyApp can all plug into one another I wrote a pretty handy little tutorial. Enjoy.
+TeamCity Installation The guide below is based on the TeamCity Documentation.</description>
+    </item>
+    
+    <item>
+      <title>After Action Review (AAR)</title>
+      <link>https://jjmtaylor.netlify.com/post/after-action-review-aar/</link>
+      <pubDate>Wed, 01 Mar 2017 04:53:40 -0800</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/after-action-review-aar/</guid>
+      <description>In the Army we conducted a formal retrospective after every operation that we completed, called an After Action Review (AAR). Books like Outliers have found such rituals to be extraordinarily important to skills mastery. In the work, Malcolm Gladwell posits that it takes at least 10,000 hours of deliberate practice to cultivate a world-class skill. Part of deliberate practice is performing a critical review of performance after every session, essentially an AAR.</description>
+    </item>
+    
+    <item>
+      <title>Missing the Target</title>
+      <link>https://jjmtaylor.netlify.com/post/20170301/</link>
+      <pubDate>Wed, 22 Feb 2017 17:04:00 -0800</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/20170301/</guid>
+      <description>Well, my monthly objectives shifted again before I was able to fully realize them. I got pulled off my personal projects by an outside offer to work on an iOS and Android travel app in my spare time. I’m sinking a lot of time into it in order to get everything to match the designer&amp;rsquo;s specifications, but it’s really rewarding to implement something so artfully envisioned. The designer is using https://app.</description>
+    </item>
+    
+    <item>
+      <title>Steelcase Hajj</title>
+      <link>https://jjmtaylor.netlify.com/post/20170202/</link>
+      <pubDate>Wed, 01 Feb 2017 20:04:40 +0000</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/20170202/</guid>
+      <description>Last month the majority of the development team in Portland made a business trip to the Steelcase International Headquarters in Grand Rapids, Michigan. While we were there we also visited the Steelcase Kentwood Factory. The whole trip really put it into perspective for us. Steelcase itself is over a century old and takes in more than 4.5 billion dollars in annual revenue, employing tens of thousands of employees. Their Kentwood plant (which is only one of five factories) has 3, eight hour shifts working around the clock.</description>
+    </item>
+    
+    <item>
+      <title>I have arrived...</title>
+      <link>https://jjmtaylor.netlify.com/post/20170101/</link>
+      <pubDate>Sun, 01 Jan 2017 20:04:40 +0000</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/20170101/</guid>
+      <description>Happy New Year! I realize that I’ve been gone for a bit, but a lot has happened since. I recently got a full time position with Steelcase in Portland, Oregon as a software developer on their new mobile team. The idea is that we’ll be integrating mobile applications with their furniture IoT. IoT stands for “Internet of Things”, which is just a fancy way of summing up everything that’s connected to the internet, from the lowly bluetooth beacons all the way to the vaunted supercomputers of the modern age.</description>
+    </item>
+    
+    <item>
+      <title>Plans within Plans</title>
+      <link>https://jjmtaylor.netlify.com/post/20161121/</link>
+      <pubDate>Mon, 21 Nov 2016 20:04:40 +0000</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/20161121/</guid>
+      <description>Well, as Eisenhower once said “In preparing for battle I have always found that plans are useless, but planning is indispensable.” The week before last I received opportunities to interview at Steelcase, the Washington Utilities and Transportation Commission (UTC), as well as several smaller startups. Steelcase alone has occupied 16 hours of time, primarily due to the six hour round-trip commutes both of the two-hour in-person interviews have necessitated. Additionally, the WA UTC position has prompted me to revisit my studies of C#, which I’m honestly a little rusty on.</description>
+    </item>
+    
+    <item>
+      <title>Of Happenings! and Agile</title>
+      <link>https://jjmtaylor.netlify.com/post/20161109/</link>
+      <pubDate>Wed, 09 Nov 2016 20:04:40 +0000</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/20161109/</guid>
+      <description>I know it’s Wednesday, but I wanted to wait until after election day so I could provide my own spin on the results. If you’re not politically inclined, by all means, skip to the paragraph after next for the month’s agile objectives.
+When populism originally emerged in the 1890’s it’s rallying cry was that “the toil of millions are boldly stolen to build up colossal fortunes for a few” (sound familiar?</description>
+    </item>
+    
+    <item>
+      <title>Job!</title>
+      <link>https://jjmtaylor.netlify.com/post/job/</link>
+      <pubDate>Tue, 01 Nov 2016 00:00:00 -0700</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/job/</guid>
+      <description>I got a job! It’s a contract position to develop an iOS app and an Android app for a recruiting agency known as eXcell. I unfortunately can’t discuss the details of the contract proposal or the app due to a Non-Disclosure Agreement (NDA) that I signed, but after hearing the pitch from the project manager I’m confident I have the skills to implement what they’re looking for. I have to say that if it hadn’t been for my time at Coding Dojo, I wouldn’t have even begun to have considered myself qualified.</description>
+    </item>
+    
+    <item>
+      <title>2 Weeks after graduation-Completion of Career Services</title>
+      <link>https://jjmtaylor.netlify.com/post/2-weeks-after-graduation-completion-of-career-services/</link>
+      <pubDate>Wed, 12 Oct 2016 12:46:14 +0000</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/2-weeks-after-graduation-completion-of-career-services/</guid>
+      <description>So, I’ve finished the coding dojo career course. Here are my biggest takeaways:
+ Know the difference between Agency and Corporate recruiters and the advantages/disadvantages of each Look up the github of the team that you’re interviewing for. See what their code style is like and try to imitate it if you’re given a coding challenge. Connect with as many recruiters and Coding Dojo alumni as possible! Roshawn had us go through 10 pages of results for ‘Technical Recruiter’ and 10 pages for ‘Coding Dojo’ and request a connection with each and every one.</description>
+    </item>
+    
+    <item>
+      <title>Day 21-Projects &amp; Graduation Day</title>
+      <link>https://jjmtaylor.netlify.com/post/day-21-projects-graduation-day/</link>
+      <pubDate>Fri, 30 Sep 2016 05:44:06 -0700</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/day-21-projects-graduation-day/</guid>
+      <description>0730-It’s the last day of Coding Dojo. I’ve got mixed feelings about it. On the one hand I’m sad to be leaving a place where I learned so much so fast. On the other I’m excited and anxious to start my job search.
+0900-Another mini-scrum. I’m going for quick-win objectives at this point. Add background music. Touch up the interface. Fix bugs. My only major objective is to implement the head-to-head interface and my chances of completing that prior to presentation seem dubious at best.</description>
+    </item>
+    
+    <item>
+      <title>Day 20-Projects Week</title>
+      <link>https://jjmtaylor.netlify.com/post/day-20-projects-week/</link>
+      <pubDate>Thu, 29 Sep 2016 05:42:59 -0700</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/day-20-projects-week/</guid>
+      <description>0730-I’m starting work on the Gwent Deck manager today. It’ll be the last full day to work on projects so I’ll have to get as much done as possible.
+0900-We had our projects mini-scrum again. It looks like all the groups are coming along nicely. I’m looking forward to seeing what each has to present tomorrow.
+1100-Algorithms time. Today we covered graphs, as well as three different ways that they can be implemented.</description>
+    </item>
+    
+    <item>
+      <title>Day 19-Projects Week</title>
+      <link>https://jjmtaylor.netlify.com/post/day-19-projects-week/</link>
+      <pubDate>Wed, 28 Sep 2016 05:41:38 -0700</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/day-19-projects-week/</guid>
+      <description>0730-Arrived early to get as much headway with Alamofire and SwiftyJSON as possible and… it doesn’t compile. xCode tells me there are now over 800 errors with the two pods. Apparently both of the libraries are still written in Swift 2. At some point Swift tried to update them to Swift 3 and it broke everything.
+0900-After fighting it for over an hour I gave up. Everyone did their mini-scrum with David and then we started working on our projects again.</description>
+    </item>
+    
+    <item>
+      <title>Day 18-Projects Week</title>
+      <link>https://jjmtaylor.netlify.com/post/day-18-projects-week/</link>
+      <pubDate>Tue, 27 Sep 2016 05:39:54 -0700</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/day-18-projects-week/</guid>
+      <description>0745-David’s back. He provides a some help with a CoreData problem that I was having. Apparently the developers of Swift 3 and xCode implemented the Swift 2 to Swift 3 migration in such a way that Swift 2 CoreData models were kept in their original Swift 2 format while the rest of the project’s syntax was changed to Swift 3. This was probably done to maintain backwards compatibility with existing app databases that clients were currently using.</description>
+    </item>
+    
+    <item>
+      <title>Day 17-Projects Week</title>
+      <link>https://jjmtaylor.netlify.com/post/day-17-projects-week/</link>
+      <pubDate>Mon, 26 Sep 2016 05:38:31 -0700</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/day-17-projects-week/</guid>
+      <description>0745-I applied to some jobs on Saturday. It usually takes a couple weeks for responses to percolate, so I figure it’s a good time to get cracking.
+0900-David’s out sick, so Michael goes through the basics of project week and provides some initial guidance to the groups on their ideas.
+1100-For algorithms we cover the trie data structure and implement .insert and .first methods.
+1900-I’ve got the basic interface for my Gwent game built.</description>
+    </item>
+    
+    <item>
+      <title>Day 16-Black Belt Test</title>
+      <link>https://jjmtaylor.netlify.com/post/day-16-black-belt-test/</link>
+      <pubDate>Fri, 23 Sep 2016 05:36:56 -0700</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/day-16-black-belt-test/</guid>
+      <description>0730-Arrived early to try and complete the most challenging aspects of the assignment. Evan (one of the other classmates) has already given most of the class a link to a good tutorial on searchBar implementation. In exchange I gave a whiteboard presentation on implementing button press responses from a button within a custom cell (which is less than trivial because that button has no knowledge of the CoreData object that it’s cell represents).</description>
+    </item>
+    
+    <item>
+      <title>Day 15-Hackathon Results and Study Session</title>
+      <link>https://jjmtaylor.netlify.com/post/day-15-hackathon-results-and-study-session/</link>
+      <pubDate>Thu, 22 Sep 2016 05:34:13 -0700</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/day-15-hackathon-results-and-study-session/</guid>
+      <description>Timeline:
+0730-I open up the project and start work. David’s already in, so I ask him about how I might stagger my JSON requests so that they execute in a particular order (since all JSON requests are asynchronous). He’s got me up and running with a recursive chain of JSON queries inside of 15 minutes.
+1000-The groups take a blind vote and our group tied for second! Alot better than my last two projects!</description>
+    </item>
+    
+    <item>
+      <title>Day 14-Hackathon</title>
+      <link>https://jjmtaylor.netlify.com/post/day-14-hackathon/</link>
+      <pubDate>Wed, 21 Sep 2016 12:32:27 +0000</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/day-14-hackathon/</guid>
+      <description>Timeline:  0740-Apparently there’s an Amazon Alexa Hackathon today at the dojo in addition to the Swift Hackathon that the class will be conducting. I went ahead and registered for the event on Meetup and rebooted my Amazon developer account out of suspended animation. I also looked into some existing web services for ideas on the Swift JSON hackathon.
+0915-They’ve divided us into groups and written down some existing web APIs that we can use.</description>
+    </item>
+    
+    <item>
+      <title>Day 13-iOS Advanced</title>
+      <link>https://jjmtaylor.netlify.com/post/day-13-ios-advanced/</link>
+      <pubDate>Tue, 20 Sep 2016 12:30:56 +0000</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/day-13-ios-advanced/</guid>
+      <description>Timeline:  0745-I asked David as soon as I got in and he had it cleared up in 5 minutes. Apparently it’s not sufficient to have a tabNavigation controller embedded in the TableViewController, you also have to have a regular navigationController embedded as well for the show segue to function. Otherwise it just defaults to a modal segue.
+0915-David calls the class together and we address the development of our own back-end servers for our mobile apps.</description>
+    </item>
+    
+    <item>
+      <title>Day 12-iOS Advanced</title>
+      <link>https://jjmtaylor.netlify.com/post/day-12-ios-advanced/</link>
+      <pubDate>Mon, 19 Sep 2016 12:29:18 +0000</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/day-12-ios-advanced/</guid>
+      <description>Timeline: 0800-This is the final week of guided lessons. Next week is project week, during which we will be set loose to use everything that we’ve learned to create our own app. I’ve got a few ideas that I’m kicking around, but I want to get through this week before I decide on anything.
+0900-David introduces JSON query structure and how we have to convert that data (which is just a specially formatted string) into either an Array or a Dictionary.</description>
+    </item>
+    
+    <item>
+      <title>Day 11-Catchup</title>
+      <link>https://jjmtaylor.netlify.com/post/day-11-catchup/</link>
+      <pubDate>Sat, 17 Sep 2016 05:16:57 -0700</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/day-11-catchup/</guid>
+      <description>Timeline:
+0800-It looks like I’ve got the Dojo all to myself for now. I wrote up my objectives for the day on the whiteboard. This is what I’ve got so far: Complete My Dogs, finish the Frameworks modules, implement remove, removeAll, and toSortedArray in Swift for my Binary Search tree, and get a head start on next week’s modules (I know I’ll need it).
+1000-I took a break to investigate an issue that we had with our Parkour app.</description>
+    </item>
+    
+    <item>
+      <title>Day 10-Hackathon</title>
+      <link>https://jjmtaylor.netlify.com/post/day-10-hackathon/</link>
+      <pubDate>Fri, 16 Sep 2016 00:00:00 -0700</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/day-10-hackathon/</guid>
+      <description>Timeline:
+0800-It looks like that we’re going to be working with mapkit today, which is exciting because mapkit paired with CoreData has the potential to build some powerful geocaching apps. Should be fun.
+0900-This time I’m part of a group of three. Our challenge is to create an app that uses Apple’s MapKit API. We decided to build a Parkour Challenge app where you compete to get from point A to B on foot through the city.</description>
+    </item>
+    
+    <item>
+      <title>Day 9-Frameworks</title>
+      <link>https://jjmtaylor.netlify.com/post/day-9-frameworks/</link>
+      <pubDate>Thu, 15 Sep 2016 12:13:50 +0000</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/day-9-frameworks/</guid>
+      <description>Timeline : 0800-Yeah! Phone’s fixed, I’m caught up in the lesson modules, I’ve got my 80’s movies soundtrack going and a hot cup of coffee at my side. Time to get to work.  0900-Finished implementing the Binary Search Tree height() and isBalanced() functions in Swift 3, just in time for the first lecture of the day. David addresses modal segues and show segues as well as their respective strengths and weaknesses.</description>
+    </item>
+    
+    <item>
+      <title>Day 8-iOS Intermediate</title>
+      <link>https://jjmtaylor.netlify.com/post/day-8-ios-intermediate/</link>
+      <pubDate>Wed, 14 Sep 2016 12:10:10 +0000</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/day-8-ios-intermediate/</guid>
+      <description>Timeline:
+1000-Argh! The firmware on my primary phone was corrupted somehow. I stayed at home until 0830 this morning trying to fix it before starting the commute. When I got in I found out that we had a new assignment-a picker view application integrating Core Data. Time to get to work.
+1100-Algorithms time. We implement height as well as isBalanced methods for our BinarySearchTree. The isBalanced is particularly interesting because it requires you to return a tuple containing whether or not it’s currently balanced as well as the tree height to compare to other children trees.</description>
+    </item>
+    
+    <item>
+      <title>Day 7-iOS Intermediate</title>
+      <link>https://jjmtaylor.netlify.com/post/day-7-ios-intermediate/</link>
+      <pubDate>Tue, 13 Sep 2016 12:08:38 +0000</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/day-7-ios-intermediate/</guid>
+      <description>Timeline:  0740-Another day at the dojo. I continue work on CoreData.  0900-David cover’s the basics of the delegate pattern, which is critical for an object to reliably call another object’s method (which it can count on because that object implements the specified delegate protocol). I also found out why my display wasn’t refreshing upon a successful add; tableView.reloadData() was commented out, preventing the tableView from updating to reflect the new data in the array it’s pointing to.</description>
+    </item>
+    
+    <item>
+      <title>Day 6-iOS Intermediate</title>
+      <link>https://jjmtaylor.netlify.com/post/day-6-ios-intermediate/</link>
+      <pubDate>Mon, 12 Sep 2016 05:06:11 -0700</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/day-6-ios-intermediate/</guid>
+      <description>Timeline:
+0745-I left around 0610 today, so I was able to get started a little earlier than normal. For those of you that see the hour and a half difference I just want to say, do not be alarmed. A good 20 minutes of that is just me walking the mile distance between the park and ride and the dojo. As soon as I got there I talked to David about the wierd errors that I was getting.</description>
+    </item>
+    
+    <item>
+      <title>Day 5-Catchup</title>
+      <link>https://jjmtaylor.netlify.com/post/day-5-catchup/</link>
+      <pubDate>Sat, 10 Sep 2016 05:04:32 -0700</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/day-5-catchup/</guid>
+      <description>Timeline:
+0745-It’s a Saturday, so traffic was really light and the Dojo parking lot was next to empty, so I parked there instead of my usual park-and-ride spot almost a mile away. I continue work on my Calculator app.
+0915-I’ve completed my work on the Calculator App and commit it to my GitHub. One of the cool resources that I used was http://unicode-table.com/en/ which allows you to copy special characters which you can then paste directly into your Xcode.</description>
+    </item>
+    
+    <item>
+      <title>Day 4-Hackathon</title>
+      <link>https://jjmtaylor.netlify.com/post/day-4-hackathon/</link>
+      <pubDate>Fri, 09 Sep 2016 11:54:00 +0000</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/day-4-hackathon/</guid>
+      <description>Timeline: 0745-Continue work on the Calculator App. 0900-A Hackathon is announced and we’re broken up into teams of 2-3 and told to have a game prepared for submission by 1700. I also completed the layout of the calculator app and implemented some basic logic. 1100-Algorithm Time! The themesong for algorithms has become He-Man HEYYEYAAEYAAAEYAEYAA, which actually does a pretty good job of pumping me up. I’m still a little bummed that we have to take a break from building our games though (our group picked chess) 1200-Back to building our app.</description>
+    </item>
+    
+    <item>
+      <title>Day 3-Intro to iOS</title>
+      <link>https://jjmtaylor.netlify.com/post/day-3-intro-to-ios/</link>
+      <pubDate>Thu, 08 Sep 2016 11:52:27 +0000</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/day-3-intro-to-ios/</guid>
+      <description>Timeline : 0820-Arrive (traffic from Federal Way was awful) make a minuet tweak to the TicTacToe App, submit it and start work on Tipster App (it says it’s supposed to take 4 hours, I’m going to try and complete it before 1100 algorithms.  0900-David briefly covers of auto layout. Afterwards I continue work on Tipster app. 1100-Algorithm time! We cover the recursion part of mergeSort. I’m still not sure how partition fits into the picture.</description>
+    </item>
+    
+    <item>
+      <title>Day 2-Intro to iOS</title>
+      <link>https://jjmtaylor.netlify.com/post/day-2-intro-to-ios/</link>
+      <pubDate>Thu, 08 Sep 2016 11:47:26 +0000</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/day-2-intro-to-ios/</guid>
+      <description>Timeline:
+0800-Arrive and start working on online modules. 0900-David goes over the basics of last night’s inheritance homework. 1000-Continue work on online modules. 1100-Break for algorithms, work on the partition and merge helper functions of mergeSort. 1200-Guest speaker Jeff Martinez gives a lunchtime briefing on his 9 years of experience as a Software Development Engineer as well as the pros and cons of working at small companies vs big companies. 1300-David briefly covers today’s IBOutlet and IBAction functions as well as how you can drag and drop them from the storyboard.</description>
+    </item>
+    
+    <item>
+      <title>Day 1-iOS Fundamentals</title>
+      <link>https://jjmtaylor.netlify.com/post/day-1-ios-fundamentals/</link>
+      <pubDate>Tue, 06 Sep 2016 20:20:32 +0000</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/day-1-ios-fundamentals/</guid>
+      <description>Timeline:
+0800-Arrive, realize from overhearing other students that there was an email sent out this weekend that asked us to complete 50% of the fundamentals course. Rush through the online learning platform modules until instruction starts.  0900-Our instructor, David, takes 30 minutes for the class to introduce themselves, and another 30 minutes to go over the basics of Swift. 1000-We’re set loose to continue to work on the Swift fundamentals online modules.</description>
+    </item>
+    
+    <item>
+      <title>Coding Dojo</title>
+      <link>https://jjmtaylor.netlify.com/post/coding-dojo/</link>
+      <pubDate>Mon, 05 Sep 2016 13:21:29 +0000</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/coding-dojo/</guid>
+      <description>Today is my first day of Coding Dojo! I’m super excited to take the first step along the path to becoming a cyber ninja! For the next month I plan to document my adventure in detail, so accordingly the frequency of my updates will increase to one post a day. Once I’m finished I’ll go back to our regularly scheduled programming of weekly entries.
+Now, since this is the first Monday of the week it’s also Agile!</description>
+    </item>
+    
+    <item>
+      <title>Daily Schedule</title>
+      <link>https://jjmtaylor.netlify.com/post/20160815/</link>
+      <pubDate>Mon, 15 Aug 2016 20:04:40 +0000</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/20160815/</guid>
+      <description>If you haven’t already, I’d highly recommend looking into the website and app Meetup. I’m a member of several groups local to the Seattle area, namely Dev Bootcamp Seattle, Seattle Tech Interviews, and Seattle Tech Mentors.
+It was at the last one specifically that the topic of daily routine came up. I asked one of the tech mentors at the meetup what their schedule was like. What surprised me was how similar mine was to his.</description>
+    </item>
+    
+    <item>
+      <title>Job Hunt</title>
+      <link>https://jjmtaylor.netlify.com/post/20160808/</link>
+      <pubDate>Mon, 08 Aug 2016 20:04:40 +0000</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/20160808/</guid>
+      <description>I promised to talk about my job interview process last week, so I’ll get right down to it. I’ve been seriously job searching since May of 2016. Since then I’ve submitted 56 resumes, completed 20 interviews with 8 companies, and turned down 2 (bad) offers.
+I’ve also experimented with a lot of different techniques. I’ve tried military headhunting companies like LucasGroup, Cameron Brooks, and Orion. I eventually stopped working with them because only Orion has prospective clients in the Northwest.</description>
+    </item>
+    
+    <item>
+      <title>Stop! Agile Time!</title>
+      <link>https://jjmtaylor.netlify.com/post/20160801/</link>
+      <pubDate>Mon, 01 Aug 2016 20:04:40 +0000</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/20160801/</guid>
+      <description>It’s the first Monday of the week, which means it’s time for Agile! Major features implemented last month and not yet mentioned include:
+ Finalize the blog page! (long) Re-learn the rules to the game of life (John Conway’s game of life, not Hasbro’s) (short) Look into participating in a Seattle Code Retreat. This was mentioned on Software Engineering radio. Unfortunately Seattle hasn’t had one since 2014 and isn’t set to have one for the foreseeable future (short).</description>
+    </item>
+    
+    <item>
+      <title>New Digs</title>
+      <link>https://jjmtaylor.netlify.com/post/20160718/</link>
+      <pubDate>Mon, 18 Jul 2016 20:04:40 +0000</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/20160718/</guid>
+      <description>We pulled into our new home last Friday. It feels great to be back in the Pacific Northwest!
+While I was on the road I had a lot of time to think, and I’m going to scale back on the whole ‘Agile Blog’ thing. I realized that listening to me go on ad nauseam about features implemented and features planned for the week would be about as much fun for readers as watching paint dry.</description>
+    </item>
+    
+    <item>
+      <title>Moving</title>
+      <link>https://jjmtaylor.netlify.com/post/20160711/</link>
+      <pubDate>Mon, 11 Jul 2016 20:04:40 +0000</pubDate>
+      
+      <guid>https://jjmtaylor.netlify.com/post/20160711/</guid>
+      <description>So we left El Paso, TX yesterday and began our long haul to Auburn, WA. I’ve subscribed to Coder Radio, Software Engineering Radio, Programming Throw-down, the Drunk Web, and the Simple Programmer Podcast and downloaded about 40 hours of podcasts to my phone for the trip. I’ll give you a review of each in a later blog post.
+I also have an ASUS 10.1” Chromebook to use in hotels. I purchased it last Wednesday to help me develop while on the move as well as to test any android tablet apps that I develop.</description>
+    </item>
+    
+  </channel>
+</rss>
