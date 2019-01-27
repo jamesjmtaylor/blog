@@ -37,6 +37,7 @@
     "gulp-util": "^3.0.7",
     "hugo": "0.0.3",
     "imports-loader": "^0.6.5",
+    "node": "^11.8.0",
     "postcss-cssnext": "^2.7.0",
     "postcss-import": "^8.1.2",
     "postcss-loader": "^0.9.1",
@@ -45,6 +46,8 @@
     "whatwg-fetch": "^1.0.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
     "babel-core": "^6.26.3",
     "gulp": "^3.9.1"
   }
