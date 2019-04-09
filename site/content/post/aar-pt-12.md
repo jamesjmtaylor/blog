@@ -2,7 +2,7 @@
 title: 'AAR pt 12 (C# and Azure)'
 date: '2019-04-01T09:04:38-07:00'
 ---
-<img style="float: right; margin:0 0em 1em 2em; width: 33%" src="/img/blog/agile.jpg"> If you have not had a chance to read the first entry in the series for context, <a href="/post/after-action-review-aar/">you can do so here</a> 
+<img style="float: left; margin:0 2em 1em 0; width: 33%" src="/img/blog/azure.png"> If you have not had a chance to read the first entry in the series for context, <a href="/post/after-action-review-aar/">you can do so here</a> 
 
 Last weekend I went through my notebook and transcribed all of my hand-written lessons learned from the past year or so into my digital tracker.  A big chunk of those entries were leftovers from my time at Steelcase.  Since Steelcase is a ASP.NET core shop there were plenty of C# and Azure notes. Since Nautilus uses Kotlin and AWS, I figured this was as good a time as any to wrap up my experiences with the Microsoft stack.  <a href="/post/aar-pt-3-xamarin-c-azure/">You can read my last Azure AAR entry here</a>
 
