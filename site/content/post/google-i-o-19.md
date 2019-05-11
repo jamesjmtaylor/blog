@@ -1,0 +1,129 @@
+---
+title: Google I/O 19
+date: '2019-05-11T08:30:01-07:00'
+---
+<img style="float: left; margin:0 0 1em 0; width: 100%" src="/img/blog/io19.jpg"/>
+
+This year I had the good fortune to be able to attend Google I/O.  It was my first time at I/O so I wasn't terribly sure what to expect, other than it would be primarily outdoors.  Overall it ended up being a great experience that I was able to get a lot of good notes out of.  My session notes are below:
+
+## Developer Keynote
+
+* WorkManager and Navigation Controller have entered 1.0 stable.  
+* Android Studio 3.5 Canary has a new implementation of Instant Run (now known as 'Apply Changes') as well as foldable device emulators.
+* Two new Android calls, updateIfRequired() and whenUpdateAvailable().  The first will present a blocking UI that forces the user to update the app before they can continue to use it, the second allows you to present a button to the user with a background update mode.
+* Google Assistant trained machine learning models have been reduced in size from a collective size of 100Gb to 500mb.  This means that Google Assistant will be able to be stored locally and function offline.
+* Health & Fitness App Actions allow a user to fast forward to certain point in a fitness app.  This would allow a user to start a Max Intelligence 14 minute workout solely from Google Assistant.
+
+## What's new in Android
+
+* Apps running on Android Q (Go edition) devices cannot receive the [SYSTEM_ALERT_WINDOW ](https://developer.android.com/reference/android/Manifest.permission#SYSTEM_ALERT_WINDOW)permission. This is because drawing overlay windows uses excessive memory, which is particularly harmful to the performance of low-memory Android devices.
+* Content insets will be added to the left, right, and bottom of the screen in Android Q.   Exclusion rectangles can be declared programmatically to remove these.
+* Nullability will be enforced as errors instead of warnings in SDK 29.
+* Lifecycle, LiveData, and Room have all received Kotlin coroutine support.
+* The new Jetpack Compose Library offers a declarative, type-safe, reactive UI toolkit.  The library is still in Alpha.
+* When an app running on Android Q requests location access users will be able to grant location access to two different extents: while in use (foreground only) or all the time (foreground and background).  If only the foreground permission is granted then any active bluetooth connections will be terminated when the app is backgrounded. [You can read more here.](https://developer.android.com/preview/privacy/device-location#request-background-location-access)
+* Android Q introduces Settings Panels, an API which allows apps to show settings to users in the context of their app. This prevents users from needing to go into Settings to change things like NFC or Mobile data in order to use the app.  An AndroidX wrapper for this functionality is planned. When called on devices running Android 9 (API level 28) or lower, the wrapper will open the most-appropriate page in the Settings app. [You can read more here.](https://developer.android.com/preview/features#settings-panels)
+
+## Modular Architecture
+
+* Android features and layers can be modularized and downloaded by the user on an as needed basis. 
+* Modules can have an api or an implementation dependency on other modules.  The former makes it part of the other modules public api.  The latter makes it an instantiated implementation detail.
+* You must use reflection for starting activities and fragments external to the module.
+
+## Foldable Support
+
+* There are currently 2 kinds of foldable devices supported, fold-in (Samsung Galaxy Fold) and fold-out (Huewei Mate X).
+* The Android lifecycle method onConfigurationChanged() is called whenever the device is folded.  If you support configuration changes and properly manage SaveInstanceState then foldables should just work with no changes required.
+* There are a range of new aspect ratios including 1:1 and 21:9.  You can use MinAspectRatio and MaxAspectRatio to limit the devices your app is available on if your layout is unable to support those ratios.
+* The android manifest activity flag android:resizableActivity must be set to true in order to expand when the device is unfolded.  Without this attribute activities will remain the same size as they were before the device was unfolded and will be letter-boxed to fit.
+* DisplayManager allows you to launch your activity on the screen of your choice when a device is unfolded if you want to enter a split-screen presentation. 
+
+## What's New in UI
+
+* Blueprint mode is recommended for speed of implementation on initial layout of components.  It allows you to right click any component for  a context menu, enabling intelligent constraint additions and placeholder items in recyclerViews.
+* You can drag layouts from the Resource Manager window into the Design View and an <include/> tag will automatically be added for that layout to the xml.
+* The Resource Manager window also supports drag & drop resource import.   This means that you can drop multiple .svgs and .pngs and Android Studio will sort and import them automatically.  
+* You can also drag constraints onto other views (or overlapped views) in order to receive a prompt on how you would like to constrain the original view in relation to the underlying view.
+* Navigation Graphs are a new type of resource file where you can declare destinations, transitions, and transition arguments between fragments and activities.  These transitions are programmatically triggered by instantiation an Action object and passing it to the static Navigation class for routing.
+* The Layout Inspector now includes a 3D exploded view for easier visual debugging of layouts, putting it on par with XCode's View Hierarchy Debugger.
+* In Navigation 2.1 you can declare DeepLinks in Navigation Graph components.  You can also nest navigation graphs within other navigation graphs.
+
+## Android App Actions
+
+* The new Android App Actions are similar in functionality to SiriKit.  They allow an app to be launched solely through voice interaction with Google Assistant. 
+* Android App Actions currently support, Finance, Fitness, Food Order & Ride Sharing.  
+* To Add App Actions to your app you must implement the following steps:
+* Ensure your app supports deep links
+* Add an Actions.xml to your app and declare it in the <metadata> tag of your AndroidManifest File.
+* Optimize for Assistant by:
+
+1. Logging the result of the action to Firebase.
+2. Handling search common intents as a fallback
+3. Implement the Assistant API in your app.
+4. Test & Deploy your app.
+
+* Android Studio has a new App Actions Test Tool Plugin.  The user that you login to Android Studio with must have access to the app's Google Play Console in order to be able to test the app.
+* You can also add a "Fulfillment by Slice" to your Actions.xml to allow the Assistant to answer questions inline using your app.
+
+## What's New in Android Architecture
+
+* Google has continued to work on DataBinding in xml.  Improvements include 20% faster compilation, refactoring support, and better error messaging for compile errors.
+* A new ViewBinding library is also planned for Android Studio 3.6 that will combine the best of DataBinding and Kotlin synthetic views.
+* Room 2.1 now allows you to use the suspend keyword with @Query @Insert and @Transaction functions.  This allows you to use Kotlin coroutines with Room.
+* Room 2.1 functions can also return RxJava Completables, Flowables, and Singles.
+* WorkManager is now supported by Robolectric and allows test instances to be created by instantiating TestWorker objects.
+* ViewModels can now be scoped to Navigation Graphs.
+
+## Kotlin, 2 Years In
+
+* Kotlin contracts (experimental in 1.3.0) allow you to write programmatic compiler guarantees.  This enables smartcasts by the compiler for your own custom functions. [You can read more here.](https://kotlinlang.org/docs/reference/whatsnew13.html)
+* Using the expect keyword for objects provides compile safety to multi-platform projects.  Platforms that do not implement an expects object will generate a compile time error.
+
+## Android Studio Build System
+
+* Android Studio 3.4 now supports incremental annotation processing for Glide, Dagger, and DataBinding.  Butterknife, Room, Realm, and Lifecycle annotations are still works in progress.
+* Android Studio 3.5's Apply Changes, unlike its predecessor Instant Run, no longer modifies your APK during builds.
+* Build speed attribution profiling is planned for a future release of Android Studio, potentially 3.6.
+
+## Android Fast Pair
+
+* The Google Fast Pair Service (GFPS) utilizes BLE to discover nearby Bluetooth devices and pair with them based on device proximity. The user will receive a notification to pair once their mobile device enters a specified range.  Once paired they will receive a second notification to download the device's companion app.  GFPS is initially aimed to facilitate first time pairing of audio sink devices, such as speakers, headphones and car kits, with as little user interaction required as possible. Subsequent pairing and reconnection is seamless based on proximity.
+* GFPS is currently limited to Android 6.0+, BLE 4.2+, and devices using either A2DP or HFP. Future support of devices using a GATT  profile is planned.
+* [You can read more here.](https://developers.google.com/nearby/fast-pair/spec#gatt_service)
+
+## What's New in Android Security
+
+* Adiation released for Android Go devices.  This has resulted in a 5x speed increase in encryption over AES.
+* A new Jetpack security library for Android 6.0+ was released as well for encrypting data at rest. [You can read more here.](https://developer.android.com/jetpack/androidx/releases/security)
+* TLS 1.3 is now enabled by default.  If you use the Conscrypt Library and target Android Q you can use TLS 1.3.0 in your app as well.
+* On Android Q the BiometricPrompt class now has an explicit and an implicit confirmation flow.  You can also enable device credential fallbacks on biometric prompts.
+
+## What's New in Q UI
+
+* Android Q now has Bubbles.  Bubbles (high user-interaction expected) and Picture-in-Picture (low user-interaction expected) are now recommended over SAW (Screen_Alert_Window).
+* Action.Builder() now has a setEditResponseBeforeSummit(Boolean) method for notifications.  You can also use FirebaseSmartReply to add ML suggested responses to your notification
+
+## Developing Smarter Animations
+
+* Google recommends that your animations adhere to three quality standards:
+
+1. Reentrant - The animation can be interrupted and called again at any time.
+2. Continuous - The animation should not have discontinuities in its position over time (it shouldn't jump).
+3. Smooth - The animation should not have discontinuities in its velocity over time (it shouldn't jerk).
+
+* You can ensure reentrant, continuous animations by retaining a concrete reference to the animation.  This is best done by calling a view's view.animate() method, which returns an animation object.
+* You can ensure smooth animations by using Googles SpringAnimation library to smooth velocity changes.
+* You can write a small View extension method in order to get the best of both worlds.  When animating windows and view holders you should turn SpringAnimation bounciness off and set stiffness to a value of 500f.
+
+## Build Testable Apps
+
+* You can now create coroutines using viewModelScope.  This prevents leaks of long running requests after a user has killed the fragment.  These scopes can then be used to call suspend functions from the the repository wrapper class for your Room and Retrofit APIs. 
+* Using coroutines means that you can use the new runBlockingTest lambda to run your coroutine unit and integration tests synchronously. 
+* You can also use Room's InMemoryDatabaseBuilder for hermetic database method testing.
+* Mock Navigation Graphs can be created to simulate routing in integration tests.
+* Improving App Performance with Benchmarking
+* The Jetpack Benchmark Library was released to Alpha. It allows you to create special benchmarking functions within Benchmarking modules.
+* You should avoid running benchmarking on Debug releases.  You also run your benchmark tests on a physical device, not an emulator.
+* Benchmark modules will issue build warning if you are running benchmark tests in debug mode, while using an emulator, without a benchmark runner, or on a device with low power.
+* Always be aware of caching and ensure that you clear the cache before each iteration.
+* [You can read more about benchmarking your app here.](https://developer.android.com/studio/profile/benchmark)
