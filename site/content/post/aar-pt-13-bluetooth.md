@@ -17,8 +17,8 @@ Since I've been at Nautilus I've had to work with Bluetooth and the Internet of 
 
 1. It emits weak signals.  This means that it consumes an order of magnitude less energy and has significantly less interference.
 2. Bluetooth signals, once paired, use frequency hopping to reduce interference even further.  This also indirectly makes Bluetooth connections more secure.  In the Army we used frequency hop on our HF radios for roughly the same purpose; it increased jamming resistance and made broadcasts more difficult to intercept.
-3.  Bluetooth can create self-healing mesh networks that adapt to the loss of a single device.
-4.  Setup is extremely simple compared to wifi, usually consisting of a single button press.
+3. Bluetooth can create self-healing mesh networks that adapt to the loss of a single device.
+4. Setup is extremely simple compared to wifi, usually consisting of a single button press.
 
 * Bluetooth connections are configured into master-slave relationships.  A master can have up to 7 slaves.  Roles can also be reversed at will and a master can simultaneously be a slave to another device.
 * BT5 is the latest iteration of bluetooth (2019).  BT4 was the first generation that qualified as BLE (Bluetooth Low Energy).
@@ -30,3 +30,5 @@ Since I've been at Nautilus I've had to work with Bluetooth and the Internet of 
 * Connecting to a Bluetooth device should be done by an Android Activity.  Once the connection is established however you should use a Service to retain the Bluetooth GATT connection.  You can manage the service object through binding and unbinding as well as a persistent foreground notification.
 * If you use a bound service pattern you can call your service methods directly for results.  The alternative is to use an intent broadcaster pattern to communicate between the activity and the service.
 * According to wikipedia "The Logical Link Control and Adaptation Layer Protocol (L2CAP) is layered over the Baseband Protocol and resides in the data link layer. L2CAP provides connection-oriented and connectionless data services to upper layer protocols with protocol multiplexing capability, segmentation and reassembly operation, and group abstractions. L2CAP permits higher level protocols and applications to transmit and receive L2CAP data packets up to 64 kilobytes in length.  Those higher level protocols include SDP (Protocol used to find other Bluetooth devices within the communication range, also responsible for detecting the function of devices in range), RFCOMM (Protocol used to emulate serial port connections) and TCS (Telephony control protocol).  The Bluetooth profiles use those protocols as their means of transmission." What that means is that all L2CAP does is reassemble the packets. Connection oriented means pairing devices.  Connectionless means packets that are just periodically broadcast.  Connectionless is used exclusively for BLE beacons that just broadcast their UUID and maybe a url."
+
+Image obtained with permission from https://www.deviantart.com/martz90
