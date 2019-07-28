@@ -66,10 +66,10 @@ paginate = 5
 			description = "Together with Workplace Advisor Subscription and Microsoft Office 365, the Find app makes finding and reserving the best workspaces quick and simple."
 
 		[[params.portfolio.gallery]]
-			destination = "https://jjmtaylor.com/images/fulls/weg2015.jpg"
-			preview = "https://jjmtaylor.com/images/thumbs/weg2015.jpg"
-			title = "Worldwide Equipment Guide - 2015 (iOS & aOS)."
-			description = "A fullstack reboot of my original android WEG application.  Written in native Swift (iOS), Kotlin (aOS), and served from my own Spring Boot API."
+			destination = "https://www.jenie.com/"
+			preview = "https://jjmtaylor.com/images/thumbs/jenie.jpg"
+			title = "Jenie (iOS)."
+			description = "A hotel reservation application written in Swift that I built for the Portland startup, Jenie."
 
 		[[params.portfolio.gallery]]
 			destination = "https://play.google.com/store/apps/details?id=com.jamestaylor.weg"
