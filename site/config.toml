@@ -69,7 +69,7 @@ paginate = 5
 			destination = "https://www.jenie.com/"
 			preview = "https://jjmtaylor.com/images/thumbs/jenie.jpg"
 			title = "Jenie (iOS)."
-			description = "A hotel reservation application written in Swift that I built for the Portland startup, Jenie."
+			description = "Search hotels, vacation rentals or hostels and share your experience through the Jenie mobile app."
 
 		[[params.portfolio.gallery]]
 			destination = "https://play.google.com/store/apps/details?id=com.jamestaylor.weg"
@@ -79,7 +79,7 @@ paginate = 5
 
 		[[params.portfolio.gallery]]
 			destination = "https://apps.apple.com/us/app/wrd-calculator/id1148696352"
-			preview = "https://jjmtaylor.com/images/thumbs/images/thumbs/wrd.jpg"
+			preview = "https://jjmtaylor.com/images/thumbs/wrd.jpg"
 			title = "Wargame: Red Dragon Calculator (iOS & aOS)."
 			description = "My first Ionic hybrid mobile application. It was written in Typescript using the Angular 2 framework and released simeltaneously to the Google Play Store and Apple App Store."
 
