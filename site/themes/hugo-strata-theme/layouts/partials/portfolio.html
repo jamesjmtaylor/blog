@@ -4,7 +4,7 @@
 	<div class="row">
 		{{ range .Site.Params.portfolio.gallery }}
 		<article class="6u 12u$(xsmall) work-item">
-			<a href="{{ $.Site.BaseURL }}images/{{ .destination }}" class="image fit thumb"><img src="{{ .preview }}" alt="" /></a>
+			<a href="{{ .destination }}" class="image fit thumb"><img src="{{ .preview }}" alt="" /></a>
 			<h3>{{ .title | markdownify }}</h3>
 			<p>{{ .description | markdownify }}</p>
 		</article>
