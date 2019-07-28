@@ -56,14 +56,14 @@ paginate = 5
 		[[params.portfolio.gallery]]
 			destination = "https://www.bowflex.com/max-trainer/intelligence.html"
 			preview = "https://jjmtaylor.com/images/thumbs/bowflex.jpg"
-			title = "Jenie (iOS)."
-			description = "A hotel reservation application written in Swift that I built for the Portland startup, Jenie."
+			title = "Bowflex Max Intelligence (iOS & aOS)"
+			description = "The Max Intelligence™ App offers the guidance and motivation you need by providing in-depth analytics and awards, helping you celebrate milestones, achievements, personal bests, and keeping track of time, calories burned, and more."
 
 		[[params.portfolio.gallery]]
 			destination = "https://www.steelcase.com/products/apps/steelcase-find/"
 			preview = "https://jjmtaylor.com/images/thumbs/find.jpg"
-			title = "Jenie Connect (iOS & aOS)."
-			description = "A hotel sms messaging system written natively in Swift (iOS) and Java (aOS) for Jenie."
+			title = "Steelcase Find (iOS & aOS)."
+			description = "Together with Workplace Advisor Subscription and Microsoft Office 365, the Find app makes finding and reserving the best workspaces quick and simple."
 
 		[[params.portfolio.gallery]]
 			destination = "https://jjmtaylor.com/images/fulls/weg2015.jpg"
@@ -74,7 +74,7 @@ paginate = 5
 		[[params.portfolio.gallery]]
 			destination = "https://play.google.com/store/apps/details?id=com.jamestaylor.weg"
 			preview = "https://jjmtaylor.com/images/thumbs/weg2012.jpg"
-			title = "Worldwide Equipment Guide - 2012 (aOS)."
+			title = "Worldwide Equipment Guide - 2012 (aOS only)."
 			description = "A native android application developed for the US Army Maneuver Center of Excellence.  With over 5,000 downloads this is my most popular individually launched app."
 
 		[[params.portfolio.gallery]]
