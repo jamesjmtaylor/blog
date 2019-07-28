@@ -7,6 +7,14 @@ asset pipeline.
 
 It's setup to use post-css and babel for CSS and JavaScript.
 
+## Notes
+Static site editing notes:
+1. In order to modify how sections of the static site are arranged edit blog/site/themes/hugo-strata-theme/layout
+2. In order to modify specific sections of the static site edit blog/site/themes/hugo-strata-theme/partials
+3. In order to modify images of the static website you must add them to blog/site/themes/hugo-strata-theme/images and then make sure they are tracked by git
+
+After any changes to the local files make sure that you commit the changes to git, push to remote, clear your browser cache and reload the page.
+
 ## Usage
 Be sure that you have the latest node, npm and [Hugo](https://gohugo.io/overview/installing/) installed. If you need to install hugo, run:
 
