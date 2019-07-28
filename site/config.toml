@@ -54,38 +54,38 @@ paginate = 5
 		# The images and thumbnails are stored under static/images
 		# Create and change subfolders as you like
 		[[params.portfolio.gallery]]
-			image = "fulls/weg2012.jpg"
-			thumb = "thumbs/weg2012.jpg"
+			destination = "fulls/weg2012.jpg"
+			preview = "https://jjmtaylor.com/images/thumbs/weg2012.jpg"
 			title = "Worldwide Equipment Guide - 2012 (aOS)."
 			description = "My first (and most popular) android app."
 
 		[[params.portfolio.gallery]]
-			image = "fulls/wrd.jpg"
-			thumb = "thumbs/wrd.jpg"
+			destination = "fulls/wrd.jpg"
+			preview = "{{ $.Site.BaseURL }}images/thumbs/wrd.jpg"
 			title = "Wargame: Red Dragon Calculator (iOS & aOS)."
 			description = "My first Ionic hybrid mobile application."
 
 		[[params.portfolio.gallery]]
-        	image = "fulls/gwent.jpg"
-            thumb = "thumbs/gwent.jpg"
+        	destination = "fulls/gwent.jpg"
+            preview = "{{ $.Site.BaseURL }}images/thumbs/gwent.jpg"
             title = "Gwent (iOS)."
             description = "My capstone project at the Coding Dojo, where I studied the Swift programming language."
 
 		[[params.portfolio.gallery]]
-			image = "fulls/jenie.jpg"
-			thumb = "thumbs/jenie.jpg"
+			destination = "fulls/jenie.jpg"
+			preview = "{{ $.Site.BaseURL }}images/thumbs/jenie.jpg"
 			title = "Jenie (iOS)."
 			description = "A hotel reservation application written in Swift that I built for the Portland startup, Jenie."
 
 		[[params.portfolio.gallery]]
-			image = "fulls/jenieConnect.jpg"
-			thumb = "thumbs/jenieConnect.jpg"
+			destination = "fulls/jenieConnect.jpg"
+			preview = "{{ $.Site.BaseURL }}images/thumbs/jenieConnect.jpg"
 			title = "Jenie Connect (iOS & aOS)."
 			description = "A hotel sms messaging system written natively in Swift (iOS) and Java (aOS) for Jenie."
 
 		[[params.portfolio.gallery]]
-			image = "fulls/weg2015.jpg"
-			thumb = "thumbs/weg2015.jpg"
+			destination = "fulls/weg2015.jpg"
+			preview = "{{ $.Site.BaseURL }}images/thumbs/weg2015.jpg"
 			title = "Worldwide Equipment Guide - 2015 (iOS & aOS)."
 			description = "A fullstack reboot of my original android WEG application.  Written in native Swift (iOS), Kotlin (aOS), and served from my own Spring Boot API."
 
