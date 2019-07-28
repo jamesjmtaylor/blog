@@ -54,40 +54,40 @@ paginate = 5
 		# The images and thumbnails are stored under static/images
 		# Create and change subfolders as you like
 		[[params.portfolio.gallery]]
-			destination = "fulls/weg2012.jpg"
-			preview = "https://jjmtaylor.com/images/thumbs/weg2012.jpg"
-			title = "Worldwide Equipment Guide - 2012 (aOS)."
-			description = "My first (and most popular) android app."
-
-		[[params.portfolio.gallery]]
-			destination = "fulls/wrd.jpg"
-			preview = "{{ $.Site.BaseURL }}images/thumbs/wrd.jpg"
-			title = "Wargame: Red Dragon Calculator (iOS & aOS)."
-			description = "My first Ionic hybrid mobile application."
-
-		[[params.portfolio.gallery]]
-        	destination = "fulls/gwent.jpg"
-            preview = "{{ $.Site.BaseURL }}images/thumbs/gwent.jpg"
-            title = "Gwent (iOS)."
-            description = "My capstone project at the Coding Dojo, where I studied the Swift programming language."
-
-		[[params.portfolio.gallery]]
-			destination = "fulls/jenie.jpg"
-			preview = "{{ $.Site.BaseURL }}images/thumbs/jenie.jpg"
+			destination = "https://www.bowflex.com/max-trainer/intelligence.html"
+			preview = "https://jjmtaylor.com/images/thumbs/bowflex.jpg"
 			title = "Jenie (iOS)."
 			description = "A hotel reservation application written in Swift that I built for the Portland startup, Jenie."
 
 		[[params.portfolio.gallery]]
-			destination = "fulls/jenieConnect.jpg"
-			preview = "{{ $.Site.BaseURL }}images/thumbs/jenieConnect.jpg"
+			destination = "https://www.steelcase.com/products/apps/steelcase-find/"
+			preview = "https://jjmtaylor.com/images/thumbs/find.jpg"
 			title = "Jenie Connect (iOS & aOS)."
 			description = "A hotel sms messaging system written natively in Swift (iOS) and Java (aOS) for Jenie."
 
 		[[params.portfolio.gallery]]
-			destination = "fulls/weg2015.jpg"
-			preview = "{{ $.Site.BaseURL }}images/thumbs/weg2015.jpg"
+			destination = "https://jjmtaylor.com/images/fulls/weg2015.jpg"
+			preview = "https://jjmtaylor.com/images/thumbs/weg2015.jpg"
 			title = "Worldwide Equipment Guide - 2015 (iOS & aOS)."
 			description = "A fullstack reboot of my original android WEG application.  Written in native Swift (iOS), Kotlin (aOS), and served from my own Spring Boot API."
+
+		[[params.portfolio.gallery]]
+			destination = "https://play.google.com/store/apps/details?id=com.jamestaylor.weg"
+			preview = "https://jjmtaylor.com/images/thumbs/weg2012.jpg"
+			title = "Worldwide Equipment Guide - 2012 (aOS)."
+			description = "A native android application developed for the US Army Maneuver Center of Excellence.  With over 5,000 downloads this is my most popular individually launched app."
+
+		[[params.portfolio.gallery]]
+			destination = "https://apps.apple.com/us/app/wrd-calculator/id1148696352"
+			preview = "https://jjmtaylor.com/images/thumbs/images/thumbs/wrd.jpg"
+			title = "Wargame: Red Dragon Calculator (iOS & aOS)."
+			description = "My first Ionic hybrid mobile application. It was written in Typescript using the Angular 2 framework and released simeltaneously to the Google Play Store and Apple App Store."
+
+		[[params.portfolio.gallery]]
+        	destination = "https://apps.apple.com/us/app/worldwide-equipment-guide-2015/id1392413944"
+            preview = "https://jjmtaylor.com/images/thumbs/weg2015.jpg"
+            title = "Worldwide Equipment Guide - 2015(iOS & aOS)."
+            description = "A reboot of my 2012 Worldwide equipment guide.  This application was developed natively for iOS & Android using Swift & Kotlin respectively.  It is supported by a Kotlin Springboot API backed by a PostgreSQL database."
 
 	[params.recentposts]
 		hide  = false
