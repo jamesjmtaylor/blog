@@ -2,14 +2,14 @@
 title: AAR pt 15 (Architecture/Software Engineering)
 date: '2019-10-05T09:41:08-07:00'
 ---
-<img style="float: left; margin:0 1em 1em 0; width: 33%" src="/img/blog/blueprint.jpg"> If you haven’t had a chance to read the first entry in the series for context, <a href="/post/after-action-review-aar/">you can do so here</a>
+<img style="float: left; margin:0 2em 0 0; width: 66%" src="/img/blog/blueprint.jpg"> If you haven’t had a chance to read the first entry in the series for context, <a href="/post/after-action-review-aar/">you can do so here</a>
 
-Given that my last post was about my architecture certification, I figured this would be a good time to do another post on some architecture concepts. This is the second architecture lessons learned post that I've done; <a href="/post/aar-pt-8-architecture-software-engineering/">you can find the first one here</a>.
+Given that my last post was about my architecture certification, I figured this would be a good time to do another post on some architecture concepts. This is the second architecture lessons learned post that I've done; <a href="/post/aar-pt-8-architecture-software-engineering/">you can find the first one here</a>. 
 
 * The idea of debouncing is that you artificially limit multiple, similar requests by a client, only sending a new request every X seconds.  Libraries like RxSwift and RxJava have debouncer functions built in.
 * Most MVC server frameworks handle exceptions by return a 500 error code and a stack trace, recovering gracefully.  
 * Any IP address starting with 10, 172, or 192.168 is private (with a few exceptions).  You will not be able to access them across the internet if you are not already on the same local network.  Everything else is public  
-* The 12 factor web API guidelines recomends that you store a microservice's configuration in the environment, NOT the app's config file.  This architectual decision has the added benefit that if the source code is compromised, none of the API secrets are lost.
+* The 12 factor web API guidelines recommends that you store a microservice's configuration in the environment, NOT the app's config file.  This architectural decision has the added benefit that if the source code is compromised, none of the API secrets are lost.
 * When you override "Equals()" you must override "Hash()" as well, otherwise you can have duplicate objects in HashSets.
 * Reachability is the ability of a device to 'reach' the internet.  Connectivity is the ability of a device to 'connect' to a particular service.  You can potentially 'reach' the internet but not connect to anything if your router is functioning but is not resolving domains.  This might happen if a user connects their device to their home wifi but their internet service provider is experiencing a localized outage.
 * In Android you use ConnectivityService to determine if you are connected to the internet.  In iOS you use ReachabilityService.
@@ -21,7 +21,7 @@ Given that my last post was about my architecture certification, I figured this 
 * Sorting a list is modifying it and is NOT thread safe.
 * There are 2 different ways of controlling versions between clients and servers.  In mobile versioning you check if the app version is compatible with the existing API and present an alert to the user to upgrade if it isn't.  In API versioning you have multiple versions of an API available until client's that relied on the old endpoints are no longer used.
 * Always use ints for money.  Floats and doubles introduce subtle rounding errors.
-* The biggest question for reactive programming is how you deal with the null state.  Blank object?  Loading Screen?  This must be dealt with on a case-by-case baseis.
+* The biggest question for reactive programming is how you deal with the null state.  Blank object?  Loading Screen?  This must be dealt with on a case-by-case basis.
 * When you index a new column what you're actually doing is creating a whole new copy of the table that is updated and in sync with the original table.
 * ODM (Original Device Manufacturer) differs from OTM (Off The Shelf) in that it is custom built by a hardware company and licensed to another for re-sale.
 * As an interpreted language javascript is able to support the "spread" operator.  This allows you to combine multiple concrete objects into a single object at run-time.  Neither C#, Kotlin, Swift, or Java supports this. Precedence favors the last object passed into the spread function if multiple objects have the same property with different values.
