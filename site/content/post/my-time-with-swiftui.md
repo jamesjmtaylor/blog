@@ -6,6 +6,10 @@ date: '2019-11-17T07:32:20-08:00'
 
 One of the biggest shocks for me was that in SwiftUI there are no longer ViewControllers.  You can still access lifecycle methods through the SceneDelegate, but other than that the traditional ViewController logic is absent.
 
+
+
+
+
 SwiftUI still has a lot of issues with compositing multiple elements.  A view cannot have more than 10 child views.  If you ever get an odd error message that is “Unable to infer complex closure return type; add explicit type to disambiguate”, thenviews into either VStack or HStack subviews.  Alternatively you can create an entirely separate and new view that you embed into the initial view.  Finally, if all else fails, try restarting Xcode.
 
 Under Combine, if you have an Observable object with a @Published property, updating that property will notify the UI to update with the new value.  It will also break any Binding<*> object references that you created by prefixing objects with the $ sign.  
