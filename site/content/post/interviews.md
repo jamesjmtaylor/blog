@@ -2,7 +2,7 @@
 title: Interviews
 date: '2020-02-01T09:02:32-08:00'
 ---
-<img style="float: left; margin:0 1em 1em 0; width: 33%" src="/img/blog/interview.jpg"/> 
+<img style="float: left; margin:0 1em 0 0; width: 50%" src="/img/blog/interview.jpg"/> 
 
 As a software developer, looking for a job is one of the most stressful things you will ever do.  This is particularly true for your first job. In the months leading up to my departure from the Army I applied for 117 different jobs.   From those 117 applications I received 35 responses.  From those 35 responses I was able to secure interviews with 18 different companies.  Of those 18 different companies I was eventually extended offers to work at 6.  
 
