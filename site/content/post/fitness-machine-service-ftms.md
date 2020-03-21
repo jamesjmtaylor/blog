@@ -2,6 +2,8 @@
 title: FiTness Machine Service (FTMS)
 date: '2020-03-01T08:50:00-08:00'
 ---
+<img style="float: right; margin:0 0 1em 1em; width: 50%" src="/img/blog/ble.png"/> 
+
 Under BLE (Bluetooth Low-Energy) GATT (General ATTributes Profile) there are "services" which act in the same way as protocols function under normal Bluetooth.  They identify various bit and byte contracts that bluetooth broadcasts must conform to.
 
 Android will not wait for BLE notification flags to be set.  If you read immediately after write you will get a garbage response.
@@ -21,3 +23,5 @@ Most BLE characteristics use Byte squishing.  A characteristic's supported featu
 MTU (Max Transmission Unit) estables the maximum number of bytes transmitted in a single transmission.  Data that exceeds the number of bytes will need to be sent in a subsequent transmission.
 
 If you have signed bytes, you should test at the byte boundry.
+
+<img style="float: right; margin: 1em 0 1em 0; width: 100%" src="/img/blog/bitbyte.png"/>
