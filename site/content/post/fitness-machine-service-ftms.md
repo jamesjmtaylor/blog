@@ -24,4 +24,24 @@ MTU (Max Transmission Unit) estables the maximum number of bytes transmitted in 
 
 If you have signed bytes, you should test at the byte boundry.
 
-<img style="float: right; margin: 1em 0 1em 0; width: 100%" src="/img/blog/bitbyte.png"/>
+<img style="float: right; margin: 1em 0 1em 0; width: 100%" src="/img/blog/bitbyte.png"/> 
+
+Test
+
+```
+@ExperimentalUnsignedTypesfun convertBytesAndFeaturesToCharacteristics(bytes: ByteArray, flags: List<INDOOR_BIKE_DATA_FLAGS>):Characteristic{    var currentByteIndex = 2 //First two bytes are used for flags.    val sb = StringBuilder()    for (flag in flags){        val dataEndByteIndex = currentByteIndex + flag.byteSize        val dataBytes = bytes.copyOfRange(currentByteIndex, dataEndByteIndex)        currentByteIndex = dataEndByteIndex        val int = if (!flag.signed) dataBytes.asUByteArray().toInt() else dataBytes.toInt()        val doubleValue = (int * flag.resolution * 10).roundToInt().toDouble() / 10.0 //Removes rounding errors        sb.append("${flag.name}: $doubleValue ${flag.units} \n")    }    return Characteristic("Indoor Bike Data",sb.toString())}
+```
+
+This relies on functions to convert between bytearrays and bitsets:
+
+```
+fun ByteArray.toInt(): Int {       val numBits = this.size * 8       return BitSet.valueOf(this).toInt(numBits)}fun BitSet.toInt(numBits : Int ): Int {    var value = 0    var isNegative = false    for (i in 0 until this.length()) {        if (i == numBits - 1) isNegative = this[numBits - 1] // handle two's compliment        else value += if (this[i]) 1 shl i else 0    }    if (isNegative) return value * -1    return value}
+```
+
+
+
+Kotlin specifically also has the experimental unsigned ByteArray.  To convert this to an integer the following custom function is used:
+
+```
+@ExperimentalUnsignedTypesfun UByteArray.toInt(): Int {    var result : UInt = 0u    for (i in this.indices){        result = result or (this[i].toUInt() shl 8 * i)    }    return result.toInt()}
+```
