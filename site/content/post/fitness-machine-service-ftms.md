@@ -12,7 +12,7 @@ Most BLE characteristics use Byte squishing.   A byte (8 bits) can be represente
 
 The maximum number of bytes transmitted in a single transmission is determined by the MTU (Max Transmission Unit).  The MTU is established between the client and the server as part of their pairing handshake.  Data that exceeds the number of bytes will need to be sent in a subsequent transmission. The larger the MTU, the longer that it takes to transmit, receive, and decode a single transmission.
 
-Most of the values you receive will be represented by unsigned integers.  This is because by re-purposing the sign bit at the front you can double the magnitude of the possible values.  When a property must be capable of representing negative values however it will be transmitted using a signed integer.  When you have signed integers, you should evaluate the value at the byte boundry.  This is illustrated in the diagram below for feature X:
+Most of the values you receive will be represented by unsigned integers.  This is because by re-purposing the sign bit at the front you can double the magnitude of the possible values.  When a property must be capable of representing negative values however, it will be transmitted using a signed integer.  When you have signed integers, you should evaluate the value at the byte boundary.  This is illustrated in the diagram below for feature X:
 
 <img style="float: right; margin: 1em 0 1em 0; width: 100%" src="/img/blog/bitbyte.png"/> 
 
@@ -47,7 +47,16 @@ fun ByteArray.toInt(): Int {
 and BitSets:
 
 ```
-fun BitSet.toInt(numBits : Int ): Int {    var value = 0    var isNegative = false    for (i in 0 until this.length()) {        if (i == numBits - 1) isNegative = this[numBits - 1] // handle two's compliment        else value += if (this[i]) 1 shl i else 0    }    if (isNegative) return value * -1    return value}
+fun BitSet.toInt(numBits : Int ): Int {
+    var value = 0
+    var isNegative = false
+    for (i in 0 until this.length()) {
+        if (i == numBits - 1) isNegative = this[numBits - 1] // handle two's compliment
+        else value += if (this[i]) 1 shl i else 0
+    }
+    if (isNegative) return value * -1
+    return value
+}
 ```
 
 Kotlin specifically also has the experimental unsigned ByteArray.  To convert this to an integer the following custom function is used:
@@ -62,3 +71,5 @@ fun UByteArray.toInt(): Int {
     return result.toInt()
 }
 ```
+
+After having implemented the Android/Kotlin solution I'm now somewhat curious how the iOS/Swift solution might be the same or different.  I would like to make a mirror implementation iOS app eventually, but if you've already done so please feel free to post in the comments!
