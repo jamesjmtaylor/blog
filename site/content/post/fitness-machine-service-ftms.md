@@ -16,7 +16,7 @@ Most of the values you receive will be represented by unsigned integers.  This i
 
 <img style="float: right; margin: 1em 0 1em 0; width: 100%" src="/img/blog/bitbyte.png"/> 
 
-For the purposes of this example Feature X uses two bytes.  The first is signed, the second is not.  You The code below illustrates how this might be accomplished in Kotlin using experimental unsigned types.  Java, for reference, does not support unsigned types.
+For the purposes of this example Feature X uses two bytes.  The first is signed, the second is not.  When decoding the ByteArray you must make sure to account for the mixture of signed and unsigned bytes. The code below illustrates how this might be accomplished in Kotlin using Kotlin's experimental unsigned types.  Java, for reference, does not support unsigned types.
 
 ```
 @ExperimentalUnsignedTypes
@@ -35,27 +35,22 @@ fun convertBytesAndFeaturesToCharacteristics(bytes: ByteArray, flags: List<INDOO
 }
 ```
 
-This function relies on the functions below to convert between bytearrays and bitsets:
+This function relies on the functions below to convert between Bytearrays:
 
 ```
 fun ByteArray.toInt(): Int {
        val numBits = this.size * 8
        return BitSet.valueOf(this).toInt(numBits)
-}fun BitSet.toInt(numBits : Int ): Int {
-    var value = 0
-    var isNegative = false
-    for (i in 0 until this.length()) {
-        if (i == numBits - 1) isNegative = this[numBits - 1] // handle two's compliment
-        else value += if (this[i]) 1 shl i else 0
-    }
-    if (isNegative) return value * -1
-    return value
 }
 ```
 
+and BitSets:
+
 ```
+fun BitSet.toInt(numBits : Int ): Int {    var value = 0    var isNegative = false    for (i in 0 until this.length()) {        if (i == numBits - 1) isNegative = this[numBits - 1] // handle two's compliment        else value += if (this[i]) 1 shl i else 0    }    if (isNegative) return value * -1    return value}
+```
+
 Kotlin specifically also has the experimental unsigned ByteArray.  To convert this to an integer the following custom function is used:
-```
 
 ```
 @ExperimentalUnsignedTypes
