@@ -22,4 +22,4 @@ LRU (Less Recent Used) cache is used by default by the Google libraries Glide an
 
 Timber is now preferred over Log in Kotlin. This is because it auto-ggrabs the class name for the TAG and does not log in production. You just need to ensure that you plant the Timber instance in your Application Singleton. In android studio you can filter out repetitive debugger messages with exclusionary regexes.
 
-Photo by Meriç Dağlı on Unsplash
+Photo by [Meriç Dağlı](https://unsplash.com/@meric?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on Unsplash
