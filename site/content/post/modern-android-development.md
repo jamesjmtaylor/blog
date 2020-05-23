@@ -2,13 +2,11 @@
 title: Modern Android Development
 date: '2020-05-01T07:24:00-07:00'
 ---
-<img style="float: left; margin:0 2em 1em 0; width: 50%" src="/img/blog/modern.jpg"/> 
+<img style="float: right; margin:0 0 1em 2em; width: 50%" src="/img/blog/modern.jpg"/> 
 
 "onSaveInstanceState" is called before "onStop()" but not necessarily before "onPause()". It may also never be called (i.e. on back press). 
 
 Only do FramentTransactions inside "Activity.onCreate()", "Activity.onPostResume()" or "FragmentActivity.onResumeFragments()". Otherwise you'll get an exception. You should avoid using FragmentTransactions in "AsyncTask.onPostExecute()" because there is NO lifecycle safety within that scope.  As a lifecycleObserver, a VM can actually implement lifecycle callback methods, avoiding fragmentTransaction errors entirely. Another safe solution is to just put fragment transactions in the activity's LiveData observer.  You should not pass in the backing data structure to an async call. Instead you should use immutable objects and replace the original object instead of modify it. You can use CMD + SHIFT + T to quickly autogenerate a new unit test for the method that your cursor is currently over.
-
-
 
 You can use the 3rd party plugin "Save Actions" to optimize imports automatically on save (amongst other things).
 
