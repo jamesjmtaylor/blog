@@ -1,8 +1,8 @@
 ---
-title: Django (Part 1)
-date: '2020-06-27T07:04:31-07:00'
+title: Django (Part 2)
+date: '2020-07-01T07:04:31-07:00'
 ---
-<img style="float: left; margin:0 2em 1em 0; width: 50%" src="/img/blog/python2.jpg"/> Recently a startup that I work part-time for asked that I transition to back end development.  They were happy to have me help, even after hearing my disclaimer that I had little experience with the framework that they were currently using, Django.  Eager to learn, I accepted the offer and have spent the past month learning the ropes and implementing features here and bug fixes there.  This is the first post in a two part series.  It will cover my philosophy on how I approach working in a completely new framework and how I account for billable hours.  The second will be on the lessons I've learned after diving into the deep end of developing a django brown-field project.
+<img style="float: left; margin:0 2em 1em 0; width: 50%" src="/img/blog/python2.jpg"/> Recently a startup that I work part-time for asked that I transition to back end development.  They were happy to have me help, even after hearing my disclaimer that I had little experience with the framework that they were currently using, Django.  Eager to learn, I accepted the offer and have spent the past month learning the ropes and implementing features here and bug fixes there.  This is the first post in a two part series.  It will cover my philosophy on how I approach working in a completely new framework and how I account for billable hours.  The second will be on the lessons I've learned after diving into the deep end of developing a django brown-field project.  I also have a [tangentially related post](/post/aar-pt-2-python/) in my old AAR series specifically about python development.  
 
 As a rule of thumb, you should always use Django with virtualenv, or virtual environment.  It's safe and you can install apps in the virtualenv while not affecting the system's environment.  To this end you can either use the virtualenv library that comes pre-packaged with python, or you can pip install virtualenvwrapper.  The benefit of the latter is that it will not add all the virtual environment executables to your project. 
 
