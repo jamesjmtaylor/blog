@@ -1,5 +1,5 @@
 ---
-title: Django (Part 2)
+title: Django (part 2)
 date: '2020-07-01T07:04:31-07:00'
 ---
 <img style="float: left; margin:0 2em 1em 0; width: 50%" src="/img/blog/python2.jpg"/> This is the second part on Django programming in a two part series.  For context, recently a startup that I work part-time for asked that I transition to back end development.  They were happy to have me help, even after hearing my disclaimer that I had little experience with the framework that they were currently using, Django.  Eager to learn, I accepted the offer and have spent the past month learning the ropes and implementing features here and bug fixes there.  This part will be on the lessons I've learned after diving into the deep end of developing a Django brown-field project.  I also have a [tangentially related post](/post/aar-pt-2-python/) in my old AAR series specifically about python development.  
@@ -20,10 +20,6 @@ It is a widely documented deficiency in python that you cannot import files from
 
 In CSS (and the HTML framework bootstrap) `align` refers to vertical alignment (top, middle, bottom) while `justify` refers to horizontal alignment (left, center, right).  In order for justify-content-center to work in bootstrap it must have nested col div classes, i.e. `<div class="row justify-content-center">`
 
-
-
-
-
 If you’re using PyCharm you  can configure your virtual environment in the bottom right by setting your run configuration for the DjangoProject. If you’ve already configured the virtual environment in the terminal, just use the “Existing environment” radio button and PyCharm should detect the environment’s presence automatically. Once you have configured the environment for PyCharm you can use the "Run" sub-menu to have PyCharm run the project, execute step-through debugging, analyze stack traces, inspect variables and execute commands.  When evaluating expressions in PyCharm you must call the function, i.e. `list.count() > 1`. When writing expressions in the Django template you must name the function, I.e.   `list.count > 1` 
 
 When working with React \`npm run watch\` can replace typical gulp/grunt watch and auto-build flows.  Delightfully enough, PyCharm has it's own npm tool window, which you can view in PyCharm by choosing "Show npm scripts" in the package.json right-click menu.  You’ll need the tool window in order to execute \`start\` within PyCharm.  If you have an scss file that isn’t being processed, make sure that it’s listed in the app.scss file as an \`@import\`.  In order to debug a React or Angular app in PyCharm you’ll need to add a Javascript Debug configuration in your run configurations.  It should use the same localhost url that your Django project uses.  Additional information can be found at   <https://www.jetbrains.com/help/pycharm/debugging-javascript-in-chrome.html>. If your React or Angular application hangs in PyCharm, try turning off breakpoints and reloading the page, then turning them back on.    
@@ -32,16 +28,16 @@ If you want to connect to a database you can do so by opening the "Database" too
 
 While working on the project I found that PyCharm curiously unable to step into libraries like it normally does for statically compiled languages like C# or Java.  That's when I found that the standard tool for debugging python applications is PDB.  PDB stands for Python DeBugger. The normal means of using it is to modify your source code by inserting the line `import pdb; pdb.set_trace()` where you would like the debugging process to start.  Once this line is inserted in your code you can run it as you normally would.  Alternatively you can start the python REPL, execute `import pdb` and then execute the command for starting your program.
 
-
 Common commands for pdb include:
 
-l(ist) - Displays 11 lines around the current line or continue the previous listing.  It’s better to us ll (long list) which displays the entire function.
-s(tep) - Execute the current line, stop at the first possible occasion.
-n(ext) - Continue execution until the next line in the current function is reached or it returns.
-b(reak) - Set a breakpoint (depending on the argument provided).
-r(eturn) - Continue execution until the current function returns.
-h(elp) - Print the list of available commands.  When a command is included as an argument, it displays the man page for that command.
-! - Anything following this will be executed in the Python REPL, rather than the pdb REPL.
+* **l(ist)** - Displays 11 lines around the current line or continue the previous listing.  It’s better to us 
+* **ll (long list)** which displays the entire function.
+* **s(tep) **- Execute the current line, stop at the first possible occasion.
+* **n(ext)** - Continue execution until the next line in the current function is reached or it returns.
+* **b(reak)** - Set a breakpoint (depending on the argument provided).
+* **r(eturn) **- Continue execution until the current function returns.
+* **h(elp)** - Print the list of available commands.  When a command is included as an argument, it displays the man page for that command.
+* **!** - Anything following this will be executed in the Python REPL, rather than the pdb REPL.
 
 When debugging you can type the name of a variable that is in scope to view its value.  You can also call the dir() function on instance and check what methods and attributes it has. You can exit pdb just like you would the python REPL, by pressing CTRL+D. If you start pdb from within the python REPL and run the program and hit an unhandled exception you can return the pdb REPL to just before the crash by executing `pdb.pm()` To practice executing all these command yourself, clone the project available at <https://github.com/spiside/pdb-tutorial> and follow the tutorial in the README.
 
