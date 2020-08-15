@@ -1,6 +1,6 @@
 ---
 title: Complete Code Coverage
-date: '2020-06-01T11:53:33-07:00'
+date: '2020-08-01T11:53:00-07:00'
 ---
 <img style="float: left; margin:0 2em 1em 0; width: 50%" src="/img/blog/tiger.jpg"/> I have a bit of a confession to make: I'm something of a [Quora](https://www.quora.com/) addict.  I love scrolling through the incredible variety of questions and answers.  A little while ago I came across an excellent question about German engineering as it applied to software.  Specifically  [If Germans are good at engineering, why don't they dominate computer operating systems or mobile operating systems?](https://www.quora.com/If-Germans-are-good-at-engineering-how-come-they-dont-dominate-computer-operating-systems-or-mobile-operating-systems)   The most upvoted answer, written by an American software engineer who works at Daimler, was fascinating: 
 
