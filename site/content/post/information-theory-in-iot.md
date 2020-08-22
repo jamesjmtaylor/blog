@@ -1,5 +1,5 @@
 ---
-title: Information Theory in IoT
+title: Information Theory in IoT (Part 1)
 date: '2020-08-22T08:08:00-07:00'
 ---
 <img style="float: left; margin:0 1em 0 0; width: 33%" src="/img/blog/shannon.jpg">
