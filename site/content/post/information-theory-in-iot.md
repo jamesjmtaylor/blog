@@ -6,7 +6,7 @@ date: '2020-09-01T08:08:00-07:00'
 
 This is the first part in a three part series and will focus on the broad concepts of information theory.  Part two will discuss converting natural data into independent identically distributed values.  Part three will discuss Huffman encoding and error correction bits.
 
-I've recently been reading [Information Theory: A Tutorial Introduction](https://www.amazon.com/Information-Theory-Introduction-James-Stone/dp/0956372856) by James Stone, partly out of curiosity, partly out of the hope that what I learn may be in some way applicable to my current work.  Sure enough, the opportunity to apply what I've learned very quickly presented itself.
+Pictured is Claude Shannon, the founder of Information Theory.  I've recently been reading [Information Theory: A Tutorial Introduction](https://www.amazon.com/Information-Theory-Introduction-James-Stone/dp/0956372856) by James Stone, partly out of curiosity, partly out of the hope that what I learn may be in some way applicable to my current work.  Sure enough, the opportunity to apply what I've learned very quickly presented itself.
 
 At Nautilus our hardware stores past workouts until they can be transferred to the cloud by a connected mobile device.  Unfortunately like all computers,  the machine's Universal Control Board (UCB) has limited memory space.  As new functionality is added to the hardware, less space remains for offline workout storage.  This presents an opportunity for the application of information theory.
 
