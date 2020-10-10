@@ -2,9 +2,9 @@
 title: Information Theory in IoT (Part 2)
 date: '2020-10-01T09:19:50-07:00'
 ---
-<img style="float: left; margin:0 1em 0 0; width: 33%" src="/img/blog/huffman.jpg">
+<img style="float: left; margin:0 1em 1em 0; width: 20%" src="/img/blog/huffman.jpg">
 
-This is the second part in the Information Theory in IoT series and will discuss converting natural data into independent and identically distributed (IID) values as well as Huffman encoding and error correction bits.  The photograph is of of David A. Huffman, developer of Huffman Encoding.  Before we get into Huffman encoding though we need to discuss making the data IID.
+This is the second part in the Information Theory in IoT series and will discuss converting natural data into independent and identically distributed (IID) values as well as Huffman encoding.  The photograph is of of David A. Huffman, developer of Huffman Encoding.  Before we get into Huffman encoding though we need to discuss making the data IID.
 
 In this article we'll address the compression of a single metric, calories per minute.  At Nautilus this metric is colloquially called "Burn Rate".  I chose burn rate because of the importance of that particular metric has in our flagship mobile app, JRNY. 
 
@@ -21,7 +21,8 @@ The Huffman encoding algorithm involves taking values from a set of data and ass
 
 1. Create a leaf node for each symbol and add it to the priority queue.
 2. While there is more than one node in the queue:
-   * Add the two nodes of highest priority from the queue to the tree as branches.
+   * Add the two nodes of highest priority from the queue
+     to the tree as branches.
    * Create a new internal node with these two nodes as children and with probability equal to the sum of the two nodes' probabilities.
    * Add the new node to the queue.
    * Repeat until there are no nodes remaining in the priority queue
@@ -29,6 +30,6 @@ The Huffman encoding algorithm involves taking values from a set of data and ass
 
 <img style="float: left; margin:0 1em 0 0; width: 50%" src="/img/blog/huffman_br_tree.png">This algorithm is visually depicted above, while the application of those rules is depicted to the left.  Each digit is shown as an alternating red or blue set of bits to assist with visually parsing the data.  The total number of bits is 71.  Adding the 16 bits for the unsigned integer encoding of the initial burn rate value, the application of IID and Huffman encoding has reduced the number of bits from our initial 480 bits to only 87 compressed bits, for a reduction in size of 82%.  Another way to look at it is that with 30 integer values represented by 71 bits, each value requires only 2.36 binary digits to be represented, as opposed to the 16 bits of the original, uncompressed encoding.
 
-Now there is one huge asterisk for this compression ratio.  That is that this Huffman encoding example is for a very specific set of data.  In order to be able to encode and decode a more generalized set of data we would need to capture all the changes in burn rate for all of the workouts recorded.   Given the wide spectrum of possible values we would want to cap the amount of change between data points in order to limit the total number of values that we would need to generate codewords for.  Doing so of course limits the fidelity of the data.  But this limitation is relatively minor compared to the fact that we can now store up to five times as many workouts (keeping the length of the workouts constant) than we could previously.
+Now there is one huge asterisk for this compression ratio.  That is that this Huffman encoding example is for a very specific set of data.  In order to be able to encode and decode a more generalized set of data we would need to capture all the possible changes in burn rate for all of the workouts recorded.   Given the wide spectrum of possible values we would want to cap the amount of change between data points in order to limit the total number of values that we would need to generate codewords for.  Doing so of course limits the fidelity of the data.  But this limitation is relatively minor compared to the fact that we can now store up to five times as many workouts (keeping the length of the workouts constant) than we could previously.
 
 Image credit to <https://www.cise.ufl.edu/~manuel/huffman/press.release.html>
