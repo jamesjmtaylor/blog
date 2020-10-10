@@ -2,9 +2,9 @@
 title: Information Theory in IoT (Part 1)
 date: '2020-09-01T08:08:00-07:00'
 ---
-<img style="float: left; margin:0 1em 0 0; width: 33%" src="/img/blog/shannon.jpg">
+<img style="float: left; margin:0 1em 0 0; width: 20%" src="/img/blog/shannon.jpg">
 
-This is the first part in a two part series and will focus on the broad concepts of information theory.  Part two will discuss converting natural data into independent identically distributed values as well as Huffman encoding and error correction bits.
+This is the first part in a two part series and will focus on the broad concepts of information theory.  Part two will discuss converting natural data into independent identically distributed values as well as Huffman encoding.
 
 Pictured is Claude Shannon, the founder of Information Theory.  I've recently been reading [Information Theory: A Tutorial Introduction](https://www.amazon.com/Information-Theory-Introduction-James-Stone/dp/0956372856) by James Stone, partly out of curiosity, partly out of the hope that what I learn may be in some way applicable to my current work.  Sure enough, the opportunity to apply what I've learned very quickly presented itself.
 
