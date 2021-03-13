@@ -2,7 +2,7 @@
 title: Hall Sensor for FTMS Server
 date: '2021-03-13T10:36:24-08:00'
 ---
-<img style="float: left; margin:0 1em 1em 0; width: 33%" src="/img/blog/hall.gif"> I've made quite a bit of progress on my FTMS server for my bike.  I've settled on a hardware configuration and completed the firmware implementation.  Now I just need to solder it together and 3d print an enclosure!  For those that haven't worked with Hall sensors before, they detect electromagnetic fields and generate either an analog or digital signal based on the magnitude of their force.
+<img style="float: left; margin:0 1em 1em 0; width: 33%" src="/img/blog/hall.gif"> I've made quite a bit of progress on my FTMS server for my bike.  I've settled on a hardware configuration and completed the firmware implementation.  Now I just need to solder it together and 3d print an enclosure!  In the process I've learned a lot about Arduino, C, C++, and Hall sensors.  For those that haven't worked with Hall sensors before, they detect electromagnetic fields and generate either an analog or digital signal based on the magnitude of their force.
 
 The ESP32 that I'm using actually has an onboard Hall sensor, but I decided to use an external sensor instead, for two reasons.  The first is that the ESP32 sensor doesn't support digital input, only analog.  There's a quite a bit of drift between separate peaks and troughs, so it was simpler to just use an on (magnetic detected)/ off (magnetic absent) digital signal for my tachometer logic.  The second was that by using external hall sensor I could force myself to become better acquainted with the ESP32s GPIO (General Purpose Input/Output) pins.
 
@@ -26,7 +26,9 @@ portENTER_CRITICAL_ISR(&revMux);
  portEXIT_CRITICAL_ISR(&revMux);
 ```
 
-I had to look up the meaning of the "&" operator shown above because it's not normally used in higher-level languages like Swift and Kotlin.  Its purpose is to retrieve the actual memory address of a prefixed variable. The "*_" _operator is similar in that it provides a pointer to a variable's memory address.  A pointer provides an additional layer of safety above direct memory address access in that they can be set to null.  This prevents you from accessing unallocated or garbage memory. In C and C++ programming you can accidently corrupt memory, causing undefined behavior when accessing other, unrelated variables.  The best way to troubleshoot these issues is by using a _[memory profiler like this.](http://www.secretlabs.de/projects/memprof/)_  Speaking of memory, both C and C++ by default are pass by value, not pass by reference like a lot of higher level languages.  You can modify function parameter syntax to pass references instead of values though by explicitly using the "" operator though.
+I ultimately decided against this approach for the same reason as the first, the signal was just too noisy to use without receiving a lot of false positives. 
+
+I had to look up the meaning of the "&" operator shown above because it's not normally used in higher-level languages like Swift and Kotlin.  Its purpose is to retrieve the actual memory address of a prefixed variable. The "*_"_ operator is similar in that it provides a pointer to a variable's memory address.  A pointer provides an additional layer of safety above direct memory address access in that they can be set to null.  This prevents you from accessing unallocated or garbage memory. In C and C++ programming you can accidently corrupt memory, causing undefined behavior when accessing other, unrelated variables_._  The best way to troubleshoot these issues is by using a [memory profiler like this.](http://www.secretlabs.de/projects/memprof/)  Speaking of memory, both C and C++ by default are pass by value, not pass by reference like a lot of higher level languages.  You can modify function parameter syntax to pass references instead of values though by explicitly using the "" operator though.
 
 For troubleshooting timing issues in the  Arduino IDE you can use the \`micros()\` function.  This returns the current time in microseconds.  This in turn allows you to detect minute differences in execution times.
 
@@ -52,8 +54,15 @@ byte reverseBits(byte n)
 }
 ```
 
-If you're using bits to indicate flags you will need to reverse the bit and byte order before transmitting. For actual numerical values you only need to reverse the the byte order.  If you don't expect to interpret the bytes on the ESP32, you can just encode the bytes in big-endian order with no issue however.  This saves compute time because it means you don't have to reverse the bytes before transmitting.  For converting 
+If you're using bits to indicate flags you will need to reverse the bit and byte order before transmitting. For actual numerical values you only need to reverse the the byte order.  If you don't expect to interpret the bytes on the ESP32, you can just encode the bytes in big-endian order with no issue however.  This saves compute time because it means you don't have to reverse the bytes before transmitting.  When it comes to actually transmitting the values as bytes I found the following logic extraordinarily useful:
 
+```
+uint16_t transmittedKph     = (uint16_t) (kph * 100);         //(0.01 resolution)
+byte bikeData[2]={(uint8_t)transmittedKph, (uint8_t)(transmittedKph >> 8)}
+```
 
+The example above shows how the speed that is transmitted, which according to the [Indoor Bike Data Characteristic ](https://www.bluetooth.com/wp-content/uploads/Sitecore-Media-Library/Gatt/Xml/Characteristics/org.bluetooth.characteristic.indoor_bike_data.xml) needs to be an unsigned 16 bit integer, can be split up across two bytes.  The first byte is captured by casting to an unsigned 8 bit integer, which truncates the leading bits.  The second byte is shifted right 8 bits and then cast, truncating the trailing bits.  The end effect is that the 16 bit integer is now split between two separate 8 bit bytes keeping the array format uniform.  This is demonstrated below with a placeholder kph of 123.05:
 
-Even though the ATT_MTU for BLE is 23 bytes, android by default only captures the first 20 bytes.
+<img style="float: left; margin:0 0 0 0; width: 100%" src="/img/blog/byteSegmentation.png">
+
+The final lesson that I learned was that even though the ATT_MTU for BLE is 23 bytes, android by default only captures the first 20 bytes.  For this reason I had to limit the number of values that I sent to just
