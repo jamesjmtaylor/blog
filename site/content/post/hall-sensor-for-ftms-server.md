@@ -1,5 +1,5 @@
 ---
-title: Hall Sensor for FTMS Server
+title: Hall Sensor FTMS Server
 date: '2021-03-13T10:36:24-08:00'
 ---
 <img style="float: left; margin:0 1em 1em 0; width: 33%" src="/img/blog/hall.gif"> I've made quite a bit of progress on my FTMS server for my bike.  I've settled on a hardware configuration and completed the firmware implementation.  Now I just need to solder it together and 3d print an enclosure!  In the process I've learned a lot about Arduino, C, C++, and Hall sensors.  For those that haven't worked with Hall sensors before, they detect electromagnetic fields and generate either an analog or digital signal based on the magnitude of their force.
@@ -8,7 +8,7 @@ The ESP32 that I'm using actually has an onboard Hall sensor, but I decided to u
 
 There are few different ways that I could have processed the hall sensor signal.  One approach is to use a pulse counter (PCNT).  You can use PCNT hardware to count the number of pulses from a particular input.  The PCNT stores the pulse count in a register, from which you can read the current count and then clear it. This can be more reliable than trying to count the pulses manually.  I initially started with this approach but found the hall sensor signal to be too noisy for this to work reliably.  
 
-A second approach is to use Arduino's TIMG API to set an interrupt for your pin.  TIMG will contain the number of clock ticks since the last interrupt and clear the ticks after the interrupt has occurred. When using interrupt service routines you need to make sure that you lock the memory for variables both in the ISR and the loop().  If the memory location is accessed in two places at once it will throw a runtime exception.  To lock the memory you need to declare a mux variable like below:
+Another approach is to use Arduino's TIMG API to set an interrupt for your pin.  TIMG will contain the number of clock ticks since the last interrupt and clear the ticks after the interrupt has occurred. When using interrupt service routines, you need to make sure that you lock the memory for variables both in the ISR and the loop().  If the memory location is accessed in two places at once it will throw a runtime exception.  To lock the memory you need to declare a mux variable like below:
 
 ```
 portMUX_TYPE revMux = portMUX_INITIALIZER_UNLOCKED;
@@ -26,13 +26,13 @@ portENTER_CRITICAL_ISR(&revMux);
  portEXIT_CRITICAL_ISR(&revMux);
 ```
 
-I ultimately decided against this approach for the same reason as the first, the signal was just too noisy to use without receiving a lot of false positives. 
+I ultimately decided against this approach for the same reason as the first; the signal was just too noisy to use without receiving a lot of false positives. 
 
-I had to look up the meaning of the "&" operator shown above because it's not normally used in higher-level languages like Swift and Kotlin.  Its purpose is to retrieve the actual memory address of a prefixed variable. The "*_"_ operator is similar in that it provides a pointer to a variable's memory address.  A pointer provides an additional layer of safety above direct memory address access in that they can be set to null.  This prevents you from accessing unallocated or garbage memory. In C and C++ programming you can accidently corrupt memory, causing undefined behavior when accessing other, unrelated variables_._  The best way to troubleshoot these issues is by using a [memory profiler like this.](http://www.secretlabs.de/projects/memprof/)  Speaking of memory, both C and C++ by default are pass by value, not pass by reference like a lot of higher level languages.  You can modify function parameter syntax to pass references instead of values though by explicitly using the "" operator though.
+I had to look up the meaning of the "&" operator shown above because it's not normally used in higher-level languages like Swift and Kotlin.  Its purpose is to retrieve the actual memory address of a prefixed variable. The "*_"_ operator is similar in that it provides a pointer to a variable's memory address.  A pointer provides an additional layer of safety above direct memory address access in that they can be set to null.  This prevents you from accessing unallocated or garbage memory. In C and C++ programming you can accidently corrupt memory, causing undefined behavior when accessing other, unrelated variables_._  The best way to troubleshoot these issues is by using a [memory profiler like this.](http://www.secretlabs.de/projects/memprof/)  Speaking of memory, both C and C++ by default are pass by value, not pass by reference like a lot of higher level languages.  You can modify function parameter syntax to pass references instead of values though by explicitly using the "*" operator.
 
 For troubleshooting timing issues in the  Arduino IDE you can use the \`micros()\` function.  This returns the current time in microseconds.  This in turn allows you to detect minute differences in execution times.
 
-Neither C or C++ have the concept of Bytes or Byte Arrays.  You should use uint8_t from stdint.h instead.  Arduino, which is a superset of C++, does have bytes and byte arrays however.  As to the arrangement of the bytes, Arduino uses the "little-endian" system whereas ARM architecture uses the "big-endian" system. You can swap the byte order of an int with the standard function htonl() - which stands for Host TO Network Long (32 bit). There is also htons() - which is the same as htonl except its for Short 16 bit values.  To reverse these operations you would use ntohl() or ntohs().
+Neither C or C++ have the concept of Bytes or Byte Arrays.  Instead you should use uint8_t from stdint.h.  Arduino, which is a superset of C++, does have bytes and byte arrays however.  As to the arrangement of the bytes, Arduino uses the "little-endian" system whereas ARM architecture uses the "big-endian" system. You can swap the byte order of an int with the standard function htonl() - which stands for Host TO Network Long (32 bit). There is also htons() - which is the same as htonl except its for Short 16 bit values.  To reverse these operations you would use ntohl() or ntohs().
 
 If you write your own bit reversal algorithm, the most efficient means in terms of memory and speed is to to use a nibble lookup table.  It is O(1) lookup time, but only occupies a lookup array of 4 bits for each of the 16 indexes.  I've included an example below:
 
