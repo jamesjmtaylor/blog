@@ -65,4 +65,6 @@ The example above shows how the speed that is transmitted, which according to th
 
 <img style="float: left; margin:0 0 0 0; width: 100%" src="/img/blog/byteSegmentation.png">
 
-The final lesson that I learned was that even though the ATT_MTU for BLE is 23 bytes, android by default only captures the first 20 bytes.  For this reason I had to limit the number of values that I sent to just
+The final lesson that I learned was that even though the ATT_MTU (ATTribute Maximum Transmission Unit) for BLE is 23 bytes, android by default only captures the first 20 bytes.  For this reason I had to limit the number of values that I sent to just instantaneous speed, average speed, instantaneous cadence,  total distance, instantaneous power, expended energy, elapsed time.
+
+More to follow next month!
