@@ -10,4 +10,11 @@ Nautilus, as a fitness equipment company, is enmeshed in firmware and hardware d
 
 Android was quite different.  I found our interpolation was just fine on that platform.  Digging into it deeper I found that the our BLE byte decoding logic was giving us those values.  Since our electrical engineers built and maintained the firmware that generated those byte values on the console, I asked them why we were getting these bytes and why the iOS logic handled them differently.  It turned out that the way the heart rate sensor hardware was constructed was to blame.  Specifically, the heart rate band that shipped with the BXT116 operated in the 5khz range.  This range is not regulated by the FCC, and is thus subject to electrical interference.  In our case the treadmill motor, when the under load of propelling an individual while they are running (which I personally did for the purposes of reproducing the bug as exactly as possible), generates an electromagnetic field in the 5khz range.  On iOS the byte decoding logic would recognize this as noise and remove it from the heart rate date.  But on Android the byte decoding logic would coerce the noise into the nearest reasonable heart rate reading.  Once this was determined we updated the Android logic to match that on iOS and the bug was fixed.
 
- Android OS for IoT
+ Now, for the benefits of using the Android OS for IoT development.  When I was at Steelcase there was a big debate about whether to use Android or Linux for the next generation of Room Wizards, which were low-power room scheduling touchscreens located outside of each conference room.  When I joined Nautilus the debate had been had and won in favor of Android.  What was remarkable was that at Steelcase the largest proponent of using Linux for IoT were the firmware engineers. It was what they knew and used on a daily basis.  The mobile developers (including myself) had to fight tooth and nail for Android.  But at Nautilus the firmware engineers were the champions of the Android OS.  When I asked one of them why he had some pretty insightful answers, enumerated below:  
+
+1. Android is much more locked down than Linux out of the box.
+2. Android userland management is much more straightforward.
+3. Android UI application development is cleaner in terms of licensing.
+4. There is a much wider selection of mobile device management (MDM) companies for Android.
+
+By his own admission Android was extremely "bloated" for what we were using it for in comparison to Linux.  But in his opinion the benefits outweighed the drawbacks.
