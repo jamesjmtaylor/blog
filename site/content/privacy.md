@@ -1,15 +1,15 @@
 +++
-date = "2018-01-27T10:15:23-04:00"
+date = "2021-11-06T10:15:23-04:00"
 draft = false
 title = "Privacy Policy"
 +++
 
-<p>I (James Taylor) develop and host http://jjmtaylor.netlify.com and my native mobile applications. This page informs you of my policies regarding the collection, use, and disclosure of personal data when you use my Services and the choices you have associated with that data. I use your data to provide and improve my website and mobile applications. By using the Services, you agree to the collection and use of information in accordance with this policy.</p>
+<p>I (James Taylor) develop and host http://jjmtaylor.com.  I also develop my own native mobile applications. This page informs you of my policies regarding the collection, use, and disclosure of personal data when you use my Services and the choices you have associated with that data. I use your data to provide and improve my website and mobile applications. By using the Services, you agree to the collection and use of information in accordance with this policy.</p>
 
 
 <h2>Information Collection And Use</h2>
 
-<p>I collect several different types of information for various purposes to provide and improve my service to you.</p>
+<p>I collect several different types of information for various purposes to improve my Service to you.</p>
 
 <h3>Types of Data Collected</h3>
 
@@ -17,7 +17,8 @@ title = "Privacy Policy"
 <p>While using my Service, I may ask you to provide me with certain personally identifiable information that can be used to contact or identify you ("Personal Data"). Personally identifiable information may include, but is not limited to:</p>
 
 <ul>
-<li>Cookies and Usage Data</li>
+<li>Usage Data</li>
+<li>Tracking & Cookies Data</li>
 </ul>
 
 <h4>Usage Data</h4>
@@ -99,6 +100,6 @@ title = "Privacy Policy"
 <p>If you have any questions about this Privacy Policy, please contact me:</p>
 <ul>
         <li>By email: james.jm.taylor@gmail.com</li>
-            <li>By visiting this page on  website: http://jjmtaylor.netlify.com</li>
+            <li>By visiting this page on  website: http://jjmtaylor.com</li>
       
         </ul>
