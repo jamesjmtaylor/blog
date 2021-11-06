@@ -4,7 +4,7 @@ draft = false
 title = "Privacy Policy"
 +++
 
-<p>I (James Taylor) develop and host http://jjmtaylor.com.  I also develop my own native mobile applications. This page informs you of my policies regarding the collection, use, and disclosure of personal data when you use my Services and the choices you have associated with that data. I use your data to provide and improve my website and mobile applications. By using the Services, you agree to the collection and use of information in accordance with this policy.</p>
+<p>I (James Taylor) develop and host http://jjmtaylor.netlify.com.  I also develop my own native mobile applications. This page informs you of my policies regarding the collection, use, and disclosure of personal data when you use my Services and the choices you have associated with that data. I use your data to provide and improve my website and mobile applications. By using the Services, you agree to the collection and use of information in accordance with this policy.</p>
 
 
 <h2>Information Collection And Use</h2>
@@ -100,6 +100,6 @@ title = "Privacy Policy"
 <p>If you have any questions about this Privacy Policy, please contact me:</p>
 <ul>
         <li>By email: james.jm.taylor@gmail.com</li>
-            <li>By visiting this page on  website: http://jjmtaylor.com</li>
+            <li>By visiting this page on  website: http://jjmtaylor.netlify.com</li>
       
         </ul>

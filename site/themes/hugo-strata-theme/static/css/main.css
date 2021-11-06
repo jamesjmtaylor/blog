@@ -2503,7 +2503,7 @@
 	#footer {
 		bottom: 0;
 		left: 0;
-		padding: 0 4em 6em 0;
+		padding: 4em 4em 1em 0;
 		position: fixed;
 		text-align: right;
 		width: 35%;
