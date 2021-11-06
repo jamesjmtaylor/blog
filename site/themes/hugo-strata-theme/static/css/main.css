@@ -2503,7 +2503,7 @@
 	#footer {
 		bottom: 0;
 		left: 0;
-		padding: 4em 4em 1em 0;
+		padding: 0 4em 0 0;
 		position: fixed;
 		text-align: right;
 		width: 35%;
@@ -2864,7 +2864,7 @@
 		/* Footer */
 
 			#footer {
-				padding: 0 3em 5em 3em;
+				padding: 0 3em 0 1em;
 				width: 30%;
 			}
 
@@ -2936,7 +2936,7 @@
 				background-size: auto,							cover;
 				bottom: auto;
 				left: auto;
-				padding: 4em 4em 6em 4em;
+				padding: 0 4em 0 4em;
 				position: relative;
 				text-align: center;
 				width: 100%;
