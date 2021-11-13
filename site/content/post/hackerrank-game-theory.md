@@ -15,13 +15,15 @@ Before we get into it, a quick primer.  Game theory is "the study of strategic i
 The technical interview process is more akin to a Game Theory "Game Tree".  This is because there are multiple sequential stages.  Each path in the tree terminates at a discrete outcome.  For the sake of keeping the tree from getting too large or complex we'll define a number of premises:
 
 1. There are two competing candidates.
-2. There is only one job opening.
-3. Both candidates are of equal starting skill, their final outcome is a factor of the time invested preparing for the interview stages.
-4. There are two interview stages.
-5. The first stage of the interview is the HackerRank digital challenge.
-6. The second stage of the interview is an in-person whiteboard challenge.
-7. The time invested studying for the whiteboard interview only imperfectly translates to skill in the digital challenge.
-8. The time invested studying for the digital challenge only imperfectly translates to skill in the whiteboard challenge.
+2. There is only one job opening, so at most one candidate can get the job.  It is also possible neither candidate gets the job.
+3. Both candidates are of equal starting skill.
+4. There are two interview stages, a HackerRank digital challenge and an in-person whiteboard challenge
+5. The time invested studying for the whiteboard interview only imperfectly translates to skill in the digital challenge.
+6. The time invested studying for the digital challenge only imperfectly translates to skill in the whiteboard challenge.
+7. You cannot pass the digital challenge without either studying or cheating.
+8. You have even odds of being hired as a candidate if both candidates study for the digital challenge since the candidates are otherwise indistinguishable to the interviewers.
+9. If you study for the whiteboard and the other candidate does not you will be hired over them.
+10. Both candidates are sufficiently skilled that their cheating would not be detected and sufficiently amoral that they would experience no guilt for having cheated.
 
 https://workplace.stackexchange.com/questions/150857/not-allowed-to-use-google-during-programming-test
 
