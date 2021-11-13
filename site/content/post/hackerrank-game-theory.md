@@ -41,6 +41,10 @@ In the second scenario is as a simultaneous game.  Neither of the candidates see
 
 Because we cannot use backward induction, we have to compare the grids themselves.  In this case it is always more beneficial for a player cheat rather than to not to cheat, and to study whiteboard problems than digital problems.
 
+This conclusion comes with a LOT of caveats.  Most candidates are not amoral, and securing a job offer contingent on cheating would have a negative impact on the candidate's final "objective" outcome value.    Most candidates are not exactly equal in all other domains.  Often times strong soft skills can make up for missing technical skills.  Interviewing also is not necessarily a zero-sum game.  I personally interviewed for a position that had already been filled, but the employers liked me so much that they created a second position just so that they could hire me.  
+
+Despite those caveats, I do not think it wise to use a system that favors dishonest candidates over honest ones, and will not be using it in my own future screening of candidates.  
+
 https://workplace.stackexchange.com/questions/150857/not-allowed-to-use-google-during-programming-test
 
 
