@@ -10,9 +10,9 @@ I've used HackerRank throughout my career, both when I've been screened as a can
 
 Having studied John Nash's work I'm naturally curious as to what the  Game Theory analysis of this simple statement is.  So I decided to apply what I had learned while reading [Game Theory 101: The Complete Textbook](http://gametheory101.com/) (an excellent introduction to the field if you're interested) to the problem of competing candidates.  
 
-Before we get into it, a quick primer.  Game theory is "the study of strategic interdependence."  In other words, the objective analysis of the decisions made by two or more parties and how those decisions impact the parties involved.  One of the ultimate goals of Game Theory is to determine the "Nash Equilibrium" of any given problem. The Nash Equilibrium is the set of strategies that maximizes each players outcome, regardless of the choices of the other players.  When most people think of Game Theory they think of the Prisoner's Dilemma.  Prisoner's Dilemma is the oldest and simplest game theory problem.  Two prisoners must simultaneously decide whether to confess or keep quiet.  The "Nash Equilibrium" is that both players confess. 
+Before we get into it, a quick primer.  Game theory is "the study of strategic interdependence."  In other words, the objective analysis of the decisions made by two or more parties and how those decisions impact the parties involved.  One of the ultimate goals of Game Theory is to determine the "Nash Equilibrium" of any given problem. The Nash Equilibrium is the set of strategies that maximizes each player's outcome, regardless of the choices of the other players.  When most people think of Game Theory they think of the Prisoner's Dilemma.  Prisoner's Dilemma is the oldest and simplest game theory problem.  Two prisoners must simultaneously decide whether to confess or keep quiet.  The "Nash Equilibrium" is that both players confess, even though this means an objectively worse outcome than if both players kept quiet. 
 
-The technical interview process is more akin to a Game Tree
+The technical interview process is more akin to a Game Theory "Game Tree".  This is because there are multiple sequential stages.  Each path in the tree terminates at a discrete outcome
 
 
 
