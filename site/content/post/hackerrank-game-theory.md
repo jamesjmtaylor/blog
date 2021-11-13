@@ -12,7 +12,20 @@ Having studied John Nash's work I'm naturally curious as to what the  Game Theor
 
 Before we get into it, a quick primer.  Game theory is "the study of strategic interdependence."  In other words, the objective analysis of the decisions made by two or more parties and how those decisions impact the parties involved.  One of the ultimate goals of Game Theory is to determine the "Nash Equilibrium" of any given problem. The Nash Equilibrium is the set of strategies that maximizes each player's outcome, regardless of the choices of the other players.  When most people think of Game Theory they think of the Prisoner's Dilemma.  Prisoner's Dilemma is the oldest and simplest game theory problem.  Two prisoners must simultaneously decide whether to confess or keep quiet.  The "Nash Equilibrium" is that both players confess, even though this means an objectively worse outcome than if both players kept quiet. 
 
-The technical interview process is more akin to a Game Theory "Game Tree".  This is because there are multiple sequential stages.  Each path in the tree terminates at a discrete outcome
+The technical interview process is more akin to a Game Theory "Game Tree".  This is because there are multiple sequential stages.  Each path in the tree terminates at a discrete outcome.  For the sake of keeping the tree from getting too large or complex we'll define a number of premises:
+
+1. There are two competing candidates.
+2. There is only one job opening.
+3. Both candidates are of equal starting skill, their final outcome is a factor of the time invested preparing for the interview stages.
+4. There are two interview stages.
+5. The first stage of the interview is the HackerRank digital challenge.
+6. The second stage of the interview is an in-person whiteboard challenge.
+7. The time invested studying for the whiteboard interview only imperfectly translates to skill in the digital challenge.
+8. The time invested studying for the digital challenge only imperfectly translates to skill in the whiteboard challenge.
+
+https://workplace.stackexchange.com/questions/150857/not-allowed-to-use-google-during-programming-test
+
+
 
 
 
