@@ -2,7 +2,9 @@
 title: New Year's
 date: '2022-01-02T17:07:39-08:00'
 ---
-<img style="float: left; margin:0 2em 1em 0; width: 50%" src="/img/blog/2022.jpg"/> Another year in the rearview mirror.  And a new year means new resolutions.  But before we get to that, a summary of last year's resolutions.  I was able to resume programming in the mornings like I did when I first started in software.  I also completed my ESP32 FTMS cycling server (you can [download the source code here](https://github.com/jamesjmtaylor/esp32-ftms-server)).  Unfortunately I was unable to resume regular, in person boardgaming.  I was also unable to start on my stretch goal of a ruggedized ESP32 anemometer.  
+<img style="float: left; margin:0 2em 1em 0; width: 50%" src="/img/blog/2022.jpg"/> Another year in the rearview mirror.  And a new year means new resolutions.  But before we get to that, here is a progress report of last year's resolutions. 
+
+ I was able to resume programming in the mornings like I did when I first started in software.  I also completed my ESP32 FTMS cycling server (you can [download the source code here](https://github.com/jamesjmtaylor/esp32-ftms-server)).  Unfortunately I was unable to resume regular, in person boardgaming (for obvious reasons).  I was also unable to start on my stretch goal of a ruggedized ESP32 anemometer.  
 
 For this year I plan to increase my 50 pushup pre-requisite for beer to 100 pushups, with the caveat that I can swap in air squats, situps, and pullups as necessary. I'm also training to complete my first ever century.  A century is a 100 mile bike ride, and I'm planning to compete in the Reach the Beach race.  
 
