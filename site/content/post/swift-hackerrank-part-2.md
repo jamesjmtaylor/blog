@@ -23,57 +23,19 @@ To keep things simple I just used a LinkedList.  I ran the tests in Android Stud
 
 ```
 import java.util.*
-```
-
-```
 import kotlin.system.measureTimeMillis
-```
 
-```
-
-```
-
-```
 var ll : Queue<Int> = LinkedList()
-```
-
-```
-
-```
-
-```
 val time = measureTimeMillis {
-```
+  for (i in 0..1000) {
+    ll.add(i)
+  }
 
-```
-    for (i in 0..1000) {
-```
-
-```
-        ll.add(i)
-```
-
-```
-    }
-```
-
-```
-    for (i in 0..1000) {
-```
-
-```
-        ll.remove()
-```
-
-```
-    }
-```
-
-```
+  for (i in 0..1000) {
+   ll.remove()
+  }
 }
-```
 
-```
 print("time $time")
 ```
 
@@ -83,66 +45,24 @@ In order to double check that the operations were actually taking place I even a
 
 ```
 import UIKit
-```
-
-```
 import XCTest
-```
 
-```
 class MyTests: XCTestCase {
-```
 
-```
-    func testQueue() {
-```
+  func testQueue() {
+    measure {
+      var q = Queue<Int>()
+      for i in 0..<1000 {
+        q.enqueue(i)
+      }
 
-```
-        measure {
-```
-
-```
-            var q = Queue<Int>()
-```
-
-```
-            for i in 0..<1000 {
-```
-
-```
-                q.enqueue(i)
-```
-
-```
-            }
-```
-
-```
-            for _ in 0..<1000 {
-```
-
-```
-                q.dequeue()
-```
-
-```
-            }
-```
-
-```
-        }
-```
-
-```
+      for _ in 0..<1000 {  
+        q.dequeue()
+      }
     }
-```
-
-```
+  }
 }
-```
 
-```
 MyTests.defaultTestSuite.run()
 ```
-
 Having completed this analysis, I'm not sure which is more startling, the fact that Kotlin is so much more performant than Swift, or the fact that despite it's limitations, it is significantly easier to program performant apps in iOS than it is in Android.  Food for thought until next time!
