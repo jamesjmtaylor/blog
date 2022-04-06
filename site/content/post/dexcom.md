@@ -6,8 +6,8 @@ date: '2022-04-05T08:00:27-07:00'
 
 The transition is a big change for me, for three reasons:
 
-1. The Staff Software position demarcates the bifurcation of software career paths, the other software career path being management.  A staff position represents a commitment to developing a deep technical knowledge of a chosen discipline.  
+1. The Staff Software position demonstrates the bifurcation of software career paths, the other software career path being management.  A staff position represents a commitment to developing a deep technical knowledge of a chosen discipline.  
 2. Dexcom is a massive company.  In 2021 it had over 7,000 employees, putting it in the same league as Steelcase.  The difference is that Dexcom is technology company, whereas Steelcase is a manufacturing company.  This means a significant shift in the technological complexity of the  infrastructure and architecture involved due to the number of contributing engineers.
 3. This is my first time I've been professionally involved in the medical field.  Medical devices are heavily regulated (and rightly so!), which means a significant increase in the amount process, paperwork, and procedures when developing new features and releases.
 
-Overall I'm ecstatic to be a part of the Dexcom team and am looking forward to helping diabetics live happier, fuller lives.
+Overall I'm ecstatic to be a part of the Dexcom team and am looking forward to helping people with diabetes live happier, fuller lives.
