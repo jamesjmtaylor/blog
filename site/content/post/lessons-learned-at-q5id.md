@@ -1,6 +1,6 @@
 ---
 title: Lessons Learned at Q5id
-date: '2022-04-22T06:23:59-07:00'
+date: '2022-05-01T06:23:59-07:00'
 ---
 <img style="float: right; margin:0; width: 50%" src="/img/blog/xamarin.png"/> 
 
