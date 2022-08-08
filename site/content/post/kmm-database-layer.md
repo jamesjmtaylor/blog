@@ -203,7 +203,7 @@ class EquipmentSDK(databaseDriverFactory: DatabaseDriverFactory) {
 }
 ```
 
-Using this logic we can return all the cached results, or retrieve from the network directly and update the cache as needed.  This also demonstrates why we don't need to store \`SearchResults\`, \`Continue\`, and \`Query\` objects in the database.  As long as the client determines whether or not to force reload from the network, the shared KMM logic can be simplified to either just returning everything that the DB has, or retrieving the data fresh.  
+Using this logic we can return all the cached results, or retrieve from the network directly and update the cache as needed.  This also demonstrates why we don't need to store `SearchResults`, `Continue`, and `Query` objects in the database.  As long as the client determines whether or not to force reload from the network, the shared KMM logic can be simplified to either just returning everything that the DB has, or retrieving the data fresh.  
 
 This wraps up the DB portion of the KMM series.  If you're curious about any of the other objects (i.e. `databaseDriverFactory`) you can access the full repository here: <https://github.com/jamesjmtaylor/weg-kmm>.  Next time we'll cover implementation of the KMM Networking layer and exactly how that `api.getEquipment()` function is implemented. Until then!
 
