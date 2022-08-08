@@ -4,7 +4,7 @@ date: '2022-08-08T05:49:44-07:00'
 ---
 <img style="float: left; margin:0 0 1em 0; width: 100%" src="/img/blog/sweden.jpg"/> 
 
-This is the second in a multi-part series on Kotlin Multiplatform Mobile.  This entry will cover [configuring SQLDelight and implementing cache logic](https://play.kotlinlang.org/hands-on/Networking%20and%20Data%20Storage%20with%20Kotlin%20Multiplatfrom%20Mobile/05_Configuring_SQLDelight_an_implementing_cache) for the mobile iOS and Android app.  Unlike the tutorial, I'm not using the SpaceX API, which provides public access to information about SpaceX rocket launches.  Instead, I'm using the Army's brand new [ODIN API ](https://odin.tradoc.army.mil/WEG) for a reboot of my WEG iOS and Android applications.  The ODIN API provides in-depth information about a wide array of military equipment.  
+This is the second in a multi-part series on Kotlin Multiplatform Mobile.  This entry will cover [configuring SQLDelight and implementing cache logic](https://play.kotlinlang.org/hands-on/Networking%20and%20Data%20Storage%20with%20Kotlin%20Multiplatfrom%20Mobile/05_Configuring_SQLDelight_an_implementing_cache) for the mobile iOS and Android app.  Unlike the tutorial, I'm not using the SpaceX API, which provides public access to information about SpaceX rocket launches.  Instead I'm using the Army's brand new [ODIN API ](https://odin.tradoc.army.mil/WEG) for a reboot of my WEG iOS and Android applications.  The ODIN API provides in-depth information about a wide array of military equipment.  
 
 Implementing a shared SQLDelight database & networking layer required the following dependencies:
 
@@ -13,7 +13,7 @@ Implementing a shared SQLDelight database & networking layer required the follow
 * kotlinx.serialization – Deserializer for JSON responses
 * SQLDelight – Kotlin code generator from SQL queries for a type-safe database API.
 
-Once those dependencies were added to the `build.gradle.kts` files in the project root directory and the KMM module directory we could configure the DTOs (Data Transfer Objects).  These objects were modelled after the responses from the [ODIN API](https://odin.tradoc.army.mil/WEG). Below is a sample of the data, and should give you a good idea of the general structure:
+Once those dependencies were added to the `build.gradle.kts` files in the project root directory and the KMM module directory, we could configure the DTOs (Data Transfer Objects).  These objects were modelled after the responses from the [ODIN API](https://odin.tradoc.army.mil/WEG). Below is a sample of the data and should give you a good idea of the general structure:
 
 ```
 import kotlinx.serialization.*
@@ -53,7 +53,7 @@ data class SearchResult (
 )
 ```
 
-That final DTO, `SearchResult` forms the cornerstone of what we'll display to the user.  A title so the user knows what they're looking at, categories for determining what bottom navigation tab (Land, Sea, or Air) to display the equipment on, images for showing a preview of the equipment, and an id for querying the API for additional details when the equipment icon is tapped. 
+That final DTO, `SearchResult` , forms the cornerstone of what we'll display to the user. It includes: a title, so the user knows what they're looking at, categories for determining what bottom navigation tab (Land, Sea, or Air) to display the equipment on, images for showing a preview of the equipment, and an id for querying the API for additional details when the equipment icon is tapped. 
 
 As you might have noticed, we have a couple of complex relationships that we need to store.  `Images` are their own DTOs that have a one-to-many relationship with `SearchResult`.  Categories are represented by strings, but they also need to be returned in a list format.  Finally, ODIN doesn't return `SearchResult` objects directly, but rather a `SearchResults` payload that contains a `Query` object (which has a list of our desired `SearchResult` objects) and a `Continue` object for [pagination](https://www.raywenderlich.com/12244218-paging-library-for-android-with-kotlin-creating-infinite-lists).  
 
