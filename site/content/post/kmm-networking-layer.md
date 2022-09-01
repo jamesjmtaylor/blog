@@ -35,7 +35,7 @@ class Api {
 }
 ```
 
-The `API` class contains a private Ktor HttpClient. Instead of accessing the client directly, our client apps will just invoke networking functions and receive results from the API. If you're wondering where all those url query parameters came from, it wasn't easy.  Since the [API documentation for ODIN](https://odin.tradoc.army.mil/mediawiki/api.php) is rather obtuse, I found it easier to open the [Chrome DevTools](https://developer.chrome.com/docs/devtools/) and just click around the ODIN website, making notes of the requests that my web client was making to the server.  Then I'd input them into [Postman](https://www.postman.com/) and tweak the parameters to figure out exactly what worked and what didn't.  
+The `API` class contains a private Ktor HttpClient. Instead of accessing the client directly, our client apps will invoke networking functions and receive results from the API. If you're wondering where all those url query parameters came from, it wasn't easy.  Since the [API documentation for ODIN](https://odin.tradoc.army.mil/mediawiki/api.php) is rather obtuse, I found it easier to open the [Chrome DevTools](https://developer.chrome.com/docs/devtools/) and just click around the ODIN website, making notes of the requests that my web client was making to the server.  Then I'd input them into [Postman](https://www.postman.com/) and tweak the parameters to figure out exactly what worked and what didn't.  
 
 The `getEquipment()` function invocation was briefly touched on in the KMM Database layer blog entry.  Here it is again for reference:
 
