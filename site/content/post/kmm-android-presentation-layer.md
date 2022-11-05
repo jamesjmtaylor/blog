@@ -6,7 +6,7 @@ date: '2022-11-05T08:45:21-07:00'
 
 This is the second to last entry in a multi-part series on Kotlin Multiplatform Mobile.  This entry will cover implementation of a Jetpack Compose UI for the Android app.  I'm using the Army's brand new [ODIN API ](https://odin.tradoc.army.mil/WEG) for a reboot of my WEG iOS and Android applications.  The ODIN API provides in-depth information about a wide array of military equipment.  
 
-The first step in implementing the compose UI was creating the Jetpack ViewModel for the view to integrate with the KMM shared module through.  The ViewModel extends the AndroidViewModel superclass so that it has access to the application context necessary to instantiate the SQLDelight database driver. 
+The first step in implementing the compose UI was creating the Jetpack ViewModel for the view to integrate with the KMM shared module.  The ViewModel extends the AndroidViewModel superclass so that it has access to the application context necessary to instantiate the SQLDelight database driver. 
 
 ```
 class EquipmentViewModel(app: Application): AndroidViewModel(app) {
@@ -31,7 +31,7 @@ class EquipmentViewModel(app: Application): AndroidViewModel(app) {
 }
 ```
 
- It then injects that SDK into the three equipment type SearchResultSource objects, which use the Jetpack paging library to seamlessly support infinite scroll:
+ From there it injects that SDK into the three equipment type SearchResultSource objects, which use the Jetpack paging library to seamlessly support infinite scroll:
 
 ```
 class SearchResultSource(val equipmentType: EquipmentType,
@@ -51,7 +51,7 @@ class SearchResultSource(val equipmentType: EquipmentType,
 }
 ```
 
-With the data retrieval and pagination implemented, we can now add the UI to display the data.  The `EquipmentActivity` forms the primary lifecycle object that the user interacts with, and contains the Jetpack Compose equipment screen:
+With the data retrieval and pagination implemented, we can now add the UI to display the data.  The `EquipmentActivity` forms the primary lifecycle object that the user interacts with and contains the Jetpack Compose equipment screen:
 
 ```
 class EquipmentActivity : ComponentActivity() {
@@ -97,9 +97,9 @@ fun EquipmentScreen(equipment: EquipmentViewModel.EquipmentFlow) {
 }
 ```
 
-The bottomBar has a separate BottomNavigationItem for each equipment type, land, air, and sea.  The onClick listener selects its respective route, which is then instantiated by the Navigation host.  
+The bottomBar has a separate BottomNavigationItem for each equipment type: land, air, and sea.  The onClick listener selects its respective route, which is then instantiated by the Navigation host.  
 
-The `EquipmentColumn` consists of a column containing a Searchbar and an EquipmentLazyVerticalGrid.  It's passed its equipment type specific paging data by the equipment screen, which in turn is injected with a generic equipment flow by the Activity.  This is done because the equipment viewmodel requires an application context in order to be instantiated, which isn't available in composable previews.  So if we want to be able to preview our Composable layouts we need to keep the EquipmentViewModel out of them, and just pass a reference to properties of the viewmodel instead.
+The `EquipmentColumn` consists of a column containing a Searchbar and an EquipmentLazyVerticalGrid.  It's passed its equipment type specific paging data by the equipment screen, which in turn is injected with a generic equipment flow by the Activity.  This is done because the equipment viewmodel requires an application context in order to be instantiated, which isn't available in composable previews.  So if we want to be able to preview our Composable layouts we need to keep the EquipmentViewModel out of them and just pass a reference to properties of the viewmodel instead.
 
 The EquipmentLazyVerticalGrid itemizes the search result paging list
 
