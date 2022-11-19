@@ -4,6 +4,7 @@ draft = false
 title = "About me"
 +++
 ![Steve the cat](/images/printrbot.jpg)
+
 I received my Bachelor of Science in Computer Science at the United States Military Academy
 in 2011. I graduated at the top of my class in my major, with honors, and my capstone project,
 the Joint Academy Cooperative Unmanned Systems Iniative won 'Best Solution to a Military Problem.'  While

@@ -26,7 +26,7 @@ paginate = 5
 		# Replace the avatar with a picture of your own under static/images
 		avatar = "avatar.jpg"
 		# Use Markdown to format the string. This works nearly all over the theme
-		bio = "**Hi!**  I'm James, a dedicated<br> polyglot mobile developer<br> based in Portland, OR."
+		bio = "**Hi!**  I'm James, a dedicated\n polyglot mobile developer\n based in Portland, OR."
 		# The icons will be shown if you enter your username
 		twitter = "James43289009"
 		github = "jamesjmtaylor"
@@ -54,15 +54,15 @@ paginate = 5
 		# The images and thumbnails are stored under static/images
 		# Create and change subfolders as you like
 		[[params.portfolio.gallery]]
-			destination = "https://www.bowflex.com/max-trainer/intelligence.html"
+			destination = "https://www.bowflex.com/max-trainer/"
 			preview = "https://jjmtaylor.com/images/thumbs/bowflex.jpg"
 			title = "Bowflex Max Intelligence (iOS & aOS)"
 			description = "The Max Intelligence™ App offers the guidance and motivation you need by providing in-depth analytics and awards, helping you celebrate milestones, achievements, personal bests, and keeping track of time, calories burned, and more."
 
 		[[params.portfolio.gallery]]
-			destination = "https://www.steelcase.com/products/apps/steelcase-find/"
+			destination = "https://youtu.be/7_5AZIRh2VE?t=64"
 			preview = "https://jjmtaylor.com/images/thumbs/find.jpg"
-			title = "Steelcase Find (iOS & aOS)."
+			title = "Steelcase Personal Assistant (iOS & aOS)."
 			description = "Together with Workplace Advisor Subscription and Microsoft Office 365, the Find app makes finding and reserving the best workspaces quick and simple."
 
 		[[params.portfolio.gallery]]
@@ -89,7 +89,7 @@ paginate = 5
             title = "Worldwide Equipment Guide - 2015(iOS & aOS)."
             description = "A reboot of my 2012 Worldwide equipment guide.  This application was developed natively for iOS & Android using Swift & Kotlin respectively.  It is supported by a Kotlin Springboot API backed by a PostgreSQL database."
 
-	[params.recentposts]
+	[params.recentposts] 
 		hide  = false
 		title = "Recent blog posts"
 
