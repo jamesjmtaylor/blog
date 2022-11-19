@@ -90,7 +90,7 @@ paginate = 5
             description = "A reboot of my 2012 Worldwide equipment guide.  This application was developed natively for iOS & Android using Swift & Kotlin respectively.  It is supported by a Kotlin Springboot API backed by a PostgreSQL database."
 
 	[params.recentposts] 
-		hide  = false
+		hide  = true
 		title = "Recent blog posts"
 
 	[params.contact]
