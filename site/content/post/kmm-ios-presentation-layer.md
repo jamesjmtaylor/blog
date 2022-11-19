@@ -1,6 +1,6 @@
 ---
 title: KMM iOS Presentation layer
-date: '2022-11-19T07:39:37-08:00'
+date: '2022-12-05T07:39:00-08:00'
 ---
 <img style="float: left; margin:0 1em 0 0; width: 50%" src="/img/blog/desert.jpg"/>  This is the last entry in a multi-part series on Kotlin Multiplatform Mobile.
 
