@@ -2,7 +2,7 @@
 title: KMM Networking layer
 date: '2022-09-01T07:07:02-07:00'
 ---
-<img style="float: left; margin:0 0 1em 0; width: 100%" src="/img/blog/clouds.jpg"/> 
+![Clouds](/img/blog/clouds.jpg)
 
 This is the third in a multi-part series on Kotlin Multiplatform Mobile.  The source code for the final project is available [here](https://github.com/jamesjmtaylor/weg-kmm). This entry will cover [configuring Ktor and executing networking requests](https://play.kotlinlang.org/hands-on/Networking%20and%20Data%20Storage%20with%20Kotlin%20Multiplatfrom%20Mobile/06_Implementing_an_API_service) for the mobile iOS and Android apps.  Unlike the tutorial, I'm not using the SpaceX API, which provides public access to information about SpaceX rocket launches.  Instead I'm using the Army's [ODIN API](https://odin.tradoc.army.mil/WEG) for a reboot of my WEG iOS and Android applications.  The ODIN API provides in-depth information about a wide array of military equipment.  
 

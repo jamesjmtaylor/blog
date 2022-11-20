@@ -2,7 +2,9 @@
 title: New Year's
 date: '2022-01-02T17:07:39-08:00'
 ---
-<img style="float: left; margin:0 2em 1em 0; width: 50%" src="/img/blog/2022.jpg"/> Another year in the rearview mirror.  And a new year means new resolutions.  But before we get to that, here is a progress report of last year's resolutions. 
+![2022](/img/blog/2022.jpg)
+
+Another year in the rearview mirror.  And a new year means new resolutions.  But before we get to that, here is a progress report of last year's resolutions. 
 
  I was able to resume programming in the mornings like I did when I first started in software.  I also completed my ESP32 FTMS cycling server (you can [download the source code here](https://github.com/jamesjmtaylor/esp32-ftms-server)).  Unfortunately I was unable to resume regular, in person boardgaming (for obvious reasons).  I was also unable to start on my stretch goal of a ruggedized ESP32 anemometer.  
 

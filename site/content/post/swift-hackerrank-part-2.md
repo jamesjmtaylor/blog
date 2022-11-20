@@ -2,7 +2,9 @@
 title: Swift & HackerRank (Part 2)
 date: '2022-02-01T06:46:37-08:00'
 ---
-<img style="float: left; margin:0 2em 1em 0; width: 50%" src="/img/blog/kt.png"/> This is the second part in the series on Swift performance.  If you haven't read the first part, <a href="/post/swift-hackerrank-part-1/">you can find it here</a>. 
+![Swift and Hacker Rank](/img/blog/kt.png)
+
+This is the second part in the series on Swift performance.  If you haven't read the first part, <a href="/post/swift-hackerrank-part-1/">you can find it here</a>. 
 
 In the first part we analyzed two different implementations of Queues in Swift: one with a linked list (the list structure, non-existent in Swift, had to be created from scratch), and  another from an array.  What we found was that the array implementation was 500% faster than the linked list implementation.  But what about Kotlin?  Kotlin builds on Java, which has a whole stable of studiously hand-crafted data structures and algorithms.  Unlike Swift, Java has [Queue's](https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html), although they're exposed as interfaces rather than concrete classes.  But there are a number of pre-built data structures that conform to the queue interface, to include: 
 

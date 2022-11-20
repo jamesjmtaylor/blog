@@ -2,7 +2,9 @@
 title: Swift & HackerRank (Part 1)
 date: '2021-11-28T07:01:40-08:00'
 ---
-<img style="float: left; margin:0 2em 1em 0; width: 50%" src="/img/blog/swifthackerrank.png"/> I recently practiced coding challenges on HackerRank with Swift.  The reason being my day job consists almost exclusively of C# development, so a little bit of hacking with Swift seemed like a good idea to keep my native development skills sharp.  This would mean going back and implementing basic algorithms and data structures in Swift.
+![Swift and Hacker Rank](/img/blog/swifthackerrank.png)
+
+I recently practiced coding challenges on HackerRank with Swift.  The reason being my day job consists almost exclusively of C# development, so a little bit of hacking with Swift seemed like a good idea to keep my native development skills sharp.  This would mean going back and implementing basic algorithms and data structures in Swift.
 
 One of the most basic data structures in computer science is the queue.  Queues are known as FIFO systems, First In, First Out. You can implement Queues a few different ways, but the most common implementations are as a doubly-linked list or as an array-this is where things get interesting.  
 

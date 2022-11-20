@@ -2,7 +2,7 @@
 title: Lessons Learned at Nautilus (Part 1)
 date: '2021-07-24T08:18:56-07:00'
 ---
-<img style="float: right; margin:0 0 1em 2em ; width: 50%" src="/img/blog/velacore.jpg"/> 
+![Velacore Bike](/img/blog/velacore.jpg)
 
 In my two and a half years at Nautilus I learned a tremendous amount about IoT, Hardware, Software, Data Science, and myself in general.  Given the amount of ground to cover, I plan to split this topic up into the following:
 

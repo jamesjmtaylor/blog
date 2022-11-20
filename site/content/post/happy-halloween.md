@@ -2,7 +2,9 @@
 title: Happy Halloween!
 date: '2018-11-03T08:29:41-07:00'
 ---
-<img style="float: left; margin:0 2em 0 0; width: 66%" src="/img/blog/halloween.jpg"/>  We had a pretty good Halloween at the Taylor household this Wednesday.  This was our first Halloween in the neighborhood, since we moved just this summer, so we weren't sure how common trick-or-treaters would be.  I'd say our new cul-de-sac is somewhere in the middle of the spectrum.  Not the swarms of locusts that I've seen in some neighborhoods, but not entirely dead either.   And to parody that last paragraph, I give you [this Andy Rooney montage.](https://youtu.be/XIpGTcR2kAQ?t=8)
+![Halloween](/img/blog/halloween.jpg)
+
+We had a pretty good Halloween at the Taylor household this Wednesday.  This was our first Halloween in the neighborhood, since we moved just this summer, so we weren't sure how common trick-or-treaters would be.  I'd say our new cul-de-sac is somewhere in the middle of the spectrum.  Not the swarms of locusts that I've seen in some neighborhoods, but not entirely dead either.   And to parody that last paragraph, I give you [this Andy Rooney montage.](https://youtu.be/XIpGTcR2kAQ?t=8)
 
 We also had midterm elections, and a number of candidates were definitely spooky enough.  Even if I had wanted to vote along party lines, I found it pretty much unconscionable to do so.  Let me explain... 
 

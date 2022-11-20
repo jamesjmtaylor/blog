@@ -2,7 +2,9 @@
 title: AAR pt 11 (Tools)
 date: '2019-02-01T11:15:55-08:00'
 ---
-<img style="float: right; margin:0 0em 1em 2em; width: 33%" src="/img/blog/tools.jpg"> If you have not had a chance to read the first entry in the series for context, <a href="/post/after-action-review-aar/">you can do so here</a> 
+![Tools](/img/blog/tools.jpg)
+
+If you have not had a chance to read the first entry in the series for context, <a href="/post/after-action-review-aar/">you can do so here</a> 
 
 It's been a almost exactly a year since I did <a href="/post/aar-pt-6-tools/">my last Tools AAR entry</a>, so I figured it was about time that I had a new entry on my lessons learned.  This post focuses almost exclusively on security tools.
 

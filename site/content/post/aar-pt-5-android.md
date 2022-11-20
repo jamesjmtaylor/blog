@@ -2,7 +2,7 @@
 title: AAR pt 5 (Android)
 date: 2017-11-01T12:20:03.000Z
 ---
-<img style="float: left; margin:0 1em 1em 0; width: 10%" src="/img/blog/android.png"/> 
+![Android](/img/blog/android.png)
 
 If you haven't had a chance to read the first entry in the series for context, [you can do so here](/post/after-action-review-aar/).  Now, about Android.  Of the two native platforms (iOS & Android) I've found Android far and away to be the more challenging of the two.  It's more verbose, more error-prone, and less standardized.  Google went a long way at Google I/O 2017 in resolving the first two with official support of Kotlin, and the last one with the adoption of the MVVM architecture pattern.  But it still leaves a lot to be desired.  Keep in mind that this is also coming from a self-admitted Google fanboy.  I've got the Google Pixel, the Motorola 360 v2, and have been developing Android for almost 4 years now (compared to 2 for iOS).  Regardless of it's complexity, I have to say that I enjoy developing in Android more, in my own sick, masochistic way.  It forces you to consciously consider the consequences of the code that you write, rather than simply churning it out like you can do in iOS.  But enough of my postulations, on to the lessons learned:
 

@@ -2,7 +2,8 @@
 title: WWDC 17
 date: 2017-06-10T13:28:32.000Z
 ---
-<img style="float: left; margin:0 2em 1em 0; width: 33%" src="/img/blog/wwdc17.jpg"/>
+
+![WWDC](/img/blog/wwdc17.jpg)
 
 One of the many benefits of working at Steelcase is that each year every developer is allotted $5000 to attend conferences.  This year I entered the Apple lottery for WWDC tickets and I won!  Over the course of 5 days I learned an immense amount about Swift 4, Xcode 9, iOS 11, Natural Language Processing, Computer Vision, and Machine Learning with CoreML.  What follows is a massive brain dump of all the notes and highlights that I took during the conference.
 

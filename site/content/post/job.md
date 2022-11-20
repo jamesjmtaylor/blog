@@ -2,6 +2,6 @@
 title: Job!
 date: 2016-11-01T00:00:00-07:00
 ---
-<img style="float: left; margin:0 2em 1em 0; width: 33%" src="/img/blog/job.jpg"/>
+![Skyscraper workers](/img/blog/job.jpg)
 
 I got a job!  It’s a contract position to develop an iOS app and an Android app for a recruiting agency known as eXcell.  I unfortunately can’t discuss the details of the contract proposal or the app due to a Non-Disclosure Agreement (NDA) that I signed, but after hearing the pitch from the project manager I’m confident I have the skills to implement what they’re looking for.  I have to say that if it hadn’t been for my time at Coding Dojo, I wouldn’t have even begun to have considered myself qualified.  It’s only two months in duration, but it’ll be good to add some professional experience in software development to my resume.

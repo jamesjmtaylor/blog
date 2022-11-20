@@ -2,7 +2,9 @@
 title: AAR pt 13 (Bluetooth)
 date: '2019-06-01T08:32:00-07:00'
 ---
-<img style="float: left; margin:0 1em 0 0; width: 10%" src="/img/blog/bluetooth-icon.png"> If you have not had a chance to read the first entry in the series for context, <a href="/post/after-action-review-aar/">you can do so here</a> 
+![Bluetooth icon](/img/blog/bluetooth-icon.png)
+
+If you have not had a chance to read the first entry in the series for context, <a href="/post/after-action-review-aar/">you can do so here</a> 
 
 Since I've been at Nautilus I've had to work with Bluetooth and the Internet of Things more closely than I have in any other point in my career.  To make sure that I could speak at least somewhat cogently about the topics I've done a fair amount of study into both.  This post focuses on my learnings about Bluetooth specifically.
 

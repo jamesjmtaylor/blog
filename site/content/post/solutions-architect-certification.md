@@ -2,7 +2,7 @@
 title: Solutions Architect Certification
 date: '2019-08-31T06:49:45-07:00'
 ---
-<img style="float: left; margin:0 0 0 0; width: 33%" src="/img/blog/aws.jpg"/>
+![AWS](/img/blog/aws.jpg)
 
 Ever since I joined Nautilus I've wanted to better understand the infrastructure that we used in AWS to support the iOS and Android applications. Because Nautilus follows the principle of least privilege however I only ever had access to S3, DynamoDb, and Terraform.  My IAM user policy to those resources also only applied to the QA & development environments.  As a mobile developer I didn't really have any need for additional access, since troubleshooting missing resources, incorrect database entries, and broken builds concerned 99% of my interactions with AWS.  
 

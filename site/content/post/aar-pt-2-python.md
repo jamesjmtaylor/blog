@@ -2,7 +2,7 @@
 title: AAR pt 2 (Python)
 date: 2017-05-01T11:37:09.000Z
 ---
-<img style="float: left; margin:0 0 1em 0; width: 100%" src="/img/blog/python.jpg"/>
+![Python programming language](/img/blog/python.jpg)
 
  If you haven't had a chance to read the first entry in the series  for context, [you can do so here](/post/after-action-review-aar/).  In this post I'll be covering my most important lessons learned from everyone's favorite language, Python.  I'll also have some React.js and React-Redux at the end, since the majority of these lessons learned were made while I was on-boarding with a full-stack web developer. 
 

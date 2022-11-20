@@ -2,7 +2,7 @@
 title: AAR pt 6 (Tools)
 date: 2018-01-01T05:48:17-08:00
 ---
-<img style="float: left; margin:0 1em 1em 0; width: 33%" src="/img/blog/toolbelt.jpeg"/> 
+![Toolbelt](/img/blog/toolbelt.jpeg)
 
 If you haven't had a chance to read the first entry in the series for context, [you can do so here](/post/after-action-review-aar/). 
 

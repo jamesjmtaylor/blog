@@ -2,7 +2,7 @@
 title: Modern Android Development
 date: '2020-05-01T07:24:00-07:00'
 ---
-<img style="float: right; margin:0 0 1em 2em; width: 50%" src="/img/blog/modern.jpg"/> 
+![Modern](/img/blog/modern.jpg)
 
 Over the last month I’ve had the opportunity to work on an open source Android project.  Working with other Android developers from across the world has been eye-opening with regards to the current state of Android development.  Android Jetpack has really hit its stride, with the adoption of Jetpack ViewModels, LiveData, View Binding, Coroutines and Navigation Flows becoming standard practice.  
 

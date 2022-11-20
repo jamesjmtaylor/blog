@@ -2,7 +2,9 @@
 title: ADB and other Miscellanea
 date: '2020-04-01T08:11:25-07:00'
 ---
-<img style="float: left; margin:0 2em 1em 0; width: 50%" src="/img/blog/bridge.jpg"/> At Nautilus I’ve been hard at work on a new line of Google-Certified OEM (Original Equipment Manufacturer) touchscreens for our fitness equipment.  This work has meant that I’ve had to become much more familiar with ADB (Android Debug Bridge) and the Android Operating System. 
+![Swinging footbridge](/img/blog/bridge.jpg)
+
+At Nautilus I’ve been hard at work on a new line of Google-Certified OEM (Original Equipment Manufacturer) touchscreens for our fitness equipment.  This work has meant that I’ve had to become much more familiar with ADB (Android Debug Bridge) and the Android Operating System. 
 
 The first step when developing using ADB is to establish a connection.  This is done either over USB or a wireless network.  Once that is done, you can confirm the connection by executing `adb devices` in the terminal and confirming the presence of the device name.  The next step is to install the Android application package (apk).  This is accomplished by executing `adb install /path/to/apk`.  To ensure that no typos are made when transcribing the path, you can drag and drop the apk itself into the terminal window.  This transcribes the absolute path into the terminal window.  
 

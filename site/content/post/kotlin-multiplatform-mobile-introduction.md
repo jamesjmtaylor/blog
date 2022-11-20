@@ -2,7 +2,7 @@
 title: Kotlin Multiplatform Mobile Introduction
 date: '2022-07-02T07:24:47-07:00'
 ---
-<img style="float: left; margin:0 1em 0 0; width: 40%" src="/img/blog/kmm.png"/> 
+![Kotlin Multiplatform Mobile](/img/blog/kmm.png)
 
 This is the first in a multi-part series on Kotlin Multiplatform Mobile.  Kotlin Multiplatform Mobile (KMM) "is an SDK for iOS and Android app development \[that] offers all the combined benefits of creating cross-platform and native apps." (<https://kotlinlang.org/lp/mobile/>).  I'm currently following the [kotlinlang.org KMM tutorial](https://play.kotlinlang.org/hands-on/Networking%20and%20Data%20Storage%20with%20Kotlin%20Multiplatfrom%20Mobile/01_Introduction) to implement a mobile iOS and Android app.  
 

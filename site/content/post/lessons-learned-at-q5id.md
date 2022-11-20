@@ -2,7 +2,7 @@
 title: Lessons Learned at Q5id
 date: '2022-05-04T16:14:35-07:00'
 ---
-<img style="float: right; margin:0; width: 50%" src="/img/blog/xamarin.png"/> 
+![Xamarin](/img/blog/xamarin.png)
 
 I spent a little less than a year at Q5id.  It was the shortest amount of time that I've spent with an employer.  I specifically picked Q5id because the CEO already had accomplished two successful startup exits, Unicru, which was acquired by Kronos Inc. in 2006, and SureID, which was acquired by Sterling Talent in 2017. Despite this precaution, I ultimately found working for a startup full-time to be beyond my appetite for risk and moved back to employment with a larger, more established company.   
 

@@ -2,7 +2,9 @@
 title: AAR pt 7 (Android Architecture Components)
 date: '2018-03-18T06:15:05-07:00'
 ---
-<img style="float: left; margin:0 1em 1em 0; width: 33%" src="/img/blog/mvvm.jpg"> If you haven’t had a chance to read the first entry in the series for context, <a href="/post/after-action-review-aar/">you can do so here</a>
+![Model-View-ViewModel](/img/blog/mvvm.jpg)
+
+If you haven’t had a chance to read the first entry in the series for context, <a href="/post/after-action-review-aar/">you can do so here</a>
 
 Way back in 2017 at Google I/O several architectural components were announced to help streamline Android development.  Kotlin support was also announced.  I've only just recently been able to get around to doing an app that implements both simultaneously.  I've included some of my lessons learned below:
 
@@ -17,171 +19,63 @@ The Google ViewModel is a superclass that all declared ViewModels must implement
 
 ```
 dependencies {
-```
-
-```
-     
-```
-
-```
     implementation "android.arch.lifecycle:extensions:1.1.0" // ViewModel and LiveData
-```
-
-```
     annotationProcessor "android.arch.lifecycle:compiler:1.1.0"
-```
 
-```
- 
-```
-
-```
     implementation "android.arch.persistence.room:runtime:1.0.0"  // Room
-```
 
-```
     annotationProcessor "android.arch.persistence.room:compiler:1.0.0"
-```
 
-```
- 
-```
-
-```
     testImplementation "android.arch.core:core-testing:1.1.0" // Test helpers for LiveData
-```
-
-```
     testImplementation "android.arch.persistence.room:testing:1.0.0"// Test helpers for Room
-```
-
-```
 }
 ```
 
 Once both the project and app build.gradle files are modified you can import the ViewModel superclass in your java files.  The benefit of using ViewModel is that ViewModel objects are automatically retained during configuration changes so that the data they hold are immediately available to the next activity or fragment instance.  For this to work however all Activities & Fragments must implement the LifecycleOwner interface in order for ViewModels to be aware of their lifecycles. An example of a ViewModel class implementation is below:
 
-**EquipmentViewModel
-**
+**EquipmentViewModel**
 
 ```
 class EquipmentViewModel(application: Application) : AndroidViewModel(application), LifecycleObserver {
-```
-
-```
     val repo = EquipmentRepository()
-```
-
-```
     val equipment = MediatorLiveData<List<Equipment>>() //Mediator allows this class to pass the RoomLiveData from the repo class to the View
-```
 
-```
     val isLoading = MediatorLiveData<Boolean>()
-```
 
-```
     var filterResults : List<Equipment>? = ArrayList<Equipment>()
-```
-
-```
     private var selectedType : EquipmentType = EquipmentType.LAND
-```
 
-```
-
-```
-
-```
     init {
-```
-
-```
         isLoading.addSource(repo.isLoading){isLoading.value=it}
-```
-
-```
         val source = getCurrentSource()
-```
 
-```
         if (source != null){
-```
-
-```
             equipment.addSource(source) {
-```
-
-```
                 equipment.value = it
-```
-
-```
             }
-```
-
-```
         }
-```
-
-```
     }
 ```
 
 When implementing an MVVM architecture you can have your view model class implement either ViewModel or ViewModelAndroid. ViewModelAndroid requires that you pass an Application instance to its constructor, but in exchange it now has a reference to the application singleton. That means that you can query the application in order to get a reference to the application database (as long as you have a reference to the database in the application, which you should). The ViewModel itself can either be instantiated by the activity or the fragment relying on the ViewModel.  Below is an example of the latter:
 
-**EquipmentFragment
-**
+**EquipmentFragment**
 
 ```
     override fun onCreate(savedInstanceState: Bundle?) {
-```
-
-```
         super.onCreate(savedInstanceState)
-```
-
-```
         columnCount = calculateNoOfColumns(App.instance.applicationContext)
-```
-
-```
         initVM()
-```
-
-```
     }
-```
 
-```
-
-```
-
-```
     //MARK: ViewModel Methods
-```
-
-```
     private fun initVM() {
-```
-
-```
         eVM = activity?.let {ViewModelProviders.of(it).get(EquipmentViewModel::class.java)}
-```
-
-```
         eVM?.let { lifecycle.addObserver(it) } //Add ViewModel as an observer of this fragment's lifecycle
-```
-
-```
         eVM?.equipment?.observe(this, equipmentObserver)
-```
-
-```
     }
-```
-
 }
+```
 
 To have a fragment receive the same instance of ViewModel as your activity you need to pass that activity in the fragment's ViewModelProviders method. To do that, just call 'getActivity' (as long as that fragment is hosted by the activity).  In the case of Kotlin, you can simply call \`activity\` since accessors and mutators generally aren't used.
 
@@ -198,8 +92,7 @@ Kotlin offers a Java interoperable language that offers a lot of Swift features 
 * The Kotlin paradigm for object property access and mutation is identical to that of Swift.  Just get and set the property explicitly.
 * The Kotlin 'let' keyword is tersely described as a function that "Calls the specified function block with this value as its argument and returns its result." It's real power is that it allows the object that calls it to have an '?.' operator, and only runs if the calling object or expression is not null. Think of it as a swift \`if let\` block where the unwrapped constant generated as a result of the \`if let\` is assigned the name \`it\`. An example is below:
 
-**let keyword
-**
+**let keyword**
 
 `findUser(id)?.let {
  return it.name
@@ -207,14 +100,10 @@ Kotlin offers a Java interoperable language that offers a lot of Swift features 
 
 The Kotlin equivalent of the Swift \`guard let\` statement takes the following format ( the unwrappedString variable is available for use immediately following unwrapping).  Note that this function makes use of the 'Elvis operator' ('?:') which is similar to Swift's default value operator ('??') except that it can execute functions as well as return values.
 
-**guard let statement
-**
+**guard let statement**
 
 ```
 val nullSafeString : String? = "Cool string"
-```
-
-```
 val unwrappedString = nullSafeString ?: return
 ```
 

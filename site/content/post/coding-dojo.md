@@ -2,7 +2,9 @@
 title: Coding Dojo
 date: 2016-09-05T13:21:29.000Z
 ---
-<img style="float: left; margin:0 0 1em 0; width: 100%" src="/img/blog/cyber.jpg"/>Today is my first day of Coding Dojo! I’m super excited to take the first step along the path to becoming a cyber ninja!  For the next month I plan to document my adventure in detail, so accordingly the frequency of my updates will increase to one post a day.  Once I’m finished I’ll go back to our regularly scheduled programming of weekly entries.  
+![Cyber sub-zero](/img/blog/cyber.jpg)
+
+Today is my first day of Coding Dojo! I’m super excited to take the first step along the path to becoming a cyber ninja!  For the next month I plan to document my adventure in detail, so accordingly the frequency of my updates will increase to one post a day.  Once I’m finished I’ll go back to our regularly scheduled programming of weekly entries.  
 
 Now, since this is the first Monday of the week it’s also Agile! Day.  I learned a LOT over the last month, so this is going to be a little lengthy.  First thing is to review progress made against last month’s objectives:
 

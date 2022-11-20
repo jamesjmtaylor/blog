@@ -2,7 +2,9 @@
 title: AAR pt 14 (Security)
 date: '2019-08-01T08:54:48-07:00'
 ---
-<img style="float: left; margin:0 2em 1em 0; width: 33%" src="/img/blog/security.jpg"> If you have not had a chance to read the first entry in the series for context, <a href="/post/after-action-review-aar/">you can do so here</a> 
+![Security](/img/blog/security.jpg)
+
+If you have not had a chance to read the first entry in the series for context, <a href="/post/after-action-review-aar/">you can do so here</a> 
 
 This first part of this post will focus on security specifically.  The second half will cover lessons learned with software tools in general, in a similar vein to <a href="/post/aar-pt-11-tools/">my last Tools AAR entry</a>.
 

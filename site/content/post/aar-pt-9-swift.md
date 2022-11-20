@@ -2,7 +2,9 @@
 title: AAR pt 9 (Swift)
 date: '2018-09-01T06:00:16-07:00'
 ---
-<img style="float: left; margin:0 1em 1em 0; width: 33%" src="/img/blog/swift.jpg"> If you haven’t had a chance to read the first entry in the series for context, <a href="/post/after-action-review-aar/">you can do so here</a>
+![Swift](/img/blog/swift.jpg)
+
+If you haven’t had a chance to read the first entry in the series for context, <a href="/post/after-action-review-aar/">you can do so here</a>
 
 It's been exactly a year since I did <a href="/post/aar-pt-4-swift-xcode/">my last Swift/iOS AAR entry</a>, and two years since I <a href="/post/day-1-ios-fundamentals/">started the Coding Dojo Swift bootcamp</a> so I figured it was about time that I had a new entry on my lessons learned with Swift.  I've got a few more entries in my notebook that I haven't been able to transcribe into a digital format yet, but you'll probably find this to be a lot to digest as it is; so without further adieu: 
 

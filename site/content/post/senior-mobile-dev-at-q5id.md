@@ -2,7 +2,7 @@
 title: Senior Mobile Dev at Q5id
 date: '2021-11-01T05:52:06-07:00'
 ---
-<img style="float: right; margin: 0 0 0 1em; width: 33%" src="/img/blog/fingerprint.jpg">
+![Fingerprint](/img/blog/fingerprint.jpg)
 
 I've been at my new job at [Q5id ](https://q5id.com/)for almost half a year now.  I was hired as a Senior Mobile Developer for the Proven Identity mobile application team.  The company is a moderately sized startup in Hillsboro, Oregon.  Since I've been here, we've received a $10 million dollar funding round and signed our first customer.  I'm optimistic that with continued hard-work we'll be able to keep up the momentum throughout the year, and that this customer will be the first of many.
 

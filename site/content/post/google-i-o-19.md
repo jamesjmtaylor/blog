@@ -2,7 +2,7 @@
 title: Google I/O 19
 date: '2019-05-11T08:30:01-07:00'
 ---
-<img style="float: left; margin:0 0 1em 0; width: 100%" src="/img/blog/io19.jpg"/>
+![Google IO 2019](/img/blog/io19.jpg)
 
 This year I had the good fortune to be able to attend Google I/O.  It was my first time at I/O so I wasn't terribly sure what to expect, other than it would be primarily outdoors.  Overall it ended up being a great experience that I was able to get a lot of good notes out of.  My session notes are below:
 

@@ -2,7 +2,9 @@
 title: Juggling Life
 date: '2022-03-05T07:12:40-08:00'
 ---
-<img style="float: left; margin:0 1em 0 0; width: 33%" src="/img/blog/juggling.jpg"/> The last few blog posts have been a little more on the technical side, so to keep it balanced I figured I'd discuss  my odyssey of juggling individual development, side-hustles, a full-time job, and raising a family.  I'll save an in-depth discussion of Kotlin Multi-Platform Project for next time.  
+![Juggling](/img/blog/juggling.jpg)
+
+The last few blog posts have been a little more on the technical side, so to keep it balanced I figured I'd discuss  my odyssey of juggling individual development, side-hustles, a full-time job, and raising a family.  I'll save an in-depth discussion of Kotlin Multi-Platform Project for next time.  
 
 The "Hustle Lifestyle", popularized in the early 21st century, has become something of a running joke.  The Youtube channel KRAZAM even did [a great two minute video lampooning the concept of the hustle in the tech world](https://www.youtube.com/watch?v=_o7qjN3KF8U).  In the video the protagonist wakes up at 6 am, works out, leaves for work at 8:30 am, and doesn't get back home until 8:30 pm.  He has no meaningful human interactions and generates nothing of lasting value.  He's incredibly active, without being at all productive.
 

@@ -2,7 +2,9 @@
 title: Dexcom
 date: '2022-04-05T08:00:27-07:00'
 ---
-<img style="float: left; margin:0 2em 1em 0; width: 33%" src="/img/blog/dexcom-office.jpeg"/> I'm excited to announce that last month I started work in my new role as a Staff Software Development Engineer at Dexcom.  Dexcom is a continuous glucose monitoring medical device company based out of San Diego, CA.  
+![Dexcom office](/img/blog/dexcom-office.jpeg)
+
+ I'm excited to announce that last month I started work in my new role as a Staff Software Development Engineer at Dexcom.  Dexcom is a continuous glucose monitoring medical device company based out of San Diego, CA.  
 
 The transition is a big change for me, for three reasons:
 

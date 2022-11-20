@@ -27,4 +27,5 @@ If you haven't had a chance to read the first entry in the series for context, [
 * If Visual Studio ever can't find the 'system' import, press CMD+SHIFT+P (opens the VS command terminal) and type **Restart Omnisharp**
 * Exchange Web Server (EWS) and on-premise Exchange will throttle excessive API requests automatically.  O365 will not.
 
-<img style="float: left; margin:0 0 1em 0; width: 100%" src="/img/blog/xamarin.jpg"/>
+
+![Xamarin](/img/blog/xamarin.jpg)

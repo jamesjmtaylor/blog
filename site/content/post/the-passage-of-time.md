@@ -2,7 +2,7 @@
 title: The Passage of Time
 date: '2021-07-01T06:29:00-07:00'
 ---
-<img style="float: left; margin:0 2em 1em 0; width: 25%" src="/img/blog/time.jpg">
+![Time](/img/blog/time.jpg)
 
 It's been almost half a year since my last blog entry!  A lot has happened since then.  Stars were born and collapsed, civilizations rose and fell, planets formed and destroyed!  But in all seriousness I've been pretty busy.  At one point I had three separate part-time contracts in addition to my full time job.  I also changed jobs.  So I haven't had a lot of time leftover for blogging.  But I plan to resume my normal monthly cadence, and I've accumulated quite a few different topics to write about.  Over the coming months I plan to release entries on:
 

@@ -2,24 +2,18 @@
 title: Day 8-iOS Intermediate
 date: 2016-09-14T12:10:10.000Z
 ---
-<img style="float: left; margin:0 1em 0 0; width: 33%" src="/img/blog/day8.jpg"/> Timeline:
+![Day 8](/img/blog/day8.jpg)
 
-1000-Argh!  The firmware on my primary phone was corrupted somehow.  I stayed at home until 0830 this morning trying to fix it before starting the commute.  When I got in I found out that we had a new assignment-a picker view application integrating Core Data. Time to get to work.
+Timeline:
 
-1100-Algorithms time.  We implement height as well as isBalanced methods for our BinarySearchTree.  The isBalanced is particularly interesting because it requires you to return a tuple containing whether or not it’s currently balanced as well as the tree height to compare to other children trees.
-
-1230-Xcode just updated to version 8, which includes mandatory use of Swift 3, which in turn has a lot of new syntax, especially with API calls.  This is because Apple thought that it would be a good idea to exclude the first argument from function calls and instead just include it as part of the function name.  Now they’re going back to a C-like implementation where you must explicitly state all the argument parameters.  So the API method names have changed to match, leading to shorter function calls overall.  For example, ‘prepareForSegue’ became just ‘prepare’.  I personally think it’s a step in the right direction.
-
-1500-Xcode 8 has a lot of unresolved bugs unfortunately.  CoreData objects created with the editor have default destinations that don’t correspond with what XCode expects, so you have to change it manually, for one.  Classes also sometime don’t resolve with the storyboard until you’ve closed out of Xcode entirely and reopened the project.  And XCode now defaults to not giving your projects a signing profile, preventing the project from compiling until you pick out a development team for each individual pod. Finally, even though it says it can convert your old Swift 2 projects to Swift 3, trying to run a project after the conversion leads to a multitude of errors.  So it’s been a barrel of fun.  So much fun that our instructor told us that we should go back to Xcode 7 until Xcode 8’s bugs are worked out.  But I’m going to stick it out, simply because I’ve figured out how to work through those bugs and I REALLY like Swift 3 over Swift 2.  Not to mention it’s the way of the future anyway.
-
-2000-I’ve completed my assignment.  Now I’ll just capture my Xcode bug fixes and head out.
-
-
+* 1000-Argh!  The firmware on my primary phone was corrupted somehow.  I stayed at home until 0830 this morning trying to fix it before starting the commute.  When I got in I found out that we had a new assignment-a picker view application integrating Core Data. Time to get to work.
+* 1100-Algorithms time.  We implement height as well as isBalanced methods for our BinarySearchTree.  The isBalanced is particularly interesting because it requires you to return a tuple containing whether or not it’s currently balanced as well as the tree height to compare to other children trees.
+* 1230-Xcode just updated to version 8, which includes mandatory use of Swift 3, which in turn has a lot of new syntax, especially with API calls.  This is because Apple thought that it would be a good idea to exclude the first argument from function calls and instead just include it as part of the function name.  Now they’re going back to a C-like implementation where you must explicitly state all the argument parameters.  So the API method names have changed to match, leading to shorter function calls overall.  For example, ‘prepareForSegue’ became just ‘prepare’.  I personally think it’s a step in the right direction.
+* 1500-Xcode 8 has a lot of unresolved bugs unfortunately.  CoreData objects created with the editor have default destinations that don’t correspond with what XCode expects, so you have to change it manually, for one.  Classes also sometime don’t resolve with the storyboard until you’ve closed out of Xcode entirely and reopened the project.  And XCode now defaults to not giving your projects a signing profile, preventing the project from compiling until you pick out a development team for each individual pod. Finally, even though it says it can convert your old Swift 2 projects to Swift 3, trying to run a project after the conversion leads to a multitude of errors.  So it’s been a barrel of fun.  So much fun that our instructor told us that we should go back to Xcode 7 until Xcode 8’s bugs are worked out.  But I’m going to stick it out, simply because I’ve figured out how to work through those bugs and I REALLY like Swift 3 over Swift 2.  Not to mention it’s the way of the future anyway.
+* 2000-I’ve completed my assignment.  Now I’ll just capture my Xcode bug fixes and head out.
 
 Xcode 8 Troubleshooting:
 
-Error-”Class can’t resolve \[UIComponent]” (after CTRL+Dragging a button or label into a class to create and @IBOutlet) Solution-close Xcode and reopen the project
-
-Error-”Signing for requires a development team” (After building a project for the first time) Solution-Open the project in the file explorer and assign each pod a development team.  Clean the project and then rebuild it.
-
-Error-”Exit Code 1” (error occurs at run-time and is preceded by long, arcane filepaths terminating with the missing NSObject files) Solution-Delete the autogenerated NSObject files, open the model, and for each entity select the ‘module path’ in the attributes tab and delete all the text, forcing the ‘true’ default directory.  Go to Editor in the menu bar and regenerate the NSObject files.
+* Error-”Class can’t resolve \[UIComponent]” (after CTRL+Dragging a button or label into a class to create and @IBOutlet) Solution-close Xcode and reopen the project
+* Error-”Signing for requires a development team” (After building a project for the first time) Solution-Open the project in the file explorer and assign each pod a development team.  Clean the project and then rebuild it.
+* Error-”Exit Code 1” (error occurs at run-time and is preceded by long, arcane filepaths terminating with the missing NSObject files) Solution-Delete the autogenerated NSObject files, open the model, and for each entity select the ‘module path’ in the attributes tab and delete all the text, forcing the ‘true’ default directory.  Go to Editor in the menu bar and regenerate the NSObject files.

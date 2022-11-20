@@ -2,7 +2,9 @@
 title: AAR pt 8 (Architecture/Software Engineering)
 date: '2018-07-01T07:08:20-07:00'
 ---
-<img style="float: left; margin:0 1em 1em 0; width: 33%" src="/img/blog/architecture.jpg"> If you haven’t had a chance to read the first entry in the series for context, <a href="/post/after-action-review-aar/">you can do so here</a>
+![Android architecture](/img/blog/architecture.jpg)
+
+If you haven’t had a chance to read the first entry in the series for context, <a href="/post/after-action-review-aar/">you can do so here</a>
 
 A lot of software development is more general than the idiosyncrasies of this framework over that.  Over the last year I've come across a few pretty handy rules of thumb to use while planning or implementing features.  A few of these are more technical (i.e. web tokens) but were included because their application spans a breadth of platforms.  Others are more general but opinionated. As an example, the first item in the list below is a more functional paradigm that others may or may not agree with, but that I have in my experience found to help reduce the overall number of bugs in production code.
 

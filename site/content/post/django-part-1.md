@@ -2,7 +2,9 @@
 title: Django (part 1)
 date: '2020-06-01T00:00:00-07:00'
 ---
-<img style="float: left; margin:0 1em 0 0; width: 33%" src="/img/blog/django.png"/> Recently a startup that I work part-time for asked that I transition to back end development.  They were happy to have me help, even after hearing my disclaimer that I had little experience with the framework that they were currently using, Django.  Eager to learn, I accepted the offer and spent the past month learning the ropes; implementing features here, bug fixes there.  This is the first post in a two-part series.  First, I will cover my philosophy on working in a completely new framework and how I account for billable hours.  Second, I will cover the lessons I've learned after diving into the deep end of developing a Django brown-field project.  If you want to learn more, I also have a [tangentially related post](/post/aar-pt-2-python/) in my old AAR series specifically about python development.
+![Django](/img/blog/django.png)
+
+Recently a startup that I work part-time for asked that I transition to back end development.  They were happy to have me help, even after hearing my disclaimer that I had little experience with the framework that they were currently using, Django.  Eager to learn, I accepted the offer and spent the past month learning the ropes; implementing features here, bug fixes there.  This is the first post in a two-part series.  First, I will cover my philosophy on working in a completely new framework and how I account for billable hours.  Second, I will cover the lessons I've learned after diving into the deep end of developing a Django brown-field project.  If you want to learn more, I also have a [tangentially related post](/post/aar-pt-2-python/) in my old AAR series specifically about python development.
 
 Starting work on a brown-field project in a framework that you've never used before presents two challenges.  One: how best to approach learning the new framework and two: how to account for the work when billing. 
 

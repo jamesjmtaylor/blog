@@ -2,7 +2,9 @@
 title: AAR pt 15 (Architecture/Software Engineering)
 date: '2019-10-05T09:41:08-07:00'
 ---
-<img style="float: left; margin:0 2em 0 0; width: 66%" src="/img/blog/blueprint.jpg"> If you haven’t had a chance to read the first entry in the series for context, <a href="/post/after-action-review-aar/">you can do so here</a>
+![Blueprint](/img/blog/blueprint.jpg)
+
+If you haven’t had a chance to read the first entry in the series for context, <a href="/post/after-action-review-aar/">you can do so here</a>
 
 Given that my last post was about my architecture certification, I figured this would be a good time to do another post on some architecture concepts. This is the second architecture lessons learned post that I've done; <a href="/post/aar-pt-8-architecture-software-engineering/">you can find the first one here</a>. 
 

@@ -2,7 +2,7 @@
 title: A Critique of Stoicism
 date: '2022-09-15T11:47:20-07:00'
 ---
-<img style="float: left; margin:0 2em 1em 0; width: 25%" src="/img/blog/zeno.jpg"/> 
+![Zeno the Stoic](/img/blog/zeno.jpg)
 
 Before we begin our critique of stoicism, it is important to understand what stoicism is, and what it is not. 
 
@@ -20,7 +20,7 @@ Wim Hof, another stoic, made a much more ambitious mountaineering attempt, seeki
 
 There are hundreds that didn't listen.  The chart below depicts all the unrecovered bodies on Mount Everest. Every one of those flags was at some point an extremely motivated person.  They stoically persevered into the "Death Zone".  At that elevation the level of oxygen is insufficient to support human life.  An extended stay will eventually result in loss of consciousness and death.  They embraced their "destiny" and ultimately perished as a result.
 
-<img style="float: left; margin:0 2em 1em 0; width: 100%" src="/img/blog/everestdeaths.jpg"/> 
+![Deaths on Mt. Everest](/img/blog/everestdeaths.jpg)
 
 Now that I've probably depressed 95% of you, let me bring it back a little bit.  I'm not saying stoicism is worthless.  Stoicism can be a very powerful tool to uplift those around you when circumstances appear their darkest, and to motivate yourself when all else fails.  My critique of stoicism concerns its determinism.  We aren't dogs tied to carts.  We can choose our circumstances, and adapt to them so that we survive to try again another day.  
 

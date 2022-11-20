@@ -159,6 +159,6 @@ fun EquipmentCard(
     }
 }
 ```
+![Android weg app](/img/blog/land.png)
 
-<img style="float: right; margin:1em 1em 1em 0; width: 50%" src="/img/blog/land.png"/> 
 If you want to see the full source code it's available \\\[here](https://github.com/jamesjmtaylor/weg-kmm).
