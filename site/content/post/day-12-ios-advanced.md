@@ -2,7 +2,7 @@
 title: Day 12-iOS Advanced
 date: 2016-09-19T12:29:18.000Z
 ---
-![Day 12](/img/blog/day12.jpg)
+![Day 12](/img/blog/day12.jpeg)
 
 Timeline:
 * 0800-This is the final week of guided lessons.  Next week is project week, during which we will be set loose to use everything that we’ve learned to create our own app.  I’ve got a few ideas that I’m kicking around, but I want to get through this week before I decide on anything.

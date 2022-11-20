@@ -2,7 +2,7 @@
 title: Happy Halloween!
 date: '2018-11-03T08:29:41-07:00'
 ---
-![Halloween](/img/blog/halloween.jpg)
+![Halloween](/img/blog/halloween.jpeg)
 
 We had a pretty good Halloween at the Taylor household this Wednesday.  This was our first Halloween in the neighborhood, since we moved just this summer, so we weren't sure how common trick-or-treaters would be.  I'd say our new cul-de-sac is somewhere in the middle of the spectrum.  Not the swarms of locusts that I've seen in some neighborhoods, but not entirely dead either.   And to parody that last paragraph, I give you [this Andy Rooney montage.](https://youtu.be/XIpGTcR2kAQ?t=8)
 

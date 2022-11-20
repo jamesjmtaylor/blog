@@ -2,7 +2,7 @@
 title: Day 3-Intro to iOS
 date: 2016-09-08T11:52:27.000Z
 ---
-![Day 3](/img/blog/day3.jpg)
+![Day 3](/img/blog/day3.jpeg)
 
 Timeline:
 * 0820-Arrive (traffic from Federal Way was awful) make a minuet tweak to the TicTacToe App, submit it and start work on Tipster App (it says it’s supposed to take 4 hours, I’m going to try and complete it before 1100 algorithms.

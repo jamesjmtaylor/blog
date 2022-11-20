@@ -2,7 +2,7 @@
 title: Day 16-Black Belt Test
 date: 2016-09-23T05:36:56-07:00
 ---
-![Day 16](/img/blog/day16.jpg)
+![Day 16](/img/blog/day16.jpeg)
 
 Timeline:
 * 0730-Arrived early to try and complete the most challenging aspects of the assignment.  Evan (one of the other classmates) has already given most of the class a link to a good tutorial on searchBar implementation.  In exchange I gave a whiteboard presentation on implementing button press responses from a button within a custom cell (which is less than trivial because that button has no knowledge of the CoreData object that it’s cell represents).  

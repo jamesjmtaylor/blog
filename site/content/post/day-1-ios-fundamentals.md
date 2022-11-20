@@ -2,7 +2,7 @@
 title: Day 1-iOS Fundamentals
 date: 2016-09-06T20:20:32.000Z
 ---
-![Day 1](/img/blog/day1.jpg)
+![Day 1](/img/blog/day1.jpeg)
 
 Timeline:
 

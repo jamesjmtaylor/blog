@@ -2,7 +2,7 @@
 title: Kotlin Conf 2018
 date: '2018-10-07T07:00:33-07:00'
 ---
-![Kotlin Conference](/img/blog/kotlinConf.jpg)
+![Kotlin Conference](/img/blog/kotlinConf.jpeg)
 
 As a software developer at Steelcase I'm able to attend a conference a year.  This year I purchased tickets to the second ever Kotlin Conference!  Over the course of 3 days I learned an immense amount about Kotlin, coroutines, and multiplatform projects.  What follows is a massive brain dump of all the notes and highlights that I took during the conference.
 

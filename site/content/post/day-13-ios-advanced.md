@@ -2,7 +2,7 @@
 title: Day 13-iOS Advanced
 date: 2016-09-20T12:30:56.000Z
 ---
-![Day 13](/img/blog/day13.jpg)
+![Day 13](/img/blog/day13.jpeg)
 
 Timeline:
 

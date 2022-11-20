@@ -2,7 +2,7 @@
 title: 2 Weeks after graduation-Completion of Career Services
 date: 2016-10-12T12:46:14.000Z
 ---
-![Career](/img/blog/career.jpg)
+![Career](/img/blog/career.jpeg)
 
 So, I’ve finished the coding dojo career course.  Here are my biggest takeaways:
 
