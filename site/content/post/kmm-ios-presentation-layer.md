@@ -1,6 +1,6 @@
 ---
 title: KMM iOS Presentation layer
-date: '2022-12-05T07:39:00-08:00'
+date: '2022-12-01T07:39:00-08:00'
 ---
 ![Desert](/img/blog/desert.jpg)
 
