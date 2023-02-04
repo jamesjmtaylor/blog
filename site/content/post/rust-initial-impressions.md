@@ -58,4 +58,23 @@ impl Rectangle {
 
 Unlike Swift structs are either entirely mutable or immutable.  They can't contain functions and instead must declare them in an `impl` block as show above.
 
-The semantics of Rust are actually much more similar to the first programming language I learned, [Ada](https://en.wikipedia.org/wiki/Ada_(programming_language)).
+The semantics of Rust are actually much more similar to the first programming language I learned, [Ada](https://en.wikipedia.org/wiki/Ada_(programming_language)). Memory and null safety are critical concepts in Rust, and the language is designed in a way to ensure that most memory and null-pointer exceptions are caught at compile time. Memory is managed through ownership. There are two possible storage mechanisms:
+
+
+* Stack: Stores & removes data in LIFO order. Data must have known, fixed size.
+* Heap: Stores arbitrarily sized data at the first address with enough space. Tracks data address with pointers, which are stored on a stack.
+
+The ownership rules in Rust are:
+
+1. Each value has an owner
+2. There can only be one owner at a time
+3. When an owner goes out of scope, the value is dropped
+
+The last rule especially caught me by surprise. This was because unlike Kotlin or Swift, passing a heap pointer to a function will cause the variable to invalidate afterwards! There are a number of solutions to keep the variable in scope afterwards:
+
+
+1. Make a clone first (slow).
+2. Have the fn return the pointer in a tuple at the end (ugly).
+3. Pass a reference type.
+
+Ko
