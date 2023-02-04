@@ -4,7 +4,7 @@ date: '2023-02-04T06:31:14-08:00'
 ---
 ![Robot Crab](/img/blog/krabs.jpg)
 
-As part of my New Year's resolution I've been studying the Rust programming language with the ultimate goal of building a bot for the game StarCraft.  I've been reading through the [Rust Programming Language Guide](https://doc.rust-lang.org/book/title-page.html) and uploading my notes and intermediate projects [here](https://github.com/jamesjmtaylor/rust).
+As part of my New Year's resolution I've been studying the Rust programming language with the ultimate goal of building a bot for the game StarCraft (hence the robot Mr. Krabs, since the Rust mascot is a crab and my end goal is to build a bot with it).  I've been reading through the [Rust Programming Language Guide](https://doc.rust-lang.org/book/title-page.html) and uploading my notes and intermediate projects [here](https://github.com/jamesjmtaylor/rust).
 
 So far the language syntactically (if not semantically) is very similar to Swift.  You can use `if let` statements to unwrap options, just like in Swift:
 
@@ -56,7 +56,7 @@ impl Rectangle {
 }
 ```
 
-Unlike Swift structs are either entirely mutable or immutable.  They can't contain functions and instead must declare them in an `impl` block as show above.
+Unlike Swift structs are either entirely mutable or immutable.  They can't contain functions and instead must declare them in an `impl` block as demonstrated above.
 
 The semantics of Rust are actually much more similar to the first programming language I learned, [Ada](https://en.wikipedia.org/wiki/Ada_(programming_language)). Memory and null safety are critical concepts in Rust, and the language is designed in a way to ensure that most memory and null-pointer exceptions are caught at compile time. Memory is managed through ownership. There are two possible storage mechanisms:
 
@@ -77,4 +77,14 @@ The last rule especially caught me by surprise. This was because unlike Kotlin o
 2. Have the fn return the pointer in a tuple at the end (ugly).
 3. Pass a reference type.
 
-Ko
+Passing a reference is like letting an inner scope "borrow" a pointer. Reference types are created by prepending the parameter type and heap variable with `&`. You can explicitly de-reference with `*`. References are immutable by default. They can be made mutable with `&mut`, but a mutable reference can only have one borrower.  You'll get compile error otherwise. Usage of these symbols are below:
+
+```
+i32          // a pointer
+&i32         // a reference
+&'a i32      // a reference with an explicit lifetime
+&'a mut i32  // a mutable reference with an explicit lifetime
+&'static i32 // a static explicit lifetime
+```
+
+These notes only scratch the surface of Rust. I haven't even gotten to package management (cargo), closures (very similar to Swift), multithreading, or data passing.  But my hope is that by highlighting the similarities and differences Rust has with other high-level programming languages you can get an idea of whether or not Rust is right for you.  Until next time!
