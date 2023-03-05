@@ -1,0 +1,11 @@
+---
+title: StarCraft Rust Bot
+date: '2023-03-05T08:01:13-08:00'
+---
+![StarCraft 2 logo](/img/blog/sc2.jpg)
+
+I finished my StarCraft Rust Bot!  It's now good enough to beat the hardest AI that ships with the game. All in only 152 lines. You can see the original source code [here](https://github.com/jamesjmtaylor/rust/tree/main/sc2_bot).  Even though the code itself is brief, the journey to creating and testing it was not.
+
+Originally the bot was going to be built using BWAPI (Brood War API).  Then I found out that BWAPI was written in C++.  Rust has a [foreign function interface (FFI) binding generation library](https://github.com/rust-lang/rust-bindgen), but the C++ headers are so badly mangled that most of the code that's generated is useless. So I did a little digging and came across [BWAPI-C](https://github.com/RnDome/bwapi-c), a Brood War API written in C.  That was a little better, but it was still annoying and error prone to have to generate the FFI myself.  So I did a little more research and found someone else had already done the work for me and created [BWAPI-RS](https://github.com/RnDome/bwapi-rs), a Brood War API written in Rust.  Unfortunately that project had very little in the way of documentation.  The README specifically mentions "As you've probably noticed, the project is in it's very early days of development. Actually, we have no idea how it would work. The future will tell."  The fact that it hasn't been updated in over five years was hardly encouraging.  
+
+This is when I finally stumbled upon the [Rust-SC2 repository](https://github.com/UltraMachine/rust-sc2).  Unlike the other repositories, this one was in active development, had great documentation, and a lively community with its own Discord server.  After trying [Manjaro](https://manjaro.org/) (ruled out because most of the Linux dependencies for the project had to be recompiled from Debian to Arch) and [Ubuntu](https://ubuntu.com/) (ruled out because of driver incompatibilities with my PC), I finally settled on Windows.  While the Windows setup documentation from the Rust-SC2 repo wasn't as comprehensive as it was for Linux, it was enough to get me started.  Running on Windows also meant that I didn't need to bother with [Wine (Wine Is Not an Emulator)](https://www.winehq.org/).
