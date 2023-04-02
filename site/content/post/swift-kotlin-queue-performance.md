@@ -34,7 +34,7 @@ fun main() {
 }
 ```
 
-My Swift hypothesis is a little more complicated.  If you remember from part 2 of the series, the doubly-linked list implementation was not at all performant, most likely because Swift doesn't perform any memory optimization around linked lists.  The array implementation was more performant, but still underperformed compared to Kotlin.  After digging into the Apple Developer documentation the reason became obvious.  [Enqueuing](https://developer.apple.com/documentation/swift/array/append(_:)-1ytnt) uses an array append operation, which occurs in constant time with the benefit of memory optimization like Kotlin. [Dequeuing](https://developer.apple.com/documentation/swift/array/removefirst()) however shifts all the elements to the left to occupy the space vacated by the removed element.  This requires linear (O(n)) time.  So even though it is less performant than the array at 1,000 values, we'll need to use the original Swift doubly linked list implementation in order to be able to compare apples to apples (pun not intended).  I'm guessing that while the absolute amount of time to perform each enqueue and dequeue will remain greater than Kotlin's, there will be no change in the relative amount of time to betweeth the first enqueue and the thousandth.  Below is the Swift implementation that will be used to test this:
+My Swift hypothesis is a little more complicated.  If you remember from part 2 of the series, the doubly-linked list implementation was not at all performant, most likely because Swift doesn't perform any memory optimization around linked lists.  The array implementation was more performant, but still underperformed compared to Kotlin.  After digging into the Apple Developer documentation the reason became obvious.  [Enqueuing](https://developer.apple.com/documentation/swift/array/append(_:)-1ytnt) uses an array append operation, which occurs in constant time with the benefit of memory optimization like Kotlin. [Dequeuing](https://developer.apple.com/documentation/swift/array/removefirst()) however shifts all the elements to the left to occupy the space vacated by the removed element.  This requires linear (O(n)) time.  So even though it is less performant than the array at 1,000 values, we'll need to use the original Swift doubly linked list implementation in order to be able to compare apples to apples (pun not intended).  I'm guessing that while the absolute amount of time to perform each enqueue and dequeue will remain greater than Kotlin's, there will be no change in the relative amount of time between the first enqueue and the thousandth.  Below is the Swift implementation that will be used to test this:
 
 ```
 import Foundation
@@ -117,9 +117,7 @@ And now on to the results!
 
 ![Results](/img/blog/data.png)
 
-Both Swift and Kotlin performed poorly on the first 1,000 enqueues and dequeues.  This was probably due to initiliazation of the the instrumentation taking a dispraportionately large amount of time.  Once we got into  10,000 operations and above however the time per enqueue and dequeue leveled off significantly.
-
- 
+Both Swift and Kotlin performed poorly on the first 1,000 enqueues and dequeues.  This was probably due to initialization of the the instrumentation taking a disproportionately large amount of time.  Once we got into 10,000 operations and above however, the time per enqueue and dequeue leveled off significantly.
 
 ![Graphs](/img/blog/graphs.png)
 
