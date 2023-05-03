@@ -35,7 +35,7 @@ A score of "-10" means that the candidate will not get the job.  A score of "0" 
 
 Both candidates study whiteboard problems and both candidates cheat on the digital portion.
 
-In the second scenario is as a simultaneous game.  Neither of the candidates see the other's preparations or know their level of honesty.  The tree for this scenario is:
+In the second scenario is as a simultaneous game.  Neither of the candidates see the other's preparations or knows their level of honesty.  The tree for this scenario is:
 
 <img style="width: 100%" src="/img/blog/simeltaneous.png"/>
 
@@ -46,10 +46,6 @@ This conclusion comes with a LOT of caveats.  Most candidates are not amoral, an
 Despite those caveats, I do not think it wise to use a system that favors dishonest candidates over honest ones, and will not be using it in my own future screening of candidates.  
 
 https://workplace.stackexchange.com/questions/150857/not-allowed-to-use-google-during-programming-test
-
-
-
-
 
 _Image Credit: MIT Museum_
 
