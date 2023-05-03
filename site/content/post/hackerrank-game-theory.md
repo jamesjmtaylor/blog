@@ -1,6 +1,6 @@
 ---
 title: HackerRank Game Theory
-date: '2021-11-13T07:34:13-08:00'
+date: '2023-05-03T07:34:00-07:00'
 ---
 <img style="float: left; margin:0 1em 0 0; width: 25%" src="/img/blog/nash.png"/>
 
