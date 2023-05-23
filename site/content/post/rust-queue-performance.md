@@ -94,7 +94,7 @@ impl<T> Queue<T> {
 }
 ```
 
-I avoided using the [Rust queues crate](https://docs.rs/queues/latest/queues/) because it suffers the same dequeue penalty as Swift, specifically a performance of (O(n)) time.  Instead I opted to use my own linked list implementation with an optional boxed type to prevent memory overflows.  The syntax for using the queue was almost identical to that of Swift's:
+I avoided using the [Rust queues crate](https://docs.rs/queues/latest/queues/) because it suffers the same penalty as Swift's array based queue, specifically a dequeue performance of (O(n)) time.  Instead I opted to use my own linked list implementation with an optional boxed data type to prevent memory overflows.  The syntax for using the queue was almost identical to that of Swift's:
 
 ```
 use std::time::Instant;
