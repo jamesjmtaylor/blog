@@ -2,7 +2,7 @@
 title: Rust Queue Performance
 date: '2023-05-16T06:12:42-07:00'
 ---
-![](/img/blog/rustqueue.jpg)
+![null](/img/blog/rustqueue.jpg)
 
 After creating my Starcraft Rustbot and then comparing queue performance in Kotlin and Swift I naturally began to wonder about the performance of a queue in Rust. How would a language billed as performant as C compare? Are there truly significant gains for operating "close to the metal", or have the Swift and Kotlin compilers developed to a point where they can optimize to a similar level of performance?
 
@@ -94,17 +94,14 @@ impl<T> Queue<T> {
 }
 ```
 
-Usage:
+I avoided using the [Rust queues crate](https://docs.rs/queues/latest/queues/) because it suffers the same dequeue penalty as Swift, specifically a performance of (O(n)) time.  Instead I opted to use my own linked list implementation with an optional boxed type to prevent memory overflows.  The syntax for using the queue was almost identical to that of Swift's:
 
 ```
 use std::time::Instant;
 
 fn main() {
     let mut queue: Queue<i32> = Queue::new();
-    let ITERATIONS = 1_000_000 
-
-
-
+    let ITERATIONS = 1_000_000;
     let start_time = Instant::now();
 
 
@@ -114,7 +111,7 @@ fn main() {
 
 
     for _ in 0..ITERATIONS {
-        if let Some(element) = queue.dequeue() {
+        if let Some(_element) = queue.dequeue() {
             // Process the dequeued element
         }
     }
@@ -124,6 +121,14 @@ fn main() {
     println!("Execution time: {:?}", elapsed_time);
 }
 ```
+
+The results were as follows:
+
+![Kotlin and Rust Results](/img/blog/rustresults.png)
+
+The table above shows three Kotlin runs (KR1 through 3) and three Rust runs (RR1 through 3) with the number of `ITERATIONS` for each run as the column header.  Swift was omitted from the comparison because of the similarity of its performance envelope to Kotlin.  
+
+In contrast to Swift & Kotlin, Rust showed almost no overhead in marshalling the memory necessary for the queue. The first enqueue operation was almost as fast (within the same order of magnitude) as the millionth.  After the first thousand enqueue and dequeue operations however that initial startup cost had been amortized sufficiently for Kotlin to be comparable to Rust.  After the ten thousandth queue and enqueue Kotlin was even faster than Rust!  I'd really like to know how Kotlin accomplished such a feat, but that's an article for another time.  
 
 Code generated from https://chat.openai.com/
 Image generated from https://creator.nightcafe.studio/
