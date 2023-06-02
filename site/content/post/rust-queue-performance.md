@@ -1,6 +1,6 @@
 ---
 title: Rust Queue Performance
-date: '2023-05-16T06:12:42-07:00'
+date: '2023-06-05T06:12:42-07:00'
 ---
 ![null](/img/blog/rustqueue.jpg)
 
