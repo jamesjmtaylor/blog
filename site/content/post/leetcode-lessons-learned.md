@@ -1,8 +1,8 @@
 ---
 title: Leetcode Lessons Learned
-date: '2023-10-23T08:03:34-07:00'
+date: '2023-11-05T08:03:34-08:00'
 ---
-As I've been working my way through Leetcode I've picked up a few new tricks.  Some of these are fairly standard, like the sliding window technique for array analysis, but others are somewhat less intuitive.  A number of insights were determined empirically, and may be specific to the Kotlin compilers for Leetcode in particular, but I figured they would be worth mentioning in any case.
+As I've been working my way through Leetcode I've picked up a few new tricks.  Some of these are fairly standard, like the sliding window technique for array analysis, but others are somewhat less intuitive.  I gained a number of insights through experimentation, and these may be specific to the Kotlin compilers for Leetcode in particular. I figured they would still be worth mentioning in any case.
 
 One of the first things that surprised me as I started the Leetcode 75 Study Plan for Kotlin was how efficient StringBuilder was.  And not just the typical "don't append strings manually because it forces the compiler to create a new string behind the scenes each time you append."  I'm talking about faster than even trying to manage a single array manually.  Take this problem statement as an example:
 
@@ -64,9 +64,9 @@ and I got the following results:
 
 ![StringBuilder Performance](/img/blog/stringbuilder.png)
 
-While not a huge different in absolute terms (26 ms and 2 MB in speed and memory usage respectively), it made a vast improvement in the relative efficiency of the solution compared to the average submission.
+While not a huge difference in absolute terms (26 ms and 2 MB in speed and memory usage respectively), it made a vast improvement in the relative efficiency of the solution compared to the average submission.
 
-A few more minor insights include:
+Here are a few more minor insights:
 
 * To avoid comparing individual characters between two strings for equality checks, you can compute the hashes for both strings once, and then compare the hash results.  If the hashes are equal to one another, the strings are equal.
 * If you need to find values that are unique between two arrays, you can convert them to sets with the extension function \`.toSet()\` and then subtract one set from the other with the \`-\` operator.  This is far more efficient than using the lambda functions filter, contains, and distinct to accomplish the same result. 
