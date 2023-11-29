@@ -57,7 +57,7 @@ paginate = 5
 			destination = "https://www.bowflex.com/max-trainer/"
 			preview = "https://jjmtaylor.com/images/thumbs/bowflex.jpg"
 			title = "JRNY™ (iOS & aOS)"
-			description = "JRNY™ App offers the guidance and motivation you need by providing in-depth analytics and awards."
+			description = "The JRNY™ App offers the guidance and motivation you need by providing in-depth analytics and awards."
 
 		[[params.portfolio.gallery]]
 			destination = "https://evercharge.com/"
@@ -81,13 +81,13 @@ paginate = 5
 			destination = "https://play.google.com/store/apps/details?id=com.jamestaylor.weg"
 			preview = "https://jjmtaylor.com/images/thumbs/weg2012.jpg"
 			title = "Worldwide Equipment Guide - 2012 (aOS only)."
-			description = "A native android application developed for the US Army Maneuver Center of Excellence.  With over 5,000 downloads this is my most popular individually launched app."
+			description = "A native android application developed for the US Army Maneuver Center of Excellence.  With over 10,000 downloads this is my most popular individually launched app."
 
 		[[params.portfolio.gallery]]
         	destination = "https://apps.apple.com/us/app/worldwide-equipment-guide-2015/id1392413944"
             preview = "https://jjmtaylor.com/images/thumbs/weg2015.jpg"
             title = "Worldwide Equipment Guide - 2015(iOS & aOS)."
-            description = "A reboot of my 2012 Worldwide equipment guide.  This application was developed natively for iOS & Android using Swift & Kotlin respectively.  It is supported by a Kotlin Springboot API backed by a PostgreSQL database."
+            description = "A reboot of my 2012 Worldwide equipment guide. It is supported by a Kotlin Springboot backend API and PostgreSQL database."
 
 	[params.recentposts] 
 		hide  = true
