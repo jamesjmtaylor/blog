@@ -60,6 +60,12 @@ paginate = 5
 			description = "The Max Intelligence™ App offers the guidance and motivation you need by providing in-depth analytics and awards, helping you celebrate milestones, achievements, personal bests, and keeping track of time, calories burned, and more."
 
 		[[params.portfolio.gallery]]
+			destination = "https://evercharge.com/"
+			preview = "https://jjmtaylor.com/images/thumbs/evercharge.svg"
+			title = "Evercharge (iOS & aOS)."
+			description = "Dynamic electric vehicle (EV) charging solutions for commercial fleets, multi-family residential properties, and single-family homes."
+
+		[[params.portfolio.gallery]]
 			destination = "https://youtu.be/7_5AZIRh2VE?t=64"
 			preview = "https://jjmtaylor.com/images/thumbs/find.jpg"
 			title = "Steelcase Personal Assistant (iOS & aOS)."
@@ -76,12 +82,6 @@ paginate = 5
 			preview = "https://jjmtaylor.com/images/thumbs/weg2012.jpg"
 			title = "Worldwide Equipment Guide - 2012 (aOS only)."
 			description = "A native android application developed for the US Army Maneuver Center of Excellence.  With over 5,000 downloads this is my most popular individually launched app."
-
-		[[params.portfolio.gallery]]
-			destination = "https://apps.apple.com/us/app/wrd-calculator/id1148696352"
-			preview = "https://jjmtaylor.com/images/thumbs/wrd.jpg"
-			title = "Wargame: Red Dragon Calculator (iOS & aOS)."
-			description = "My first Ionic hybrid mobile application. It was written in Typescript using the Angular 2 framework and released simeltaneously to the Google Play Store and Apple App Store."
 
 		[[params.portfolio.gallery]]
         	destination = "https://apps.apple.com/us/app/worldwide-equipment-guide-2015/id1392413944"
