@@ -56,8 +56,8 @@ paginate = 5
 		[[params.portfolio.gallery]]
 			destination = "https://www.bowflex.com/max-trainer/"
 			preview = "https://jjmtaylor.com/images/thumbs/bowflex.jpg"
-			title = "Bowflex Max Intelligence (iOS & aOS)"
-			description = "The Max Intelligence™ App offers the guidance and motivation you need by providing in-depth analytics and awards, helping you celebrate milestones, achievements, personal bests, and keeping track of time, calories burned, and more."
+			title = "JRNY™ (iOS & aOS)"
+			description = "JRNY™ App offers the guidance and motivation you need by providing in-depth analytics and awards."
 
 		[[params.portfolio.gallery]]
 			destination = "https://evercharge.com/"
