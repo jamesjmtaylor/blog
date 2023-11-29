@@ -78,6 +78,12 @@ paginate = 5
 			description = "Search hotels, vacation rentals or hostels and share your experience through the Jenie mobile app."
 
 		[[params.portfolio.gallery]]
+			destination = "https://play.google.com/store/apps/details?id=com.jamestaylor.weg"
+			preview = "https://jjmtaylor.com/images/thumbs/weg2012.jpg"
+			title = "Worldwide Equipment Guide - 2012 (aOS only)."
+			description = "A native android application developed for the US Army Maneuver Center of Excellence.  With over 5,000 downloads this is my most popular individually launched app."
+
+		[[params.portfolio.gallery]]
         	destination = "https://apps.apple.com/us/app/worldwide-equipment-guide-2015/id1392413944"
             preview = "https://jjmtaylor.com/images/thumbs/weg2015.jpg"
             title = "Worldwide Equipment Guide - 2015(iOS & aOS)."
