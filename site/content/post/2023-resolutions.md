@@ -6,9 +6,9 @@ date: '2023-01-03T06:59:47-08:00'
 
 This is the fourth year I've done New Year's resolutions. You can read the previous years' entries here:
 
-* [2020 New Years](https://jjmtaylor.com/admin/#/collections/blog/entries/new-years-resolutions)
-* [2021 New Years](https://jjmtaylor.com/admin/#/collections/blog/entries/a-year-in-review)
-* [2022 New Years](https://jjmtaylor.com/admin/#/collections/blog/entries/new-year-s)
+* [2020 New Years](https://jjmtaylor.com/post/new-years-resolutions/)
+* [2021 New Years](https://jjmtaylor.com/post/a-year-in-review/)
+* [2022 New Years](https://jjmtaylor.com/post/new-year-s/)
 
 As the saying goes: man plans, God laughs. Last year I had planned to do 100 pushups/situps/pullups/air squats per beer, to complete a century race, participate in a HackerRank contest, and update my Worldwide Equipment Guide app.  Of those I only completed the last.  
 
