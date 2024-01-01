@@ -4,7 +4,7 @@ date: '2024-01-01T07:45:46-08:00'
 ---
 ![2024](/img/blog/2024.png)
 
-2023 proved to be quite the turbulent year.  Of my three[ 2023 new year's resolutions](https://jjmtaylor.com/post/2023-resolutions/), I accomplished two.  Specifically, I completed my Starcraft Rust AI (you can read about it [here](https://jjmtaylor.com/post/starcraft-rust-bot/)) and successfully summited three new mountains. My goals for 2024 are below:
+2023 proved to be quite the turbulent year.  Of my three[ 2023 new year's resolutions](https://jjmtaylor.com/post/2023-resolutions/), I accomplished two.  Specifically, I completed my Starcraft Rust AI (you can read about it [here](https://jjmtaylor.com/post/starcraft-rust-bot/)) and successfully summited four new mountains, Mt Hood, Old Snowy, Broken Top, and Three Finger Jack. My goals for 2024 are below:
 
 * Update my Worldwide Equipment Guide app to use the new [Odin API](https://odin.tradoc.army.mil/)
 * Climb three new mountains.
@@ -18,4 +18,4 @@ Unfortunately a sudden (and extensive) change in the organization of the Odin AP
 
 The second and third goals are repeats of the same goals from 2023.  I wasn't accepted to ICS in 2023 despite a near perfect score on the entrance exam.  This was mostly because there were twice as many applicants as available student slots. When I asked what I could do to make myself a more competitive candidate for 2024 I was told I needed to complete more alpine snow climbs.  So my plan going forward is to scale back my volunteer efforts with the Mazamas (which didn't seem to have an impact on my application) and scale up my climbing efforts.  The Mazamas does keep track of your previous applications to ICS and gives preference to previous applicants.  So my hope is that my previous application combined with a more robust climb resume will be sufficient for me to be accepted in 2024.
 
-I hope you had a great 2023, and an even better 2024.  I'll keep you posted on my progress for this year's resolutions.  Climbing three new mountains will be contingent on which climbs are put on the Mazamas calendar, but I'm optimistic that I'll be able to complete them before the summer.  Starting from scratch with the Odin API certainly seems daunting, but I think reprioritizing to shipping a truly Minimum Viable Product (MVP) will help focus my efforts.  Lastly,
+I hope you had a great 2023, and that you have an even better 2024.  I'll keep you posted on my progress for this year's resolutions.  Climbing three new mountains will be contingent on which climbs are put on the Mazamas calendar, but I'm optimistic that I'll be able to complete them before the summer.  Starting from scratch with the Odin API certainly seems daunting, but I think reprioritizing to shipping a truly Minimum Viable Product (MVP) will help focus my efforts.  Lastly, my hope is that more climbs will allow me to secure a spot in the 2024 ICS course.
