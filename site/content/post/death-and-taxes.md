@@ -34,6 +34,8 @@ The tax gotcha is that when you do sell RSUs your company reports the sale as in
 
 ![Stock Plan Transactions Supplement](/img/blog/transactions.png)
 
+Using the adjusted cost basis allows you to calculate the adjusted gain or loss, which is almost always lower than the 1099-B's gain or loss.
 
+Well, that sums up all the neat ways that Uncle Sam can unintentionally gouge you, including preventing Roth IRA contributions, disadvantaging ESPPs, and double taxing RSUs.  I hope your able to save a few dollars as a result, if not this tax year, at least in the years to come. 
 
 Photo by <a href="https://unsplash.com/@kellysikkema?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Kelly Sikkema</a> on <a href="https://unsplash.com/photos/white-printed-paper-8DEDp6S93Po?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
