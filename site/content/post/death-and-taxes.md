@@ -4,7 +4,7 @@ date: '2024-02-27T07:04:18-08:00'
 ---
 ![Tax forms](/img/blog/taxes.jpg)
 
-It's tax season again, and in the words of Benjamin Franklin "in this world nothing can be said to be certain, except death and taxes." That's why I figured this month I'd cover some tax gotchas that have snared me in previous years.  I'll specifically be addressing Roth Individual Retirement Account (IRA) contribution limits as well as Employee Stock Purchase Program (ESPP) and Restricted Stock Unit (RSU) sale tax implications.  
+It's tax season again, and in the words of Benjamin Franklin "in this world nothing can be said to be certain, except death and taxes." That's why I figured this month I'd cover some tax "gotchas" that have snared me in previous years.  I'll specifically be addressing Roth Individual Retirement Account (IRA) contribution limits as well as Employee Stock Purchase Program (ESPP) and Restricted Stock Unit (RSU) sale tax implications.  
 
 Before I get too deep in the weeds I want to qualify that I am strictly a tax preparation amateur, parroting back what I learned during several tax seminars that my company was kind enough to sponsor.  To quote Morgan Stanley's own legal disclaimer, I cannot "provide tax, legal or accounting advice. This material has been prepared for informational purposes only, and is not intended to provide, and should not be relied on for, tax, legal or accounting advice. You should consult your own tax, legal and accounting advisors before engaging in any transaction."
 
@@ -28,9 +28,9 @@ An example of a qualifying vs disqualifying adjustment is below:
 
 When filing your taxes you should include the Supplementary Information documents from your ESPP's website and manually calculate your tax obligation using a Form 8949 rather than taking the values reported in the ESPP's 1099-B for granted.  This is because the 1099-B will not have the adjusted cost basis, discounted grant price, or grant date price from the example above, potentially significantly increasing your tax obligation.
 
-The final surprise that I found was that RSU's have a similar, but thankfully simpler, gotcha.  For those that haven't received RSUs before, they're stocks in the company that your employer gives you completely free of charge.  The catch is you can't sell them until after they've vested (the "Restricted" part of RSU), usually a year or two after they were initially granted. 
+The final surprise that I found was that RSU's have a similar, but thankfully simpler, "gotcha."  For those that haven't received RSUs before, they're stocks in the company that your employer gives you completely free of charge.  The catch is you can't sell them until after they've vested (the "Restricted" part of RSU), usually a year or two after they were initially granted. 
 
-The tax gotcha is that when you do sell RSUs your company reports the sale as income on your W-2.  But the sale is also reported as income by your company's brokerage on, you guessed it, your stock plan's 1099-B. This means that if your not careful you can end up paying twice.  To resolve the issue you can check your brokerage's website for a “Stock Plan Transactions Supplement” under tax documents section in order to get your adjusted cost basis. An example is included below:
+When you do sell RSUs your company reports the sale as income on your W-2.  Unfortunately the sale is also reported as income by your company's brokerage on, you guessed it, your stock plan's 1099-B. This means that if your not careful you can end up paying twice.  To resolve the issue you can check your brokerage's website for a “Stock Plan Transactions Supplement” under tax documents section in order to get your adjusted cost basis. An example is included below:
 
 ![Stock Plan Transactions Supplement](/img/blog/transactions.png)
 
