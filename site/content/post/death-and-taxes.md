@@ -1,6 +1,6 @@
 ---
 title: Death and Taxes
-date: '2024-02-27T07:04:18-08:00'
+date: '2024-03-05T07:04:18-08:00'
 ---
 ![Tax forms](/img/blog/taxes.jpg)
 
