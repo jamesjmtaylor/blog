@@ -1,0 +1,15 @@
+---
+title: FIRE
+date: '2024-05-05T08:43:07-07:00'
+---
+![Fire](/img/blog/fire.jpg)
+
+We're back from Japan and I've had to hit the ground running.  My day job is in crunch time to get a release out the door and my part-time contracting gig has no shortage of mobile work taking up my nights and weekends.  Which might lead some of you to ask why.  Why am I pushing myself when I could comfortably live off of the income from my day job? There's a couple reasons.  The first is that by undertaking part-time contracts with smaller organizations, I'm able to get a breadth of experience on how other companies approach problems and generate solutions.  The second reason is FIRE, or Financial Independence, Retire Early.  
+
+There's a lot of different [blogs](https://smartasset.com/retirement/fire-blogs-and-websites-you-need-to-know) that have covered the tenets of FIRE and their personal journeys in attaining it far better than I ever could for myself, so I'll skip over most of that and just cover the highlights as they apply to my objectives.  Right now I'm aiming to achieve Fat FIRE (an indefinite $100k withdrawal rate sustained by a portfolio growth rate of 4% after inflation) within 7 years.  To that end I've invested primarily in broad-based index funds, split across Roth IRAs, a single consolidated 401k, and a brokerage account.  I've also continued to receive RSUs (Restricted Stock Units) from my company and am investing heavily in their ESPP (Employee Stock Purchase Plan), which allows me to purchase company stock at a steep discount.  
+
+Given market returns of 10.5% ([pretty standard for the S&P 500](https://www.investopedia.com/ask/answers/042415/what-average-annual-return-sp-500.asp))  you can expect your money to double every 7 years.  Which means that every additional dollar that I'm able to save or earn right now will have doubled by my planned FIRE date.  I think the alignment of my FIRE date with this doubling rate date has really focused my intentions, making me "double down" on my ambitions.
+
+All this isn't to say that I necessarily plan to retire in 7 years.  One of the pieces of retirement advice that has really stuck with me recently is "don't retire _from_ something, but rather to something."  The thing I'd most like to do is retire to more part-time work.  Something that would let me eventually hike the Pacific Crest Trail, summit the 16 peaks of the Pacific Northwest, and take bikebacking trips through Europe.  To this end I might take up substitute teaching, or return to part-time service in the Army Reserve.  In any case, I look forward to when like Forrest Gump I can say I "don't have to worry about money no more. And ... that's good! One less thing." 
+
+Photo by <a href="https://unsplash.com/@fourcolourblack?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Adam Wilson</a> on <a href="https://unsplash.com/photos/person-standing-in-front-of-fire-wCKzi8nDkw8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
