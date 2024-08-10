@@ -22,4 +22,43 @@ My second major complaint against squash merges is that it exacerbates the compl
 
 I don't want to leave the reasons for squash merges unaddressed though, so I'll address them next.  For the argument "It makes the git history easier to read at a glance",  I'd really like to know _why_ you need to look at it in a glance.  If you want to tell what features a particular release branch has you can filter the logs to merge commits, which will list all the merged features and bugfixes.  For "I don't always have a meaningful commit message for in-progress features." and "Each commit should stand on its own as a functional product." I am strongly tempted to wryly to state "that sounds like a _you_ problem" but for the sake providing actionable means of improvement I'll shamelessly quote from the [Such Dev Blog](https://suchdevblog.com/lessons/AtomicGitCommits.html) concerning the practice of atomic commits:
 
->  atomic git commits means your commits are of the smallest possible size. Each commit does one, and only one simple thing, that can be summed up in a simple sentence.  The amount of code change doesn't matter. It can be a letter or it can be a hundred thousand lines, but you should be able to describe the change with one simple short sentence.
+> atomic git commits means your commits are of the smallest possible size. Each commit does one, and only one simple thing, that can be summed up in a simple sentence.  The amount of code change doesn't matter. It can be a letter or it can be a hundred thousand lines, but you should be able to describe the change with one simple short sentence.
+
+For the final argument "Each commit should be annotated with the name of the feature branch that it was a part of.", I have a rather simple solution, a bash alias that allows me to prepend each commit message I write with the Jira ticket number before committing it locally and pushing to remote.  The script is below:
+
+```
+# gcamp: Git commit all with a message prepended by the current branch prefix and then push
+gcamp() { 
+     branch=$(git rev-parse --abbrev-ref HEAD)
+     split "$branch" / parts
+     prefix=${parts[1]} # bash arrays are 1-indexed
+     # echo "$prefix $@"
+     git commit -a -m "$prefix $@"
+     git push -u origin HEAD
+} 
+
+# split: splits a string in bash into an array
+split() { # args: string delimiter result_var
+  if
+    [ -n "$ZSH_VERSION" ] &&
+      autoload is-at-least &&
+      is-at-least 5.0.8 # for ps:$var:
+  then
+    eval $3'=("${(@ps:$2:)1}")'
+  elif
+    [ "$BASH_VERSINFO" -gt 4 ] || {
+      [ "$BASH_VERSINFO" -eq 4 ] && [ "${BASH_VERSINFO[1]}" -ge 4 ]
+      # 4.4+ required for "local -"
+    }
+  then
+    local - IFS="$2"
+    set -o noglob
+    eval "$3"'=( $1"" )'
+  else
+    echo >&2 "Your shell is not supported"
+    exit 1
+  fi
+}
+```
+
+That about sums up my arguments against the commit squash and my rebuttals against some of the arguments for the squash merge by its advocates.  My hope is that some of you will be able to use this post as ammunition when advocating for just using the default GitHub merge mechanism with your teams.  Until next time!
