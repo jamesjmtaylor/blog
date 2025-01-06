@@ -16,8 +16,4 @@ I was able to summit Mount Theilsen in May, Colchuck Peak in June, and Rooster R
 * Complete Intermediate Climbing School (ICS)
 * Start my masters in Computer Science at OSU
 
-
-
 Photo by <a href="https://unsplash.com/@paulfiedler?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Paul Fiedler</a> on <a href="https://unsplash.com/photos/a-city-skyline-at-night-with-fireworks-in-the-sky-Pf92n7cIqOE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-
-\
